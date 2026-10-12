@@ -1,7 +1,7 @@
 {
-  "name": "FEIM Atlas · Studio creativo",
-  "short_name": "FEIM Atlas",
-  "description": "Un atlante creativo privato, offline e completo, per costruire mondi insieme.",
+  "name": "FEIM Wiki · Enciclopedia del progetto",
+  "short_name": "FEIM Wiki",
+  "description": "Una wiki privata e offline per FEIM: visione scritta, relazioni e appunti.",
   "id": "./",
   "start_url": "./",
   "scope": "./",

@@ -24,3 +24,104 @@
 .entry-thumbnail>svg{position:absolute;inset:0;width:100%;height:100%;opacity:.8;stroke:none;fill:none;transform:scale(2.4);transform-origin:64% 59%}
 .entry-thumbnail .thumb-symbol{position:relative;z-index:1;display:grid;place-items:center;width:24px;height:24px;border:1px solid rgba(255,255,255,.13);background:rgba(9,18,14,.35);border-radius:8px;backdrop-filter:blur(3px)}
 .entry-thumbnail .thumb-symbol svg{width:15px;height:15px}
+
+/* FEIM Wiki · editorial information architecture */
+.wiki-welcome{position:relative;border:1px solid #46624d;border-radius:28px;background:radial-gradient(circle at 85% 18%,rgba(92,133,89,.25),transparent 44%),linear-gradient(135deg,#273e30,#14231f);padding:24px;overflow:hidden;box-shadow:0 18px 62px rgba(0,0,0,.17)}
+.welcome-top{display:flex;align-items:center;justify-content:space-between;gap:10px;position:relative;z-index:1}
+.wiki-private{display:inline-flex;align-items:center;gap:4px;color:#bbd3b6;font-size:8px;letter-spacing:.11em;font-weight:850;white-space:nowrap}
+.wiki-private svg{width:13px;height:13px}
+.welcome-main{display:flex;align-items:center;min-height:236px;position:relative}
+.welcome-main>div:first-child{max-width:82%;position:relative;z-index:2}
+.welcome-main h2{font-family:var(--serif);font-weight:400;letter-spacing:-.05em;line-height:1.09;font-size:clamp(30px,7vw,44px);margin:19px 0 12px}
+.welcome-main p{color:#c0d2bc;font-size:12px;line-height:1.8;margin:0 0 19px;max-width:400px}
+.welcome-art{position:absolute;right:-70px;top:-16px;width:63%;height:280px;opacity:.62;pointer-events:none}
+.welcome-art svg{width:100%;height:100%}
+.welcome-main .btn-row{position:relative;z-index:3}
+.welcome-main .btn-ghost{border-color:#55715b;background:rgba(24,35,28,.8)}
+.wiki-how{margin-top:4px}
+.how-grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:11px}
+.how-card{display:grid;grid-template-columns:42px 1fr;grid-template-rows:auto auto;gap:5px 13px;position:relative;border:1px solid var(--line);border-radius:19px;background:var(--card);padding:15px 14px;align-items:start}
+.how-card .step-index{position:absolute;right:14px;top:14px;letter-spacing:.13em;font-size:9px;color:#789684;font-weight:800}
+.how-icon{width:39px;height:39px;border-radius:12px;background:#2d4233;display:grid;place-items:center;color:#d8f0c5;grid-column:1;grid-row:1 / span 2}
+.how-icon svg{width:19px;height:19px}
+.how-card strong{grid-column:2;grid-row:1;margin-right:30px;align-self:end;font-size:13px;letter-spacing:-.01em}
+.how-card p{grid-column:2;grid-row:2;margin:0;color:#a0b6a9;font-size:11px;line-height:1.6}
+.wiki-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:1px}
+.wiki-metric{min-width:0;text-align:center;background:#1a2923;border:1px solid #304739;border-radius:18px;padding:13px 4px}
+.wiki-metric strong{display:block;color:#e4f6d5;font-size:23px;line-height:1.2;letter-spacing:-.05em}
+.wiki-metric span{display:block;font-size:10px;margin-top:4px;color:#a4bca9}
+.wiki-bottom-tip{background:#1b2b24;border:1px solid #334739;border-radius:18px;display:flex;align-items:flex-start;gap:10px;padding:16px}
+.wiki-bottom-tip>svg{width:19px;height:19px;color:#c6eaba;margin-top:2px}
+.wiki-bottom-tip p{margin:0;color:#b6c7bb;font-size:11px;line-height:1.75}
+.wiki-guide summary{font-weight:750}
+.chapter-toc{display:flex;flex-wrap:wrap;gap:9px;border-radius:15px;padding:14px 15px;background:#182720;border:1px solid #2c4433}
+.chapter-toc span{display:inline-flex;align-items:center;gap:5px;color:#c6d2c6;font-size:10px;font-weight:750}
+.chapter-toc span+span{border-left:1px solid #45604c;padding-left:9px}
+.chapter-toc svg{width:14px;height:14px;color:#c1e6b1}
+.category-info{min-height:101px}
+.category-card .category-title{min-height:1.4em}
+.category-card .category-meta{align-items:center}
+.entry-card .entry-summary{color:#a8bcb0}
+.entry-card .origin-pill{margin-right:4px}
+.entry-card .entry-mini{gap:6px}
+.wiki-article{min-width:0;display:flex;flex-direction:column;gap:18px}
+.breadcrumbs{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:11px;color:#aabfae}
+.breadcrumbs>svg{height:13px;width:13px;color:#698471}
+.breadcrumbs button{font-size:11px;color:#c3dfc0;background:transparent;border:0;padding:5px 1px;font-weight:690}
+.article-head{border-bottom:1px solid var(--line);padding:9px 0 22px}
+.article-label{display:flex;align-items:center;gap:7px;font-size:10px;color:#a3caa7;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.article-label svg{width:16px;height:16px}
+.article-head h2{font-family:var(--serif);font-size:clamp(32px,7vw,49px);font-weight:400;letter-spacing:-.055em;line-height:1.12;margin:16px 0 15px}
+.article-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.article-verdict{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:840;letter-spacing:.01em;padding:7px 10px;border-radius:99px}
+.article-verdict svg{width:13px;height:13px}
+.article-verdict.canon{background:#2a4830;color:#d1f3ba}
+.article-verdict.proposal{background:#443c2c;color:#f2d9aa}
+.article-status-note{font-size:11px;line-height:1.6;color:#879e91;margin:13px 0 0;max-width:650px}
+.article-grid{display:flex;flex-direction:column;gap:19px}
+.article-main{min-width:0}
+.article-body{background:#172421;border:1px solid #30463a;border-radius:22px;padding:22px 19px 24px}
+.article-section{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.article-section:first-child{padding-top:0;margin-top:0;border:0}
+.article-section-caption{color:#a0c9a3;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:850;margin-bottom:15px}
+.article-section h3{font-family:var(--serif);font-size:22px;font-weight:400;letter-spacing:-.02em;margin:0 0 12px}
+.article-prose{color:#d1dfd2;font-size:14px;line-height:1.92;letter-spacing:.002em;overflow-wrap:anywhere}
+.article-prose p{margin:0 0 15px}
+.article-prose p:last-child{margin:0}
+.article-aside{display:flex;flex-direction:column;gap:13px}
+.article-infobox,.article-tools,.article-notes,.article-related{background:#172321;border:1px solid var(--line);border-radius:21px;overflow:hidden}
+.article-infobox .infobox-art{height:95px;position:relative;background:linear-gradient(125deg,#284633,#293e35)}
+.infobox-art[data-tone="coral"],.infobox-art[data-tone="pink"]{background:linear-gradient(125deg,#584139,#33292b)}
+.infobox-art[data-tone="amber"],.infobox-art[data-tone="sand"]{background:linear-gradient(125deg,#5c4b2f,#302f27)}
+.infobox-art[data-tone="blue"],.infobox-art[data-tone="violet"]{background:linear-gradient(125deg,#343c56,#2b2939)}
+.infobox-art svg{position:absolute;inset:0;width:100%;height:100%;stroke:none}
+.infobox-icon{position:absolute;left:17px;top:19px;width:51px;height:51px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.24);border-radius:16px;background:rgba(8,24,18,.46);backdrop-filter:blur(10px);color:#edf7e4}
+.infobox-icon svg{position:static;width:25px;height:25px;stroke:currentColor;fill:none}
+.infobox-content{padding:18px}
+.infobox-content h3{font-size:15px;margin:0 0 11px}
+.infobox-row{border-top:1px solid var(--line);padding:11px 0;display:grid;grid-template-columns:minmax(90px,.8fr) minmax(0,1.2fr);gap:8px;font-size:11.5px;line-height:1.5}
+.infobox-row dt{color:#8ea797;font-weight:700}
+.infobox-row dd{color:#e1e9dc;margin:0;text-align:right;overflow-wrap:anywhere}
+.article-tools{padding:19px}
+.article-tools h3{font-size:14px;margin:0 0 8px}
+.article-tools p{font-size:11px;line-height:1.75;color:var(--muted);margin:0 0 15px}
+.article-tools .btn+.btn{margin-top:9px}
+.article-notes{margin-top:16px;padding:19px}
+.article-notes .section-head{margin-bottom:8px}
+.article-notes h3,.article-related h3{font-size:15px;margin:0;display:flex;align-items:center;gap:8px;letter-spacing:-.02em}
+.article-notes h3 svg{width:17px;height:17px;color:#c9e6b4}
+.article-notes>p{font-size:11px;line-height:1.7;color:#9eb8a5;margin:0 0 12px}
+.article-notes textarea{background:#111c19;resize:vertical;border:1px solid #30483a;width:100%;min-height:104px;border-radius:13px;outline:none;color:#dbead5;font-size:12.5px;padding:12px;line-height:1.7}
+.article-notes textarea:focus{border-color:#a3cd92}
+.article-notes small{display:block;font-size:10px;color:#80a48b;margin-top:9px}
+.article-related{padding:19px;margin-top:16px}
+.related-grid{display:grid;gap:8px}
+.related-link{text-align:left;display:flex;align-items:center;gap:11px;background:#22312a;border:1px solid #34493a;color:#edf6e7;width:100%;border-radius:13px;padding:10px 12px}
+.related-link .entry-icon{width:32px;height:32px;flex-basis:32px;border-radius:10px}
+.related-link .entry-icon svg{width:16px;height:16px}
+.related-link span:nth-child(2){flex:1;min-width:0}
+.related-link strong{font-size:11.5px;line-height:1.4;display:block}
+.related-link small{display:block;font-size:10px;color:#9aaea0;margin-top:4px}
+.related-link>svg{width:16px;height:16px;color:#7c9b81}
+@media(min-width:520px){.how-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.how-card{display:block;min-height:181px}.how-icon{margin-bottom:12px}.how-card strong{display:block;font-size:12px;margin-bottom:7px}.how-card p{font-size:11px}.welcome-main>div:first-child{max-width:69%}.welcome-art{right:-30px;width:49%;opacity:.78}.related-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:930px){.wiki-welcome{padding:29px 33px}.welcome-main{min-height:264px}.welcome-main h2{font-size:46px}.welcome-main p{font-size:13px}.welcome-art{width:43%;right:4px}.article-grid{display:grid;grid-template-columns:minmax(0,1fr) 305px;align-items:start;gap:20px}.article-aside{position:sticky;top:24px}.article-body{padding:29px}.article-prose{font-size:15px}.article-head h2{font-size:50px}.wiki-metric{padding:15px}.wiki-metric strong{font-size:27px}}

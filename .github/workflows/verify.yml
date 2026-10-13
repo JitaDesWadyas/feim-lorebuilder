@@ -12,13 +12,16 @@ jobs:
         with:
           node-version: '22'
       - name: Validate offline app and privacy
-        run: node --test tests/app.test.mjs
+        run: node --test tests/*.test.mjs
       - name: Verify static deploy assets
         shell: bash
         run: |
           test -f index.html
           test -f styles.css
           test -f app.js
+          test -f reference.js
+          test -f experience.js
+          test -f experience.css
           test -f sw.js
           test -f manifest.webmanifest
           test -f assets/icon.svg

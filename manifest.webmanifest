@@ -1,7 +1,7 @@
 {
-  "name": "FEIM Wiki · Enciclopedia del progetto",
-  "short_name": "FEIM Wiki",
-  "description": "Una wiki privata e offline per FEIM: visione scritta, relazioni e appunti.",
+  "name": "FEIM Next · Atlante del progetto",
+  "short_name": "FEIM Atlas",
+  "description": "Enciclopedia pubblica di FEIM Next, appunti privati sul dispositivo ed export per ChatGPT.",
   "id": "./",
   "start_url": "./",
   "scope": "./",

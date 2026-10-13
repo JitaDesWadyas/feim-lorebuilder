@@ -83,7 +83,7 @@ function headline(){
  const t={home:['FEIM • KNOWLEDGE BASE','La wiki di FEIM'],explore:['INDICE GENERALE','Capitoli'],ideas:['APPUNTI VELOCI','Taccuino'],vault:['DATI E PRIVACY','Archivio'],category:['CAPITOLO DELLA WIKI',cat(route.id)?.title||'Capitolo'],entry:['ARTICOLO','Enciclopedia'],edit:['MODIFICA ARTICOLO','Editor'],search:['RICERCA NELLA WIKI','Cerca']};
  const current=t[route.page]||t.home;$('#page-eyebrow').textContent=current[0];$('#page-title').textContent=current[1];
  $('#back-button').classList.toggle('hidden',!['category','entry','edit','search'].includes(route.page));
- $('#top-add').classList.toggle('hidden',route.page==='vault');const addLabel=$('#top-add span');if(addLabel)addLabel.textContent=route.page==='ideas'?'Nuova idea':'Nuovo articolo'
+ $('#top-add').classList.toggle('hidden',false);const addLabel=$('#top-add span');if(addLabel)addLabel.textContent=route.page==='ideas'?'Nuova idea':'Nuovo articolo'
 }
 
 function svgArtwork(c,hero=false){const tone=(c&&c.tone)||'teal',colors={violet:['#e1c7ff','#9d9ace'],coral:['#f5bdac','#bc746d'],amber:['#f6dda4','#b3925a'],sand:['#dcd0ac','#aa9c82'],teal:['#bfedc8','#75ab94'],blue:['#c4e2ff','#779fbc'],pink:['#f4c1d7','#bd819d']},p=colors[tone]||colors.teal;return '<svg viewBox="0 0 320 172" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrazione geometrica del percorso"><circle cx="230" cy="60" r="47" fill="'+p[0]+'" opacity=".15"/><circle cx="230" cy="60" r="33" stroke="'+p[0]+'" opacity=".25" stroke-width="1.2" stroke-dasharray="4 8"/><path d="M-10 145Q50 110 113 145T237 145T351 124V200H-10z" fill="'+p[1]+'" opacity=".12"/><path d="M0 158Q50 100 106 130T215 124T340 100" fill="none" stroke="'+p[0]+'" opacity=".42" stroke-width="1.3"/><path d="m166 121 19-44 23 44m-35-15h29M233 138V79l20-23 19 23v59m-39-42h39m-30 18h9m-79 23v-26l-16-13-18 13v26m-26-20 18-35 17 35" stroke="'+p[0]+'" opacity=".7" stroke-width="1.2"/><path d="M85 168V96m0 0-21 26h42zM296 172v-64m0 0-15 24h30z" stroke="'+p[0]+'" opacity=".35" stroke-width="1.2"/><circle cx="275" cy="30" r="3" fill="'+p[0]+'" opacity=".8"/><circle cx="53" cy="35" r="2" fill="'+p[0]+'" opacity=".5"/><circle cx="185" cy="23" r="2" fill="'+p[0]+'" opacity=".5"/></svg>'}
@@ -225,11 +225,11 @@ if(el.matches('[data-field]')&&route.page==='edit'){const e=item(route.id);if(!e
 document.addEventListener('change',(event)=>{const el=event.target;if(el.matches('[data-field]')&&route.page==='edit'){const e=item(route.id);if(e){const field=el.dataset.field;if(['status','priority','origin','phase','kind','categoryId'].includes(field)){e[field]=el.value;e.updatedAt=now();scheduleSave();render()}}}});
 $('#import-input').addEventListener('change',async(event)=>{const f=event.target.files?.[0];event.target.value='';await handleFile(f)});
 $('#open-search').addEventListener('click',()=>{searchTerm='';navigate('search')});
-$('#top-add').addEventListener('click',()=>{if(route.page==='ideas')ideaModal('');else newEntryModal(route.page==='category'?route.id:'fondamenti')});
+$('#top-add').addEventListener('click',()=>ideaModal(''));
 $('#back-button').addEventListener('click',()=>{if(route.page==='edit'){navigate('entry',route.id)}else if(route.page==='entry'){const e=item(route.id);navigate('category',e?.categoryId||'fondamenti')}else navigate('explore')});
 document.addEventListener('keydown',(event)=>{if(event.key==='Escape'&&$('#modal-root').children.length)closeModal();if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'){event.preventDefault();searchTerm='';navigate('search')}});
 window.addEventListener('popstate',()=>{route=routeFromHash();render()});
 document.addEventListener('visibilitychange',()=>{if(document.hidden){clearTimeout(saveTimer);saveNow()}});
 window.addEventListener('pagehide',()=>{if(dirty)saveNow()});
 async function init(){await load();route=routeFromHash();if(!['home','explore','ideas','vault','category','entry','edit','search'].includes(route.page))route={page:'home',id:''};render();if('serviceWorker' in navigator&&location.protocol.startsWith('http')){navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(()=>{})}}
-init();
+globalThis.FEIM_APP_INIT=init();

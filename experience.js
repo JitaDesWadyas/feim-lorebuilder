@@ -34,7 +34,7 @@
      const base={id:r.id,title:r.title,subtitle:r.subtitle,summary:r.summary||'',icon:p[0],tone:p[1],group:p[2],order:index,guide:Object.assign(defaultGuide(r.title),r.guide||{}),notes:''};
      const existing=current.get(r.id);
      if(!existing){workspace.categories.push(base);changed=true}
-     else if(!existing.__userEdited && (!existing.__referenceRevision||existing.__referenceRevision<REF.revision)){
+     else if(!existing.__userEdited && (!existing.__referenceRevision||existing.__referenceRevision<REF.revision) && (existing.__referenceRevision || !legacyNames.has(r.id) || (existing.title===legacyNames.get(r.id)[1]&&existing.subtitle===legacyNames.get(r.id)[2]&&(!existing.guide?.goal||existing.guide.goal.startsWith('Definire una visione'))))){
        Object.assign(existing,base,{notes:existing.notes||'',__referenceRevision:REF.revision});changed=true;
      }
    }
@@ -57,6 +57,7 @@
  const nativeHandleAction=handleAction;
  globalThis.handleAction=function(button,event){
    const action=button.dataset.action, id=button.dataset.id||'';
+   if(action==='save-category'){const categoryId=$a('#cat-id')?.value;const result=nativeHandleAction(button,event);const record=cat(categoryId);if(record){record.__userEdited=true;scheduleSave()}return result;}
    if(action==='export-handoff'){exportHandoff();return}
    if(action==='copy-handoff'){copyText(handoffInstructions());return}
    if(action==='copy-idea-prompt'){const x=idea(id);if(x)copyText(ideaPrompt(x));return}

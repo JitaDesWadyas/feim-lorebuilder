@@ -1,27 +1,45 @@
-# FEIM Wiki — enciclopedia privata del progetto
+# FEIM Next · Atlante di world design
 
-Applicazione statica, mobile-first e utilizzabile offline. L'interfaccia e le **26 categorie generiche vuote** sono pubbliche. Tutta la vera conoscenza di FEIM — visione, Bura'Ka, Bango, meccaniche, articoli, proposte, segreti e idee — si trova soltanto nel **JSON privato** che va importato manualmente. **Non committare quel file su questo repository pubblico.**
+Enciclopedia mobile-first per consultare la visione di **FEIM Next**, sviluppare idee e passare un contesto strutturato a ChatGPT. Applicazione statica, senza account, utilizzabile come PWA su GitHub Pages, anche offline dopo il primo caricamento.
 
-## Come funziona
+## Come è organizzata
 
-1. Apri il sito da Android o Safari su iPhone. Puoi aggiungerlo alla schermata Home.
-2. Nella pagina **Wiki**, tocca **Importa la wiki privata** e seleziona il JSON ricevuto dal creatore di FEIM.
-3. Ora trovi subito articoli già scritti. Da **Indice** scegli un capitolo e apri una voce.
-4. Leggi prima il testo dell'articolo. Il badge **Già discusso** indica che l'idea fa parte della visione concordata; **Proposta** significa che è una possibilità creativa ancora da approvare. **Non indica lo stato di implementazione tecnica del gioco.**
-5. La **Scheda rapida** mostra proprietà, tipo, ambito e informazioni rilevanti. **Collegamenti nella wiki** permette di seguire altri articoli correlati.
-6. Scrivi contributi nel campo **I tuoi appunti**, che è separato dal testo principale e si salva automaticamente.
-7. Quando vuoi proporre modifiche al testo, usa **Modifica articolo**: puoi cambiare contenuto, proprietà e collegamenti (titoli esatti, uno per riga). In alternativa, **Discuti con ChatGPT** copia un contesto per ragionare insieme sul tema; l'app **non invia automaticamente** nulla a ChatGPT.
-8. Puoi aggiungere appunti veloci in **Taccuino**.
-9. Usa **Archivio → Esporta backup JSON** regolarmente. Puoi importare un backup o unirlo al progetto attuale.
+La pagina **Inizio** propone sei letture essenziali e una panoramica sintetica. **Atlante** raccoglie 11 capitoli e oltre 40 voci di world design, con collegamenti, proprietà, approfondimenti e ricerca. **Idee** consente di catturare appunti in un solo campo o svilupparli in una scheda facoltativa con domanda, alternative e conseguenze. **Esporta** produce un pacchetto Markdown per ChatGPT e un backup JSON ripristinabile.
 
-### Private-by-design
+L'archivio comprende la premessa degli evocati e dei Bango, Bura'Ka, la minaccia comune, le stagioni, i raid, la magia elementale, la ricerca senza ricette ufficiali, le armi fisiche, le professioni, il commercio di conoscenze, la comunicazione tramite piccioni e il gameplay sociale persistente. Include anche lo stato tecnico effettivo del prototipo.
 
-Non ci sono account, cloud, analytics, font remoti, script esterni o sincronizzazione. I dati personali sono in IndexedDB (con fallback localStorage) e non vengono inviati a un server. Se cancelli i dati del browser o disinstalli la PWA, **puoi perdere tutte le modifiche**: conserva un JSON esportato. Importare il JSON privato non pubblica nulla su GitHub.
+**Origine e stato tecnico sono assi distinti:** `Già discusso` indica una decisione emersa nella visione, non una feature sviluppata. `Proposta` indica una possibilità da valutare. Le schede documentano ciò che è già verificato, simulato o ancora assente. Gli esempi narrativi non diventano automaticamente lore definitiva.
 
-### GitHub Pages
+## Flusso da telefono a ChatGPT
 
-Settings → Pages → Deploy from a branch → **main** → **/(root)**. L'app non richiede build. Indirizzo previsto: `https://jitadeswadyas.github.io/feim-lorebuilder/`.
+1. Aprire **Idee**, inserire lo spunto e salvarlo. Nessun campo avanzato è obbligatorio.
+2. All'occorrenza, aprire **Approfondisci** per aggiungere domanda, alternative, conseguenze e stato di riflessione. Tutti questi stati sono locali: non rendono canon un'idea.
+3. Aprire **Esporta → Esporta per ChatGPT (.md)** e allegare il file alla futura conversazione.
+4. Dopo la discussione e le conferme esplicite, aggiornare il file versionato `reference.js` del repository. Lo stesso sito si aggiornerà al caricamento; gli articoli non modificati localmente ricevono le nuove revisioni.
+5. Esportare regolarmente anche il **backup JSON** per recuperare tutte le modifiche e le note sul dispositivo.
 
-### Sviluppo e test
+L'app non trasmette il documento automaticamente a ChatGPT, GitHub o altri servizi.
 
-App in HTML/CSS/JavaScript senza dipendenze runtime, PWA opzionale. Test statici: `node --test tests/*.test.mjs`. Le Actions controllano gli articoli, la sicurezza del rendering, la privacy e la correttezza dei principali componenti della wiki.
+## Pubblico e privato: distinzione esplicita
+
+**Il repository è pubblico.** `reference.js` contiene visione e lore di riferimento accessibili a chiunque navighi o cloni il repository, compresi eventuali spoiler di progetto. Non inserire in questo file segreti da proteggere prima del lancio.
+
+**Le note personali restano locali**, in IndexedDB con fallback localStorage. Importare un backup non pubblica automaticamente le note su GitHub. Cancellare i dati del sito, cambiare telefono o rimuovere la PWA può cancellare i dati locali; conservare periodicamente un JSON su uno spazio controllato.
+
+## Compatibilità
+
+L'archivio mantiene il formato `feim-atlas` versione 1 e l'originale database locale `feim-atlas`: i backup precedenti si possono importare e i contenuti esistenti vengono mantenuti. Le voci pubblicate hanno ID stabili e una revisione. Le modifiche locali alle pagine devono essere verificate prima di riversarle nella fonte pubblica. Non viene effettuato alcun invio automatico al repository.
+
+## Pubblicazione
+
+GitHub Pages → Settings → Pages → **Deploy from a branch** → `main` → `/(root)`.
+
+Sito: https://jitadeswadyas.github.io/feim-lorebuilder/
+
+Nessuna build necessaria. `index.html` carica `reference.js`, `app.js` ed `experience.js`, con `styles.css` e `experience.css`. `sw.js` gestisce la cache della shell e dei dati statici, non i backup.
+
+Test: `node --test tests/*.test.mjs`. La CI verifica struttura, compatibilità e coerenza dei riferimenti.
+
+---
+
+**Ambito:** FEIM Next. NOT IN SYNC ed E POI? sono prodotti separati dello studio; non mescolare i rispettivi universi narrativi.

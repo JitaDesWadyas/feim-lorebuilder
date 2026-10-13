@@ -329,7 +329,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-evocati",
-      "categoryId": "arrivo",
+      "categoryId": "fondamenti",
       "title": "Gli evocati: identità del giocatore",
       "summary": "I giocatori sono stati evocati dai Bango. Nel mondo portano inventiva, capacità di sperimentare e volontà di intervenire dove gli abitanti da soli non riescono.",
       "sections": [
@@ -391,7 +391,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-arrivo-giocatore",
-      "categoryId": "arrivo",
+      "categoryId": "fondamenti",
       "title": "I primi minuti nel mondo",
       "summary": "L'esperienza deve comunicare subito un mondo abitato. Bura'Ka, la fontana, le botteghe e un Bango riconoscibile sono un punto di partenza; un problema concreto può introdurre naturalmente la mano fisica e i rapporti sociali.",
       "sections": [
@@ -453,7 +453,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-territori",
-      "categoryId": "mappa",
+      "categoryId": "insediamenti",
       "title": "Oltre Bura'Ka: mondo e regioni",
       "summary": "La visione finale richiede più villaggi, territori, percorsi, aree pericolose e luoghi da scoprire. Le informazioni attraversano distanze reali e la posizione dei giocatori conta.",
       "sections": [
@@ -484,7 +484,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-architettura-utile",
-      "categoryId": "architettura",
+      "categoryId": "insediamenti",
       "title": "Edifici funzionali, non facciate",
       "summary": "Una bottega deve avere superfici su cui lavorare, depositi, passaggi e attrezzi. Gli elementi importanti devono essere utilizzabili, ma non serve una simulazione fisica completa per ogni dettaglio della scena.",
       "sections": [
@@ -746,7 +746,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-fisica",
-      "categoryId": "oggetti",
+      "categoryId": "crafting",
       "title": "Oggetti e mano fisica",
       "summary": "Gli oggetti importanti si afferrano, spostano, ruotano, appoggiano e utilizzano tramite le mani. Le azioni avvengono nello spazio condiviso del mondo, con server autorevole per evitare appropriazioni e movimenti incoerenti.",
       "sections": [
@@ -915,7 +915,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-economia",
-      "categoryId": "economia",
+      "categoryId": "professioni",
       "title": "Economia fra giocatori e produzione di valore",
       "summary": "Il commercio deve nascere da bisogni veri: strumenti, rifornimenti, prodotti unici, trasporti, informazioni e servizi. I Bango assicurano una società minima anche con pochi giocatori collegati.",
       "sections": [
@@ -946,7 +946,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-deleghe-npc",
-      "categoryId": "deleghe",
+      "categoryId": "personaggi",
       "title": "Bango come collaboratori e continuità",
       "summary": "I Bango possono mantenere commerci e servizi elementari mentre pochi giocatori sono online; possono essere incaricati di attività ripetitive e forse imparare tecniche trasmesse dagli evocati.",
       "sections": [
@@ -1147,7 +1147,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-creature",
-      "categoryId": "natura",
+      "categoryId": "insediamenti",
       "title": "Creature, ambienti e vulnerabilità",
       "summary": "Il mondo deve contenere ecosistemi, creature e fenomeni che reagiscono a elementi, materiali, forme di arma e ambiente. La scoperta di vulnerabilità dovrebbe nascere dall'osservazione e dagli esperimenti.",
       "sections": [
@@ -1178,7 +1178,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-esplorazione",
-      "categoryId": "esplorazione",
+      "categoryId": "eventi",
       "title": "Esplorare per cambiare il mondo",
       "summary": "Esplorazione e avventura devono creare scoperte, pericoli, materiali, incontri, percorsi e informazioni indispensabili anche alle professioni non combattenti.",
       "sections": [
@@ -1271,7 +1271,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-proprieta",
-      "categoryId": "criminalita",
+      "categoryId": "societa",
       "title": "Proprietà, furto e protezione",
       "summary": "La libertà di spostare oggetti apre a proprietà, furto, custodia e recupero. In passato è stata discussa la possibilità di incaricare Bango come guardie di beni e attività.",
       "sections": [
@@ -1302,7 +1302,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-abitare",
-      "categoryId": "abitare",
+      "categoryId": "insediamenti",
       "title": "Case e botteghe come progetti persistenti",
       "summary": "Abitare significa avere un posto nel mondo. Case, botteghe, spazi di lavoro e depositi possono diventare investimenti personali o collettivi, purché abbiano funzioni reali.",
       "sections": [
@@ -1405,7 +1405,7 @@ window.FEIM_REFERENCE={
     },
     {
       "id": "feim-identita-visiva",
-      "categoryId": "art",
+      "categoryId": "produzione",
       "title": "Direzione artistica: Bango e fantasy leggibile",
       "summary": "L'identità approvata favorisce forme fantasy stilizzate, angolari ed espressive, non personaggi generici da gioco di piattaforma. Taglio, Vetta e Bruma sono riferimenti morfologici consolidati.",
       "sections": [

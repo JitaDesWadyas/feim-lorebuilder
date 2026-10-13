@@ -1507,6 +1507,49 @@ window.FEIM_REFERENCE={
       "priority": "alta",
       "favorite": false,
       "__seedRevision": 20261013
+    },
+    {
+      "id": "feim-decisioni-superate",
+      "categoryId": "produzione",
+      "title": "Registro decisioni: approvato, aperto, superato",
+      "summary": "Non tutte le idee emerse nella storia di FEIM hanno lo stesso peso. L'atlante distingue le scelte di visione, le ipotesi da verificare e le direzioni effettivamente abbandonate. Una scelta può essere valida per FEIM originale senza essere stata riconfermata per FEIM Next.",
+      "sections": [
+        {
+          "heading": "Direzioni superate",
+          "body": "La vecchia piazza scenografica non rappresenta più il masterplan completo: Bura'Ka dispone di complessi funzionali.\n\nL'aspetto da mascotte geometrica generica è stato respinto in favore delle sagome Bango riconoscibili Taglio, Vetta e Bruma.\n\nLa forgiatura non deve funzionare soltanto attraverso pulsanti contestuali di stazione: l'azione fisica è centrale.\n\nLa vecchia logica dei colpi speciali a pulsante del FEIM dall'alto non è automaticamente la scelta di FEIM Next in prima persona."
+        },
+        {
+          "heading": "Direzioni approvate",
+          "body": "Mondo persistente, socialità, fisicità utilizzabile, grandi stagioni condivise, minaccia comune, evocazione dei giocatori, artigianato inventivo, conoscenza da scoprire nel mondo, comunicazioni integrate e libertà di mestieri."
+        },
+        {
+          "heading": "Idee da riconfermare",
+          "body": "Nel progetto FEIM originale era stata discussa l'assenza di deterioramento permanente degli oggetti. L'attuale prototipo tecnico gestisce anche valori di durabilità: non c'è una decisione definitiva recuperata per l'economia e l'usura nel FEIM Next completo.\n\nIl numero di server, la divergenza territoriale fra essi, la durata reale delle stagioni, le leggi di proprietà, il PvP, i dettagli dei Bango e della magia restano aperti."
+        },
+        {
+          "heading": "Criterio di aggiornamento",
+          "body": "Non convertire automaticamente ogni esempio, suggestione o proposta commerciale in lore. La conferma esplicita e la data della decisione devono guidare le revisioni. Non trattare FEIM Next e gli altri progetti dello studio come un universo comune per impostazione predefinita."
+        }
+      ],
+      "properties": {
+        "Ambito": "Decisioni di world design",
+        "Stato": "Registro interpretativo",
+        "Usura oggetti": "Precedente storico, da riconfermare per Next"
+      },
+      "links": [
+        "feim-visione",
+        "feim-buraka",
+        "feim-forgiatura",
+        "feim-combat",
+        "feim-questioni"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "lore",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261013
     }
   ]
 };

@@ -6,17 +6,20 @@
   <meta name="theme-color" content="#101716">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="FEIM Wiki">
+  <meta name="apple-mobile-web-app-title" content="FEIM Next">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Una wiki privata e offline per leggere, collegare e sviluppare la visione di FEIM.">
+  <meta name="description" content="Atlante FEIM Next: visione, storia, sistemi, note locali e idee esportabili per ChatGPT.">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
-  <title>FEIM Wiki — Enciclopedia del progetto</title>
+  <title>FEIM Next — Atlante e laboratorio di idee</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
   <link rel="apple-touch-icon" href="./assets/icon-apple.png">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./experience.css">
+  <script defer src="./reference.js"></script>
   <script defer src="./app.js"></script>
+  <script defer src="./experience.js"></script>
 </head>
 <body>
 <svg aria-hidden="true" class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
@@ -65,14 +68,14 @@
 <div class="shell">
  <aside class="sidebar" aria-label="Navigazione desktop">
   <div class="brand"><span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 35 12v16L20 36 5 28V12z"/><path d="m12 26 8-15 8 15m-12-6h8"/></svg></span><span><strong>FEIM</strong><small>PROJECT WIKI</small></span></div>
-  <div class="sidebar-caption">IL TUO SPAZIO CREATIVO</div>
+  <div class="sidebar-caption">WORLD DESIGN ARCHIVE</div>
   <nav id="side-nav" class="side-nav"></nav>
-  <div class="sidebar-foot"><span class="privacy-dot"></span> Privato sul tuo dispositivo <small id="side-count"></small></div>
+  <div class="sidebar-foot"><span class="privacy-dot"></span> Appunti salvati sul dispositivo <small id="side-count"></small></div>
  </aside>
  <div class="main-column">
    <header class="topbar">
-    <div class="topbar-title"><span class="overline" id="page-eyebrow">YOUR CREATIVE SPACE</span><div class="headline-row"><button id="back-button" class="icon-button back-button hidden" aria-label="Torna indietro"><svg><use href="#i-back"></use></svg></button><h1 id="page-title">La wiki di FEIM</h1></div></div>
-    <div class="topbar-actions"><button class="icon-button" id="open-search" aria-label="Cerca" title="Cerca"><svg><use href="#i-search"></use></svg></button><button class="add-button" id="top-add" aria-label="Aggiungi un articolo"><svg><use href="#i-plus"></use></svg><span>Nuovo articolo</span></button></div>
+    <div class="topbar-title"><span class="overline" id="page-eyebrow">WORLD DESIGN REFERENCE</span><div class="headline-row"><button id="back-button" class="icon-button back-button hidden" aria-label="Torna indietro"><svg><use href="#i-back"></use></svg></button><h1 id="page-title">FEIM Next</h1></div></div>
+    <div class="topbar-actions"><button class="icon-button" id="open-search" aria-label="Cerca" title="Cerca"><svg><use href="#i-search"></use></svg></button><button class="add-button" id="top-add" aria-label="Aggiungi un articolo"><svg><use href="#i-plus"></use></svg><span>Nuova idea</span></button></div>
    </header>
    <main id="view" class="view" tabindex="-1"><div class="startup-loading"><span class="orbit-spinner"></span><p>Prepariamo il tuo atlante…</p></div></main>
  </div>
@@ -81,6 +84,6 @@
 <div id="modal-root" class="modal-root" aria-live="polite"></div>
 <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
 <input type="file" id="import-input" hidden accept=".json,application/json">
-<noscript>Attiva JavaScript per usare FEIM Atlas.</noscript>
+<noscript>Attiva JavaScript per consultare FEIM Next.</noscript>
 </body>
 </html>

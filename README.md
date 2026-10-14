@@ -4,9 +4,15 @@ Enciclopedia mobile-first per consultare la visione di **FEIM Next**, sviluppare
 
 ## Come è organizzata
 
-La pagina **Inizio** propone sei letture essenziali e una panoramica sintetica. **Atlante** raccoglie 11 capitoli e oltre 40 voci di world design, con collegamenti, proprietà, approfondimenti e ricerca. **Idee** consente di catturare appunti in un solo campo o svilupparli in una scheda facoltativa con domanda, alternative e conseguenze. **Esporta** produce un pacchetto Markdown per ChatGPT e un backup JSON ripristinabile.
+La pagina **Inizio** propone sei letture essenziali e una panoramica sintetica. **Atlante** raccoglie 11 capitoli e 49 voci di world design, con collegamenti, proprietà, approfondimenti e ricerca. **Idee** consente di catturare appunti in un solo campo o svilupparli in una scheda facoltativa con domanda, alternative e conseguenze. **Esporta** produce un pacchetto Markdown per ChatGPT e un backup JSON ripristinabile.
 
 L'archivio comprende la premessa degli evocati e dei Bango, Bura'Ka, la minaccia comune, le stagioni, i raid, la magia elementale, la ricerca senza ricette ufficiali, le armi fisiche, le professioni, il commercio di conoscenze, la comunicazione tramite piccioni e il gameplay sociale persistente. Include anche lo stato tecnico effettivo del prototipo.
+
+### Creazione fisica senza simulatore universale
+
+Le nuove schede fissano il principio architetturale: **cinque sistemi riutilizzabili** (materiali, geometria, connessioni, trasformazioni e interazioni), simulazione per eventi, oggetti dormienti e dati di rete compatti. Le proprietà di spade, asce, picconi e utensili dovrebbero derivare dalla costruzione, invece di aggiungere una ricetta o un comportamento hardcoded per ogni oggetto. Sono descritti anche minerali e metallurgia, fonderia e colata, stampi costruibili, mola, affilatura, manici e fissaggi, oltre al controllo indipendente di mano e telecamera.
+
+**Gerarchia di prodotto:** FEIM Next resta prima di tutto un MMORPG sociale, di avventura e RPG. La lavorazione artigianale è facoltativa, con accesso rapido tramite oggetti comprati, trovati o commissionati, e maggiore profondità per chi vuole specializzarsi. Queste voci sono decisioni di design e proposte tecniche, non una dichiarazione di feature già implementate.
 
 **Origine e stato tecnico sono assi distinti:** `Già discusso` indica una decisione emersa nella visione, non una feature sviluppata. `Proposta` indica una possibilità da valutare. Le schede documentano ciò che è già verificato, simulato o ancora assente. Gli esempi narrativi non diventano automaticamente lore definitiva.
 

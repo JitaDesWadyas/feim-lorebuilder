@@ -1,7 +1,7 @@
 /* FEIM Next project reference — publicly readable. Local personal notes never belong here. */
 window.FEIM_REFERENCE={
   "format": "feim-atlas-seed",
-  "revision": 20261013,
+  "revision": 20261014,
   "project": {
     "name": "FEIM Next · Atlante",
     "description": "Archivio di worldbuilding, sistemi e decisioni di FEIM Next. Le note e le nuove idee sono locali."
@@ -75,14 +75,14 @@ window.FEIM_REFERENCE={
     {
       "id": "crafting",
       "title": "Creazione fisica",
-      "subtitle": "Forgiare, progettare, combinare",
-      "summary": "Oggetti davvero costruiti e manipolati.",
+      "subtitle": "Materiali, strumenti e creazione libera",
+      "summary": "Poche regole leggere per lavorare e assemblare oggetti, senza trasformare l'MMORPG in un simulatore di artigianato.",
       "guide": {
-        "goal": "Oggetti davvero costruiti e manipolati.",
-        "method": "Leggere il quadro generale, confrontare le alternative e descrivere situazioni giocabili concrete.",
-        "avoid": "Non attribuire a FEIM Next caratteristiche di altri giochi o idee non approvate. Distinguere visione, prototipo e implementazione.",
+        "goal": "Descrivere i sistemi riutilizzabili e l'esperienza di creazione fisica senza perdere l'identità di MMORPG sociale, avventura e RPG.",
+        "method": "Distinguere regole generiche, gesti giocabili, costo computazionale e limiti del prototipo. Collegare ogni attività a esplorazione, professioni e scambi.",
+        "avoid": "Non introdurre una ricetta hardcoded per ogni attrezzo, un solver universale o una catena obbligatoria di micro-lavorazioni.",
         "questions": [],
-        "output": "Decisioni motivate e quesiti ancora aperti."
+        "output": "Una meccanica concreta, i dati minimi, i vincoli tecnici, il grado di libertà e un criterio di accettazione giocabile."
       }
     },
     {
@@ -156,21 +156,27 @@ window.FEIM_REFERENCE={
       "id": "feim-visione",
       "categoryId": "fondamenti",
       "title": "FEIM Next — visione fondamentale",
-      "summary": "Un mondo fantasy multiplayer persistente in prima persona. I giocatori non completano semplicemente contenuti: abitano un mondo, cambiano luoghi, costruiscono legami, inventano strumenti e partecipano a una storia collettiva che prosegue nel tempo.",
+      "summary": "FEIM Next è un MMORPG fantasy sociale, di avventura e di ruolo, persistente e in prima persona. Le persone esplorano, collaborano e costruiscono storie; i sistemi fisici e le professioni ampliano le possibilità del mondo ma non ne diventano il centro obbligatorio.",
       "sections": [
         {
           "heading": "I tre pilastri",
-          "body": "Fisicità: gli oggetti importanti si usano nel mondo, non soltanto da menu.\n\nSocialità: gli altri sono clienti, alleati, rivali, testimoni e collaboratori.\n\nPersistenza: scoperte, beni, relazioni e conseguenze sopravvivono alle singole sessioni."
+          "body": "Avventura RPG: esplorare, combattere, incontrare creature e cercare scoperte significative.\n\nSocialità: altri giocatori come alleati, clienti, rivali, compagni di spedizione e membri della comunità.\n\nPersistenza e fisicità selettiva: azioni e oggetti importanti hanno conseguenze nel mondo, senza simulare ogni dettaglio della realtà."
         },
         {
-          "heading": "Non è",
-          "body": "Non è soltanto un simulatore di forgiatura. Non è un survival con una lista infinita di ricette. Non è un MMO basato unicamente su livelli, grind o quest con indicatori."
+          "heading": "Non è un simulatore di fabbro",
+          "body": "La fucina è una professione facoltativa, non la condizione per accedere all'avventura. Un giocatore può trovare, comprare o commissionare equipaggiamento senza fondere minerali; un altro può dedicarsi all'artigianato avanzato. Il valore delle attività manuali emerge anche dagli scambi e dalle relazioni."
+        },
+        {
+          "heading": "Principio di produzione",
+          "body": "Preferire poche regole di base riutilizzabili a decine di sistemi specializzati. Non realizzare un motore fisico universale prima del loop MMO: ingresso nel mondo → persone/opportunità → avventura condivisa → ricompense/scoperte → ritorno nel mondo sociale."
         }
       ],
       "properties": {
         "Ambizione": "MMORPG fantasy sociale e sistemico",
         "Origine": "Evoluzione di FEIM → FEIM Next",
-        "Stato tecnico": "Vertical slice parziale"
+        "Stato tecnico": "Vertical slice parziale",
+        "Genere prioritario": "MMORPG sociale, avventura e RPG",
+        "Crafting": "Profondità facoltativa, mai collo di bottiglia obbligatorio"
       },
       "links": [
         "feim-bango",
@@ -178,7 +184,9 @@ window.FEIM_REFERENCE={
         "feim-daily",
         "feim-forgiatura",
         "feim-ricerca",
-        "feim-persistence"
+        "feim-persistence",
+        "feim-oggetti-generici",
+        "feim-crafting-accessibile"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -186,7 +194,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261014
     },
     {
       "id": "feim-radici",
@@ -748,25 +756,37 @@ window.FEIM_REFERENCE={
       "id": "feim-fisica",
       "categoryId": "crafting",
       "title": "Oggetti e mano fisica",
-      "summary": "Gli oggetti importanti si afferrano, spostano, ruotano, appoggiano e utilizzano tramite le mani. Le azioni avvengono nello spazio condiviso del mondo, con server autorevole per evitare appropriazioni e movimenti incoerenti.",
+      "summary": "La manipolazione fisica deve essere intuitiva, reattiva e leggera: presa, trasporto, rotazione e appoggio con assist minimo; mano e camera separabili per i lavori di precisione.",
       "sections": [
         {
-          "heading": "Esperienza",
-          "body": "Il contatto visibile deve corrispondere a ciò che il sistema considera preso, colpito o depositato. Piccoli assist alle superfici sono ammessi, senza calamite o teletrasporti evidenti."
+          "heading": "Esperienza e controlli",
+          "body": "Nel movimento normale lo sguardo è indipendente dall'oggetto, senza trascinare rigidamente il braccio con la camera. La modalità di precisione muove e orienta solo la mano o l'utensile mantenendo lo sguardo fermo; quando si raggiunge il limite del raggio di movimento, un trascinamento prolungato può spostare dolcemente anche la camera. I tasti esatti e i gesti touch restano da provare."
         },
         {
-          "heading": "Limite reale",
-          "body": "Collisioni approssimate e solver limitato alla bottega, non rigid body globale. Il feeling su GPU reale e Android resta da confermare."
+          "heading": "Presenza fisica, non magnetismo",
+          "body": "Oggetti che cadono e si appoggiano in modo credibile. Il vincolo di presa può avere un piccolo scorrimento/cedimento al limite anziché lasciare la mano incastrata o trascinare il corpo. Gli assist all'appoggio e all'inserimento sono leggeri, non teleportano oggetti e non persistono dopo il rilascio."
+        },
+        {
+          "heading": "Vincoli di prestazioni",
+          "body": "Niente corpo rigido globale con ogni particella. Usare collisioni semplici, vincoli a budget, dormienza per oggetti fermi e calcoli locali solo durante l'interazione. Pinze con carico e contatti ripetuti devono mantenere frame time stabile anche su Android; serve profiling reale, non solo test di logica."
+        },
+        {
+          "heading": "Stato da verificare",
+          "body": "Queste sono regole di design e requisiti di accettazione. La geometria, la presa e il solver nel prototipo sono parziali e devono essere verificati in GPU reale: non dichiarare già risolti bug osservati di lag, oggetti sospesi e mani incastrate."
         }
       ],
       "properties": {
         "Stato tecnico": "Core fisico implementato e testato in logica",
-        "Limite": "Non simulazione rigida universale"
+        "Limite": "Non simulazione rigida universale",
+        "Target controllo": "Modalità normale + precisione mano senza camera",
+        "Prestazioni": "Fisica a eventi, budget e sleep; verifica su PC e Android"
       },
       "links": [
         "feim-forgiatura",
         "feim-armi-libere",
-        "feim-architettura-utile"
+        "feim-architettura-utile",
+        "feim-controlli-precisione",
+        "feim-oggetti-generici"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -774,35 +794,45 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261014
     },
     {
       "id": "feim-forgiatura",
       "categoryId": "crafting",
       "title": "Forgiatura fisica — prima vertical slice",
-      "summary": "Il giocatore prende il metallo da uno scaffale, lo riscalda, lo afferra con le pinze, lo porta all'incudine, lo colpisce con il martello e lo raffredda nell'acqua.",
+      "summary": "La forgia è la prima prova concreta delle regole generiche: si scalda un grezzo, lo si manipola con le pinze, lo si martella sull'incudine e lo si tratta termicamente. È una delle professioni di FEIM Next, non il gameplay principale.",
       "sections": [
         {
-          "heading": "Proprietà",
-          "body": "Temperatura, allineamento, contatto, forza del colpo e deformazione locale incidono sul risultato. Il colpo richiede separazione effettiva prima di un altro impatto."
+          "heading": "Vertical slice fisica",
+          "body": "Scaffale → grezzo metallico → calore → pinze → incudine → colpi → acqua: ciclo di test. Colore/temperatura, contatto, forza e direzione cambiano la lavorabilità. Il martello deve puntare naturalmente verso la zona osservata, ma la mano deve potersi controllare senza muovere la camera."
         },
         {
-          "heading": "Stato verificato",
-          "body": "Sono stati completati cicli logici con server Go e Babylon NullEngine, test di persistenza e secondo giocatore. La convalida visiva completa, la risposta dei controlli e le prestazioni Android non sono certificate."
+          "heading": "Dimensioni e massa",
+          "body": "Il lingotto attuale non deve trasformarsi in una lama sproporzionata. Dimensioni e volume devono corrispondere alla massa iniziale; stirare una barra ne assottiglia altre sezioni, senza creare materiale dal nulla. Deformare poche sezioni è sufficiente per il primo sistema leggero."
         },
         {
-          "heading": "Non è",
-          "body": "Non è modellazione libera di qualsiasi lama, né metallurgia totalmente simulata. La lama attuale è un prodotto grezzo."
+          "heading": "Ciclo completo opzionale",
+          "body": "Un artigiano può ottenere il metallo dai minerali, preparare un grezzo con stampi quando il materiale lo consente, forgiare, sgrossare, trattare termicamente, affilare e assemblare. Il giocatore che vuole solo un'arma può partire da un grezzo acquistato o ricevere un manufatto pronto."
+        },
+        {
+          "heading": "Verifica e limite",
+          "body": "Test passati in logica non equivalgono a feeling convincente. Pinze, appoggio, stabilità del metallo e deformazione naturale richiedono prove visive e prestazionali. Fonderia, stampi e assemblaggio libero restano progettazione, non feature completate."
         }
       ],
       "properties": {
         "Stato tecnico": "Vertical slice verificata logicamente",
-        "Da validare": "Feeling reale PC/Android"
+        "Da validare": "Feeling reale PC/Android",
+        "Obiettivo immediato": "Loop divertente e stabile, non simulazione metallurgica universale"
       },
       "links": [
         "feim-fisica",
         "feim-armi-libere",
-        "feim-artigianato"
+        "feim-artigianato",
+        "feim-metallurgia",
+        "feim-affilatura",
+        "feim-assemblaggio",
+        "feim-controlli-precisione",
+        "feim-crafting-accessibile"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -810,34 +840,43 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261014
     },
     {
       "id": "feim-armi-libere",
       "categoryId": "crafting",
       "title": "Armi inventate dai fabbri",
-      "summary": "Nel gioco completo le armi devono derivare dalle scelte del fabbro: lunghezza, proporzioni, manico lungo la barra, combinazione di pezzi, distribuzione del peso e componenti speciali. Niente catalogo chiuso di sole ricette prefabbricate.",
+      "summary": "Armi e utensili sono combinazioni di materiali, geometria e connessioni: asce, picconi, lame o oggetti ibridi emergono dalle stesse regole, senza ricette o tipi specifici hardcoded per ogni oggetto.",
       "sections": [
         {
-          "heading": "Proprietà emergenti",
-          "body": "Portata, massa, inerzia, maneggevolezza, taglio, resistenza e comportamento della magia devono risultare dalla costruzione."
+          "heading": "La stessa base per oggetti diversi",
+          "body": "Una punta resistente concentra l'impatto; uno spigolo sottile può tagliare; una testa pesante trasferisce energia; un manico sposta impugnatura e baricentro. L'uso dipende da geometria, proprietà del bersaglio, impatto e connessioni, non da una condizione item.type === 'pickaxe'."
         },
         {
-          "heading": "Equilibrio",
-          "body": "Una lama più lunga non è automaticamente migliore: richiede spazio, pesa, fatica a riprendersi dopo un colpo. Nessuna statistica deve premiare inevitabilmente un'unica forma."
+          "heading": "Proprietà derivate",
+          "body": "Portata, massa, momento d'inerzia, bilanciamento, potenziale di taglio/perforazione, resistenza e usura derivano dal progetto. Il danno reale resta soggetto a regole di combattimento RPG leggibili e bilanciate, non a simulazione illimitata."
         },
         {
-          "heading": "Stato",
-          "body": "Sistema desiderato, non implementato nella sua libertà finale."
+          "heading": "Assemblaggio modulare",
+          "body": "Lama + manico + eventuale guardia, oppure testa appuntita + asta: i componenti sono gli stessi tipi fisici. Connessioni riconosciute, fissate e salvate trasformano più pezzi in un unico oggetto economico da gestire; si conservano origine e proprietà dei componenti."
+        },
+        {
+          "heading": "Limiti dichiarati",
+          "body": "Il gioco non riconosce automaticamente ogni macchina immaginabile. Taglio, perforazione e impatto si prestano a regole generiche; archi, ruote, corde, catene e meccanismi richiederanno famiglie di comportamento specializzate. La libertà completa non è oggi implementata."
         }
       ],
       "properties": {
-        "Stato tecnico": "Non implementato nella forma libera"
+        "Stato tecnico": "Non implementato nella forma libera",
+        "Principio": "Nessuna ricetta hardcoded per ascia/piccone/spada",
+        "Stato": "Visione confermata; proprietà e riconoscimento da prototipare"
       },
       "links": [
         "feim-forgiatura",
         "feim-combat",
-        "feim-magia-oggetti"
+        "feim-magia-oggetti",
+        "feim-oggetti-generici",
+        "feim-assemblaggio",
+        "feim-stampi"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -845,34 +884,44 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261014
     },
     {
       "id": "feim-artigianato",
       "categoryId": "professioni",
       "title": "Artigianato oltre la forgia",
-      "summary": "Falegnameria, riparazioni, cucina, costruzione e altri lavori sono famiglie promettenti, non una lista di professioni già approvate una per una.",
+      "summary": "Artigianato facoltativo e progressivo: metallurgia, falegnameria, finitura e montaggio riusano il sistema di materiali e componenti senza imporre decine di operazioni a ogni giocatore.",
       "sections": [
         {
-          "heading": "Il criterio",
-          "body": "Ogni mestiere deve prevedere gesti interessanti, decisioni, materiale con proprietà e clienti reali. Ripetere 20 passaggi identici per ogni oggetto è lavoro, non profondità."
+          "heading": "Un mestiere non è una lista di tasti",
+          "body": "Pochi gesti chiari (prendere, posizionare, tagliare, colpire, unire, rifinire). La qualità dipende da scelte significative, non da cinquanta passaggi identici. Le interazioni fisiche avanzate sono una profondità per appassionati, non un percorso obbligatorio."
         },
         {
-          "heading": "Connessioni",
-          "body": "Una porta può proteggere un magazzino; un carretto può trasportare merce; una riparazione può avere una durata e qualità specifiche."
+          "heading": "Filiera opzionale",
+          "body": "Minerale → metallo → grezzo → forgia → affilatura → assemblaggio; il singolo giocatore può intervenire a qualunque fase, comprare componenti o commissionare il risultato. L'economia collega minatori, fonditori, falegnami, fabbri, mercanti e avventurieri."
         },
         {
-          "heading": "Da definire",
-          "body": "Livello di simulazione, limiti del crafting libero, tempi e bisogni."
+          "heading": "Riutilizzo sistemico",
+          "body": "La stessa logica di materiale, forma e collegamenti potrà servire ad attrezzi, oggetti di bottega, arredi e semplici meccanismi. Ogni nuova famiglia più complessa va giustificata da gameplay e costo computazionale."
+        },
+        {
+          "heading": "Questioni ancora da validare",
+          "body": "Rendimento degli attrezzi, durabilità, tempo per oggetto, fabbricazione di stampi, autenticità dei processi e bilanciamento economico. Separare esplicitamente i vincoli confermati dalle proposte di implementazione."
         }
       ],
       "properties": {
-        "Stato": "Proposte per gioco completo"
+        "Stato": "Proposte per gioco completo",
+        "Priorità di prodotto": "Subordinata ad avventura, socialità e combattimento RPG"
       },
       "links": [
         "feim-professioni",
         "feim-architettura-utile",
-        "feim-economia"
+        "feim-economia",
+        "feim-crafting-accessibile",
+        "feim-metallurgia",
+        "feim-stampi",
+        "feim-affilatura",
+        "feim-assemblaggio"
       ],
       "origin": "proposta",
       "status": "in_discussione",
@@ -880,7 +929,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261014
     },
     {
       "id": "feim-professioni",
@@ -889,12 +938,16 @@ window.FEIM_REFERENCE={
       "summary": "Il mondo deve supportare attività manuali, avventurose, commerciali, sociali, creative e di ricerca, con passaggi fluidi fra ruoli.",
       "sections": [
         {
-          "heading": "Esempi esemplificativi",
-          "body": "Fabbro, mercante, sentinella, esploratore, oste, trasportatore, archivista, ricercatore di magie. I nomi sono ruoli sociali, non classi con un albero di skill già approvato."
+          "heading": "Ruoli non obbligatori",
+          "body": "Il mondo offre mestieri manuali, avventurosi, commerciali, sociali e di ricerca. Fabbro, mercante, sentinella, esploratore, oste e ricercatore sono identità che emergono dalle attività, non classi obbligatorie."
         },
         {
-          "heading": "Il criterio",
-          "body": "Cosa fai con le mani? Cosa scegli? Chi ha bisogno del risultato? Cosa cambia la centesima volta?"
+          "heading": "L'incontro è la ricompensa",
+          "body": "Un esploratore trova un materiale e lo vende; un fabbro prova a lavorarlo; un mercante porta l'oggetto a un'altra comunità. Professioni profonde devono alimentare storie condivise, senza impedire agli avventurieri di giocare."
+        },
+        {
+          "heading": "Tre livelli d'accesso",
+          "body": "Uso immediato: equipaggiamento trovato, acquistato o commissionato. Artigianato semplice: pochi gesti per un manufatto funzionale. Artigianato esperto: controllo su materiali, geometria e finitura. Sono livelli di esperienza desiderati, non durate o UI già implementate."
         }
       ],
       "properties": {
@@ -903,7 +956,9 @@ window.FEIM_REFERENCE={
       "links": [
         "feim-daily",
         "feim-artigianato",
-        "feim-diario"
+        "feim-diario",
+        "feim-crafting-accessibile",
+        "feim-oggetti-generici"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -911,7 +966,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261014
     },
     {
       "id": "feim-economia",
@@ -1376,15 +1431,19 @@ window.FEIM_REFERENCE={
       "sections": [
         {
           "heading": "Prova del valore",
-          "body": "Un piccolo ciclo cooperativo che unisce fisicità, utilità, interazione sociale e conseguenza durevole vale più di un mondo vasto con attività scollegate."
+          "body": "Il loop prioritario è entrare → incontrare giocatori e opportunità → esplorare/combattere/collaborare → ottenere scoperte e ricompense → ritornare alla comunità. Un piccolo ciclo cooperativo stabile conta più di un simulatore di crafting esteso."
         },
         {
-          "heading": "Differenza",
-          "body": "Prima versione: dimostrare che qualcuno torna per ripetere il loop con amici. Gioco completo: professioni, regioni, economia, magie, combattimento e stagioni profonde."
+          "heading": "Il crafting minimo",
+          "body": "Prima rendere stabili manipolazione, presa, gravità, martello e grezzo di dimensioni coerenti; dimostrare una connessione e un'interazione riutilizzabile. Non subordinare l'Early Access a fonderia avanzata, stampi costruibili, tutti i materiali o fisica universale."
         },
         {
-          "heading": "Rischio",
-          "body": "Non presentare una demo tecnica come se implementasse già tutte le promesse commerciali."
+          "heading": "Differenza tra versioni",
+          "body": "Prima esperienza: attività condivise utili e coerenti, crafting di prova opzionale. Visione a lungo termine: professioni, regioni, leghe, meccanismi, armi modulari, economia e stagioni. Nessuna proposta tecnica è una feature già consegnata."
+        },
+        {
+          "heading": "Rischio da evitare",
+          "body": "Non promettere un MMORPG completo quando esiste solo una vertical slice, e non fare del loop di forgiatura la principale identità pubblica del progetto."
         }
       ],
       "properties": {
@@ -1393,7 +1452,10 @@ window.FEIM_REFERENCE={
       },
       "links": [
         "feim-stato-tecnico",
-        "feim-daily"
+        "feim-daily",
+        "feim-oggetti-generici",
+        "feim-crafting-accessibile",
+        "feim-controlli-precisione"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1401,7 +1463,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261014
     },
     {
       "id": "feim-identita-visiva",
@@ -1479,15 +1541,15 @@ window.FEIM_REFERENCE={
         },
         {
           "heading": "Sistemi",
-          "body": "Elementi magici, formule, varietà effettiva del crafting, danni e parate, PvP, proprietà, economie locali, protezione notturna, apprendimento Bango."
+          "body": "Elementi magici, formule, PvP, proprietà, economia, apprendimento Bango e calibrazione del combattimento. Nel crafting restano da decidere set minimo di materiali, precisione geometrica, qualità del fissaggio, recupero scarti e limiti di stampa/colata."
         },
         {
           "heading": "Prodotto",
-          "body": "Loop minimo cooperativo, onboarding senza tutorial pesanti, progresso non grind, costi operativi, contenuti stagionali ed equilibrio con pochi giocatori."
+          "body": "Loop minimo cooperativo, onboarding, progressione senza grind, costi operativi e bilanciamento con pochi giocatori. La profondità di una professione non deve impedire a nessuno di fare avventura."
         },
         {
           "heading": "Criterio",
-          "body": "Una proposta nuova resta proposta finché non viene esplicitamente approvata. Lo stato di progettazione non equivale mai allo stato di sviluppo."
+          "body": "Non spacciare una proposta d'architettura per tecnica già sviluppata. Le regole condivise sono un obiettivo di design; misure di FPS, latenza, correttezza fisica ed economia richiedono prototipi e test."
         }
       ],
       "properties": {
@@ -1498,7 +1560,10 @@ window.FEIM_REFERENCE={
         "feim-magia",
         "feim-combat",
         "feim-territori",
-        "feim-early-access"
+        "feim-early-access",
+        "feim-oggetti-generici",
+        "feim-metallurgia",
+        "feim-stampi"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1506,7 +1571,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261014
     },
     {
       "id": "feim-decisioni-superate",
@@ -1521,6 +1586,14 @@ window.FEIM_REFERENCE={
         {
           "heading": "Direzioni approvate",
           "body": "Mondo persistente, socialità, fisicità utilizzabile, grandi stagioni condivise, minaccia comune, evocazione dei giocatori, artigianato inventivo, conoscenza da scoprire nel mondo, comunicazioni integrate e libertà di mestieri."
+        },
+        {
+          "heading": "Decisioni confermate il 14 ottobre 2026",
+          "body": "FEIM Next rimane un MMORPG sociale, di avventura e di ruolo: la forgia non può occupare il centro obbligatorio del prodotto.\n\nIl crafting deve poggiare su un nucleo leggero di materiali, geometria, connessioni, trasformazioni e interazioni, evitando tipi di arma e ricette hardcoded uno per uno.\n\nProduzione del metallo, stampi costruibili, mola, manici e fissaggi sono direzioni di design del ciclo artigianale. Vanno sviluppate modularmente e solo dove aggiungono gameplay."
+        },
+        {
+          "heading": "Aperto / non implementato",
+          "body": "Le leghe concrete, i metodi di modellazione delle cavità, la rottura dei giunti, i bind precisi della mano, i dettagli di usura e il livello di simulazione ambientale devono essere ancora testati o deliberati."
         },
         {
           "heading": "Idee da riconfermare",
@@ -1541,7 +1614,10 @@ window.FEIM_REFERENCE={
         "feim-buraka",
         "feim-forgiatura",
         "feim-combat",
-        "feim-questioni"
+        "feim-questioni",
+        "feim-oggetti-generici",
+        "feim-crafting-accessibile",
+        "feim-assemblaggio"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -1549,7 +1625,344 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261014
+    },
+    {
+      "id": "feim-oggetti-generici",
+      "categoryId": "crafting",
+      "title": "Motore di oggetti — cinque regole leggere",
+      "summary": "Architettura di design per costruire e usare oggetti senza codice specifico per ogni arma: materiali, geometria, connessioni, trasformazioni e interazioni. Comportamento complesso ottenuto da poche regole; niente fisica universale.",
+      "sections": [
+        {
+          "heading": "1 · Materiali",
+          "body": "Ogni materiale con pochi dati significativi: densità, durezza, tenacità, risposta al calore, usura e proprietà speciali. Tabelle o dati versionati, non logiche replicate in ogni oggetto."
+        },
+        {
+          "heading": "2 · Geometria",
+          "body": "Forma rappresentata inizialmente con sezioni parametriche o altre strutture compatte: dimensioni, volume, punte, spigoli e zone di contatto. Conservazione approssimata del volume durante la deformazione; nessuna crescita gratuita del lingotto. Mesh dettagliata solo dove utile."
+        },
+        {
+          "heading": "3 · Connessioni",
+          "body": "Unione rigida, scorrevole o articolata tra componenti, con compatibilità geometrica, resistenza e condizioni di fissaggio. Assemblaggio fisico assistito ma non magnetico. Dopo il montaggio, i gruppi rigidi diventano un solo corpo simulato."
+        },
+        {
+          "heading": "4 · Trasformazioni",
+          "body": "Operazioni riutilizzabili: deformare, tagliare, consumare, rifinire, fondere/solidificare e riscaldare/raffreddare. Si applicano agli oggetti interessati da eventi reali, non in polling permanente."
+        },
+        {
+          "heading": "5 · Interazioni",
+          "body": "Presa, appoggio, urto, taglio e perforazione usano stato e proprietà dell'oggetto e del bersaglio. Evitare switch per nomi di arma (ascia, piccone, spada); famiglie come corde, ingranaggi, archi o magia possono avere logiche dedicate."
+        },
+        {
+          "heading": "Tre stati di simulazione",
+          "body": "IN LAVORAZIONE: parametri geometrici e calore aggiornati per evento; IN USO: rigid body e collisioni semplificate, proprietà già derivate; A RIPOSO: oggetto dormiente, inventario o rappresentazione statica. Attivare solo il necessario vicino alle interazioni."
+        },
+        {
+          "heading": "Multiplayer leggero",
+          "body": "Client responsivo e predizione visiva; server autorevole valida prese, modifiche significative e proprietà. Trasmettere operazioni e snapshot compatti invece dei vertici di mesh a ogni frame. Profilare CPU, memoria, frame time e traffico, con particolare attenzione ad Android."
+        },
+        {
+          "heading": "Perimetro iniziale",
+          "body": "Obiettivo iniziale: pochi materiali, deformazione economica, connessioni rigide e impatti/contatti generici. Non progettare una simulazione in tempo reale di voxel, fluidi, metallurgia microscopica, tessuti o catene globali."
+        }
+      ],
+      "properties": {
+        "Principio architetturale": "Programmare proprietà e interazioni, non una ricetta per oggetto",
+        "Prestazioni": "Evento + dormienza + collider semplici + snapshot compatti",
+        "Stato": "Design approvato, implementazione generale da costruire"
+      },
+      "links": [
+        "feim-fisica",
+        "feim-forgiatura",
+        "feim-armi-libere",
+        "feim-controlli-precisione",
+        "feim-crafting-accessibile"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": true,
+      "__seedRevision": 20261014
+    },
+    {
+      "id": "feim-metallurgia",
+      "categoryId": "crafting",
+      "title": "Dal minerale al grezzo: forni e colate",
+      "summary": "La materia prima può arrivare da minerali, metalli acquistati o riciclo. Distinguere riduzione del ferro, fusione di metalli colabili e forgia: percorsi realistici ma semplificati, mai obbligatori.",
+      "sections": [
+        {
+          "heading": "Tre impianti, tre ruoli",
+          "body": "Forno di riduzione: estrae il ferro dal minerale e produce una massa grezza da consolidare. Fonderia/crogiolo: fonde materiali adatti alla colata, permette miscele e versa il liquido in stampi. Forgia: riscalda e rende lavorabile un pezzo solido sull'incudine."
+        },
+        {
+          "heading": "Non tutto il ferro si cola",
+          "body": "Nella siderurgia storica da bloomery il ferro non esce ordinariamente come liquido da versare in uno stampo. Per rame, stagno e bronzo il percorso per colata è plausibile. Tecnologie per colare ghisa o acciai possono essere introdotte separatamente, con regole coerenti."
+        },
+        {
+          "heading": "Interazione proposta",
+          "body": "Una leva inclina un crogiolo o un dispositivo di colata; sotto si posiziona uno stampo. Quantità, portata, temperatura, geometria della cavità e materiale determinano riempimento e forma. Colata troppo scarsa: pezzo incompleto; eccessiva: trabocco e scarto recuperabile."
+        },
+        {
+          "heading": "Miscele e materiali",
+          "body": "Più materie prime possono produrre leghe soltanto se le regole dei materiali lo consentono. Mescolare a caso non garantisce qualità migliore. Impurità, proporzioni, temperatura e fasi di lavoro influenzano il risultato con modelli semplificati."
+        },
+        {
+          "heading": "Economia, non obbligo",
+          "body": "Il giocatore può comprare lingotti e grezzi, raccogliere scarti o commissionare a chi lavora in fonderia. La filiera completa è una profondità facoltativa per chi ama produrre."
+        },
+        {
+          "heading": "Stato e limiti",
+          "body": "Impianti, fluidi e ricette delle leghe descritti qui sono design, non implementazione verificata. Per il prototipo si può simulare il livello di riempimento e generare il solido a fine colata, senza fluidodinamica particellare."
+        }
+      ],
+      "properties": {
+        "Ruolo": "Materia prima, leghe e grezzi",
+        "Tecnica iniziale": "Volume/riempimento semplificati; nessun fluido globale",
+        "Stato": "Progettazione"
+      },
+      "links": [
+        "feim-stampi",
+        "feim-forgiatura",
+        "feim-oggetti-generici",
+        "feim-artigianato"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "media",
+      "favorite": false,
+      "__seedRevision": 20261014
+    },
+    {
+      "id": "feim-stampi",
+      "categoryId": "crafting",
+      "title": "Stampi costruibili e forme ripetibili",
+      "summary": "Gli stampi possono essere manufatti dei giocatori: cavità ricavate da un modello, intaglio o materiale lavorabile. La colata riproduce il volume disponibile, non una lista chiusa di sagome preimpostate.",
+      "sections": [
+        {
+          "heading": "Costruzione",
+          "body": "Il giocatore lavora una massa adatta (es. sabbia da fonderia, argilla o stampo durevole in base al processo), oppure usa un oggetto modello per creare la cavità. Gli stampi possono essere monoparte o composti da metà combacianti."
+        },
+        {
+          "heading": "Colata e sformatura",
+          "body": "Un canale di ingresso porta materiale nella cavità. Deve esserci volume sufficiente e una via praticabile per estrarre o rompere lo stampo; sottosquadri e dettagli difficili hanno limiti o costi. Non creare automaticamente forme impossibili."
+        },
+        {
+          "heading": "Libertà senza costo esplosivo",
+          "body": "Lo stampo si salva come rappresentazione compatta della cavità e genera una geometria di grezzo al momento della colata. La simulazione del metallo liquido può essere una logica di riempimento, non milioni di particelle."
+        },
+        {
+          "heading": "Relazione con la forgia",
+          "body": "Lo stampo offre una preforma; incudine e mola servono per la lavorazione e la rifinitura. Stampi, grezzi e modelli possono essere commerciati e copiati secondo le regole del mondo."
+        },
+        {
+          "heading": "Stato",
+          "body": "Libertà di progettare stampi approvata come direzione; modello di geometria, limiti di fabbricazione, interfaccia e costi prestazionali ancora da prototipare."
+        }
+      ],
+      "properties": {
+        "Oggetto chiave": "Cavità geometrica, non ID di stampo fisso",
+        "Stato": "Visione confermata; dettaglio tecnico aperto"
+      },
+      "links": [
+        "feim-metallurgia",
+        "feim-forgiatura",
+        "feim-oggetti-generici"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "media",
+      "favorite": false,
+      "__seedRevision": 20261014
+    },
+    {
+      "id": "feim-affilatura",
+      "categoryId": "crafting",
+      "title": "Mola, finitura e trattamenti termici",
+      "summary": "Una lama non nasce affilata perché ha un nome: mola e utensili di finitura modificano il filo e asportano materiale. Tempra e rinvenimento dipendono dalla metallurgia effettiva del pezzo.",
+      "sections": [
+        {
+          "heading": "Mola fisica",
+          "body": "Il giocatore appoggia la lama sulla mola e la fa scorrere. Zona di contatto, angolo, pressione e durata determinano la rimozione del materiale e la geometria del filo; la lavorazione deve essere visibile e non una barra 0–100."
+        },
+        {
+          "heading": "Filo e prestazioni",
+          "body": "Spessore del bordo, continuità, angolo e durezza contribuiscono a taglio e mantenimento del filo. Una rifinitura mal eseguita può consumare o danneggiare il pezzo."
+        },
+        {
+          "heading": "Ordine ragionevole",
+          "body": "Per una lama d'acciaio: forgiatura, sgrossatura, trattamenti termici appropriati (inclusi tempra e rinvenimento quando applicabili), rifinitura e affilatura. Materiali diversi seguono procedimenti diversi; non applicare la stessa tempra a qualsiasi lega."
+        },
+        {
+          "heading": "Implementazione leggera",
+          "body": "Asportazione di materiale su sezioni locali, senza particelle permanenti e senza ricalcolare mesh ad alta definizione a ogni frame. La mola aggiorna il pezzo per evento o intervalli limitati."
+        },
+        {
+          "heading": "Stato",
+          "body": "Mola e affilatura fisica sono obiettivo; i processi termici completi e la loro fedeltà non sono dichiarati già realizzati."
+        }
+      ],
+      "properties": {
+        "Meccanica": "Geometria del filo, non bonus arbitrario di danno",
+        "Stato": "Progettazione"
+      },
+      "links": [
+        "feim-forgiatura",
+        "feim-armi-libere",
+        "feim-oggetti-generici"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "media",
+      "favorite": false,
+      "__seedRevision": 20261014
+    },
+    {
+      "id": "feim-assemblaggio",
+      "categoryId": "crafting",
+      "title": "Manici, codoli, rivetti e incastri",
+      "summary": "Le armi non si assemblano con un pulsante magico: si costruisce il manico, si allineano componenti compatibili e si usa un fissaggio comprensibile. Dopo il montaggio il sistema resta economico.",
+      "sections": [
+        {
+          "heading": "Falegnameria essenziale",
+          "body": "Un grezzo di legno viene tagliato e sagomato, con una sezione compatibile con la presa. Può avere foro o scanalatura per codolo, oppure essere diviso in due guancette. Un rivestimento di cuoio o corda resta facoltativo."
+        },
+        {
+          "heading": "Codolo passante",
+          "body": "Forgiare una lama con codolo; infilare la guardia; far scorrere il manico; posizionare il pomolo; ribattere l'estremità del codolo. Il fissaggio richiede geometrie compatibili e una lavorazione effettiva, non incollaggio istantaneo."
+        },
+        {
+          "heading": "Guancette e rivetti",
+          "body": "Per alcuni coltelli e attrezzi, due metà di manico affiancano un codolo piatto; fori e perni vengono allineati e i rivetti ribattuti. Corde, perni, manicotti e colle possono esistere come famiglie di fissaggio con proprietà diverse."
+        },
+        {
+          "heading": "Assistente fisico discreto",
+          "body": "Una lieve guida interviene soltanto quando fori e superfici sono quasi allineati. Niente magnetismo persistente e niente saldatura automatica al contatto. Il collegamento strutturale nasce quando la lavorazione prevista lo chiude."
+        },
+        {
+          "heading": "Da pezzi separati a un oggetto",
+          "body": "Durante il montaggio i componenti sono oggetti individuali; a fissaggio completato diventano un unico corpo rigido con massa e inerzia aggregate. Conservare componenti, materiali e resistenza del giunto per manutenzione e possibili cedimenti."
+        },
+        {
+          "heading": "Limiti",
+          "body": "Il fissaggio non è attualmente confermato come funzionante nel prototipo. La possibilità di rottura, riparazione o usura permanente deve essere bilanciata e confermata a parte."
+        }
+      ],
+      "properties": {
+        "Regola": "Compatibilità + inserimento + fissaggio esplicito",
+        "Prestazioni": "Collasso a corpo rigido assemblato",
+        "Stato": "Design da implementare"
+      },
+      "links": [
+        "feim-armi-libere",
+        "feim-oggetti-generici",
+        "feim-controlli-precisione",
+        "feim-artigianato"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "media",
+      "favorite": false,
+      "__seedRevision": 20261014
+    },
+    {
+      "id": "feim-controlli-precisione",
+      "categoryId": "crafting",
+      "title": "Controlli: mano indipendente dalla camera",
+      "summary": "Una modalità di precisione separa lo sguardo dalla mano: utile a martellare, ruotare utensili, usare pinze e inserire manici senza dover spostare tutta la visuale.",
+      "sections": [
+        {
+          "heading": "Principio",
+          "body": "Movimento normale: camera libera e mano con follow naturale. Precisione: mouse o gesture spostano e orientano l'obiettivo della mano/utensile, mentre lo sguardo resta fermo. Nessuna posizione di default del martello troppo verticale verso il giocatore."
+        },
+        {
+          "heading": "Scorrimento al bordo",
+          "body": "Avvicinandosi al limite del raggio di movimento, la mano deve cedere/scorrere anziché incastrarsi; soltanto un trascinamento più ampio attiva una rotazione progressiva della telecamera. Introdurre zona morta e transizione dolce."
+        },
+        {
+          "heading": "Input da esplorare",
+          "body": "Su PC: tasto momentaneo di precisione, trascinamento per muovere la mano, gesto secondario per ruotare e rotellina per profondità. Su smartphone: area touch mano e gesture per orientamento con camera separata. Bind definitivi da testare e rendere configurabili."
+        },
+        {
+          "heading": "Accettazione",
+          "body": "Colpire un punto scelto sull'incudine ripetutamente senza spostare lo sguardo; infilare un manico sul codolo senza jitter o teletrasporti; pinze senza crolli di FPS; uscire dalla presa senza bloccare le mani."
+        },
+        {
+          "heading": "Stato",
+          "body": "Decisione di esperienza; nessuna affermazione che i controlli siano già implementati o validati in PC e Android."
+        }
+      ],
+      "properties": {
+        "Modalità": "Camera normale / precisione mano",
+        "Stato": "Da sviluppare e provare su PC/Android"
+      },
+      "links": [
+        "feim-fisica",
+        "feim-forgiatura",
+        "feim-assemblaggio"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261014
+    },
+    {
+      "id": "feim-crafting-accessibile",
+      "categoryId": "fondamenti",
+      "title": "Il crafting serve il mondo, non viceversa",
+      "summary": "Un MMO sociale d'avventura deve essere divertente anche senza toccare una forgia. La profondità artigianale è opzionale, si integra con scambi fra giocatori e non blocca combattimento o scoperta.",
+      "sections": [
+        {
+          "heading": "Il giocatore avventuriero",
+          "body": "Può comprare, trovare o commissionare un'arma, entrare in un gruppo, partire e tornare con risorse e storie. Non deve imparare siderurgia per giocare."
+        },
+        {
+          "heading": "Il giocatore sociale",
+          "body": "Trova persone, entra in comunità, organizza scambi, vive negli insediamenti. La complessità di mestiere è un'opportunità d'incontro, non una porta obbligata."
+        },
+        {
+          "heading": "Il giocatore artigiano",
+          "body": "Può svolgere pochi gesti per produrre un oggetto semplice o approfondire materiali, proporzioni, forma, finitura e giunzioni. La seconda scelta premia interesse e padronanza, non è l'unico modo per ottenere equipaggiamento valido."
+        },
+        {
+          "heading": "Tre livelli di accesso",
+          "body": "Immediato: acquistare/trovare/commissionare. Semplice: pochi passaggi fisici leggibili per un risultato utilizzabile. Esperto: lavorazioni più fini e controllo approfondito. Profondità senza ripetizione forzata."
+        },
+        {
+          "heading": "Ordine delle priorità",
+          "body": "Prima mondo, esplorazione, socialità, combattimento e un loop cooperativo. Il crafting generico va costruito un modulo per volta e riutilizzato: non inseguire un simulatore universale prima dell'Early Access."
+        }
+      ],
+      "properties": {
+        "Priorità": "Identità MMORPG sociale, avventura, RPG",
+        "Regola": "Crafting opzionale con profondità progressiva"
+      },
+      "links": [
+        "feim-visione",
+        "feim-daily",
+        "feim-professioni",
+        "feim-economia",
+        "feim-oggetti-generici"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261014
     }
   ]
 };

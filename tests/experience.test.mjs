@@ -17,7 +17,7 @@ function catalog(){
 test('reference has a complete coherent FEIM Next information architecture',()=>{
  const data=catalog();
  assert.equal(data.format,'feim-atlas-seed');
- assert.ok(data.entries.length>=35);
+ assert.ok(data.entries.length>=74);
  assert.equal(data.categories.length,11);
  const ids=new Set(data.entries.map(e=>e.id));
  assert.equal(ids.size,data.entries.length,'article ids must be unique');
@@ -30,6 +30,8 @@ test('reference has a complete coherent FEIM Next information architecture',()=>
    for(const link of e.links||[])assert.ok(ids.has(link),e.title+' has broken link '+link);
  }
  assert.ok(ids.has('feim-visione')&&ids.has('feim-bango')&&ids.has('feim-stagioni')&&ids.has('feim-ricerca')&&ids.has('feim-stato-tecnico'));
+ for (const id of ['feim-forgia-percorso','feim-focolare-carbone','feim-camera-riduzione','feim-materiali-fantastici','feim-cartellino-oggetto','feim-bango-domande','feim-bango-bibita','feim-magia-gesti','feim-bango-minatori','feim-trasporti','feim-animali-fantastici','feim-criminalita','feim-stato-forgia-20261016']) assert.ok(ids.has(id),id+' is missing');
+ assert.ok(data.revision>=20261016);
 });
 test('notes and technical implementation are not mistaken for finalized lore',()=>{
  const data=catalog();
@@ -39,13 +41,17 @@ test('notes and technical implementation are not mistaken for finalized lore',()
  assert.equal(pages.get('feim-artigianato').origin,'proposta');
  assert.match(pages.get('feim-stagioni').properties['Stato tecnico'],/Non implementato/);
  assert.equal(pages.get('feim-magie-inventate')?.origin,undefined);
+ assert.equal(pages.get('feim-bango-bibita').origin,'proposta');
+ assert.equal(pages.get('feim-magia-gesti').origin,'proposta');
+ assert.match(pages.get('feim-cartellino-oggetto').summary,/attaccato/i);
+ assert.match(JSON.stringify(pages.get('feim-stato-forgia-20261016')),/playtest/i);
 });
 test('PWA loads the reference before the reader and caches the complete offline shell',()=>{
  const scripts=[...page.matchAll(/<script defer src="([^"]+)"/g)].map(x=>x[1]);
  assert.deepEqual(scripts,['./reference.js','./app.js','./experience.js']);
  assert.match(page,/experience\.css/);
  for(const f of ['reference.js','experience.js','experience.css'])assert.ok(sw.includes("'./"+f+"'"),f+' missing offline cache');
- assert.match(sw,/shell-v3/);
+ assert.match(sw,/shell-v4/);
  assert.doesNotMatch(experience,/fetch\(['"]https?:/);
 });
 test('reader syntax is valid and reference merges without erasing notebook entries',async()=>{

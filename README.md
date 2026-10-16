@@ -4,9 +4,15 @@ Enciclopedia mobile-first per consultare la visione di **FEIM Next**, sviluppare
 
 ## Come è organizzata
 
-La pagina **Inizio** propone sei letture essenziali e una panoramica sintetica. **Atlante** raccoglie 11 capitoli e 49 voci di world design, con collegamenti, proprietà, approfondimenti e ricerca. **Idee** consente di catturare appunti in un solo campo o svilupparli in una scheda facoltativa con domanda, alternative e conseguenze. **Esporta** produce un pacchetto Markdown per ChatGPT e un backup JSON ripristinabile.
+La pagina **Inizio** propone sei letture essenziali e una panoramica sintetica. **Atlante** raccoglie 11 capitoli e 74 voci di world design, con collegamenti, proprietà, approfondimenti e ricerca. **Idee** consente di catturare appunti in un solo campo o svilupparli in una scheda facoltativa con domanda, alternative e conseguenze. **Esporta** produce un pacchetto Markdown per ChatGPT e un backup JSON ripristinabile.
 
 L'archivio comprende la premessa degli evocati e dei Bango, Bura'Ka, la minaccia comune, le stagioni, i raid, la magia elementale, la ricerca senza ricette ufficiali, le armi fisiche, le professioni, il commercio di conoscenze, la comunicazione tramite piccioni e il gameplay sociale persistente. Include anche lo stato tecnico effettivo del prototipo.
+
+### Aggiornamento 16 ottobre 2026
+
+Il progetto ora documenta 74 voci: ferro e riduzione allo stato solido, accensione e propagazione del calore nel carbone, camera di caricamento accessibile, colata semplificata, materiali fantastici e prestazioni MMO; oltre a scontrini attaccati agli oggetti e copiati nel diario, inventario da progettare, rune, gesti magici, Bango lavoratori con bisogni e conoscenze, acqua frizzante al limone (proposta), fauna originale, logistica, lingua inglese, traduzione futura, chat vocale e conseguenze sociali del combattimento.
+
+Il branch **`feim-next/feat/playable-forge-rebuild`** contiene codice consistente, ma **il playtest Android del 16 ottobre non ha completato un ciclo di crafting**. La wiki separa l'implementato, i test automatici, i problemi verificati manualmente e le proposte ancora aperte. I nomi dei materiali citati sono provvisori. Nessun contenuto locale o spoiler narrativo privato è pubblicato.
 
 ### Creazione fisica senza simulatore universale
 
@@ -15,6 +21,10 @@ Le nuove schede fissano il principio architetturale: **cinque sistemi riutilizza
 **Gerarchia di prodotto:** FEIM Next resta prima di tutto un MMORPG sociale, di avventura e RPG. La lavorazione artigianale è facoltativa, con accesso rapido tramite oggetti comprati, trovati o commissionati, e maggiore profondità per chi vuole specializzarsi. Queste voci sono decisioni di design e proposte tecniche, non una dichiarazione di feature già implementate.
 
 **Origine e stato tecnico sono assi distinti:** `Già discusso` indica una decisione emersa nella visione, non una feature sviluppata. `Proposta` indica una possibilità da valutare. Le schede documentano ciò che è già verificato, simulato o ancora assente. Gli esempi narrativi non diventano automaticamente lore definitiva.
+
+## Come leggere le fonti
+
+Le revisioni versionate confrontano conversazioni, `feim-next` (branch, codice, documenti) e playtest reali. `Già discusso` non vuol dire `implementato`; `Proposta` non vuol dire `canon`. Sono mantenuti gli ID di articolo e le note locali dell'utente. Il repository resta pubblico: non riversare segreti narrativi o appunti privati in `reference.js`.
 
 ## Flusso da telefono a ChatGPT
 

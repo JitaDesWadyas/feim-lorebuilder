@@ -1,10 +1,10 @@
 /* FEIM Next project reference — publicly readable. Local personal notes never belong here. */
 window.FEIM_REFERENCE={
   "format": "feim-atlas-seed",
-  "revision": 20261014,
+  "revision": 20261016,
   "project": {
     "name": "FEIM Next · Atlante",
-    "description": "Archivio di worldbuilding, sistemi e decisioni di FEIM Next. Le note e le nuove idee sono locali."
+    "description": "Enciclopedia pubblica aggiornata al 16 ottobre 2026: mondo, forgia, Bango, materiali fantastici, magia, oggetti, società e stato tecnico verificato. Note personali locali."
   },
   "categories": [
     {
@@ -169,6 +169,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Principio di produzione",
           "body": "Preferire poche regole di base riutilizzabili a decine di sistemi specializzati. Non realizzare un motore fisico universale prima del loop MMO: ingresso nel mondo → persone/opportunità → avventura condivisa → ricompense/scoperte → ritorno nel mondo sociale."
+        },
+        {
+          "heading": "Ampliamento del mondo vissuto",
+          "body": "Bango con lavoro e bisogni, filiere fra miniere e botteghe, cartellini associati agli oggetti, magia nella materia e gesti, fauna e trasporti originali: sistemi interconnessi, non una catena obbligatoria di quest."
         }
       ],
       "properties": {
@@ -186,7 +190,11 @@ window.FEIM_REFERENCE={
         "feim-ricerca",
         "feim-persistence",
         "feim-oggetti-generici",
-        "feim-crafting-accessibile"
+        "feim-crafting-accessibile",
+        "feim-cartellino-oggetto",
+        "feim-magia-gesti",
+        "feim-trasporti",
+        "feim-bango-lavoro"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -194,7 +202,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261014
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-radici",
@@ -316,6 +324,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Questione aperta",
           "body": "Distinguere visivamente gli evocati dai Bango: i modelli attuali condividono in parte la loro morfologia e la soluzione lore definitiva non è documentata."
+        },
+        {
+          "heading": "Abitudini e conoscenze",
+          "body": "Conoscenze situate nei mestieri, risposte a un oggetto mostrato in mano, lavoro commissionato con limiti e pause. L'amore per acqua frizzante al limone è un'idea culturale, non canon obbligatorio."
         }
       ],
       "properties": {
@@ -325,7 +337,10 @@ window.FEIM_REFERENCE={
       "links": [
         "feim-evocati",
         "feim-personaggi-base",
-        "feim-deleghe-npc"
+        "feim-deleghe-npc",
+        "feim-bango-domande",
+        "feim-bango-lavoro",
+        "feim-bango-bibita"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -333,7 +348,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-evocati",
@@ -503,6 +518,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Cosa esiste",
           "body": "Collisori e postazioni condividono dati con la scena; l'uso reale di molti arredi resta futuro."
+        },
+        {
+          "heading": "Bottega da usare",
+          "body": "Forno concavo, focolare aperto, incudine vicina, colata e depositi con spazio per mani e carri. La collisione corrisponde alla forma visibile; materiali e luce distinguibili."
         }
       ],
       "properties": {
@@ -510,7 +529,9 @@ window.FEIM_REFERENCE={
       },
       "links": [
         "feim-buraka",
-        "feim-fisica"
+        "feim-fisica",
+        "feim-camera-riduzione",
+        "feim-usabilita-fisica"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -518,7 +539,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-minaccia",
@@ -773,6 +794,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Stato da verificare",
           "body": "Queste sono regole di design e requisiti di accettazione. La geometria, la presa e il solver nel prototipo sono parziali e devono essere verificati in GPU reale: non dichiarare già risolti bug osservati di lag, oggetti sospesi e mani incastrate."
+        },
+        {
+          "heading": "Ergonomia prima del rigore sterile",
+          "body": "Il corpo non deve restare bloccato perché una mano o utensile si incastra; presa, distacco e appoggio richiedono assistenza discreta, senza magnetismi o attraverso-pareti. La fisica deve avere conseguenze precise, non gesture punitive."
         }
       ],
       "properties": {
@@ -786,7 +811,9 @@ window.FEIM_REFERENCE={
         "feim-armi-libere",
         "feim-architettura-utile",
         "feim-controlli-precisione",
-        "feim-oggetti-generici"
+        "feim-oggetti-generici",
+        "feim-usabilita-fisica",
+        "feim-camera-riduzione"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -794,13 +821,13 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261014
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-forgiatura",
       "categoryId": "crafting",
       "title": "Forgiatura fisica — prima vertical slice",
-      "summary": "La forgia è la prima prova concreta delle regole generiche: si scalda un grezzo, lo si manipola con le pinze, lo si martella sull'incudine e lo si tratta termicamente. È una delle professioni di FEIM Next, non il gameplay principale.",
+      "summary": "La forgiatura fisica è una vertical slice: una barra viene riscaldata, afferrata con pinze e deformata localmente sull'incudine. Il codice della nuova bottega esiste, ma il primo playtest Android del 16 ottobre 2026 ha fallito le interazioni fondamentali.",
       "sections": [
         {
           "heading": "Vertical slice fisica",
@@ -817,6 +844,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Verifica e limite",
           "body": "Test passati in logica non equivalgono a feeling convincente. Pinze, appoggio, stabilità del metallo e deformazione naturale richiedono prove visive e prestazionali. Fonderia, stampi e assemblaggio libero restano progettazione, non feature completate."
+        },
+        {
+          "heading": "Accettazione ancora mancante",
+          "body": "Sul branch feat/playable-forge-rebuild ci sono focolare, forno, rame, Vetril e pressa. Nel test umano non si sono scaldati correttamente carbone e ferro; riduzione e colata sono rimaste inaccessibili. Nessuna build automatica equivale a prodotto giocabile."
         }
       ],
       "properties": {
@@ -832,7 +863,10 @@ window.FEIM_REFERENCE={
         "feim-affilatura",
         "feim-assemblaggio",
         "feim-controlli-precisione",
-        "feim-crafting-accessibile"
+        "feim-crafting-accessibile",
+        "feim-forgia-percorso",
+        "feim-stato-forgia-20261016",
+        "feim-usabilita-fisica"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -840,7 +874,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261014
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-armi-libere",
@@ -948,6 +982,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Tre livelli d'accesso",
           "body": "Uso immediato: equipaggiamento trovato, acquistato o commissionato. Artigianato semplice: pochi gesti per un manufatto funzionale. Artigianato esperto: controllo su materiali, geometria e finitura. Sono livelli di esperienza desiderati, non durate o UI già implementate."
+        },
+        {
+          "heading": "Filiere, non loop obbligatori",
+          "body": "I Bango e umani possono estrarre, consegnare, fondere, forgiare o comprare semilavorati; commercio e trasporto sostengono i mestieri senza bloccare l'avventura."
         }
       ],
       "properties": {
@@ -958,7 +996,10 @@ window.FEIM_REFERENCE={
         "feim-artigianato",
         "feim-diario",
         "feim-crafting-accessibile",
-        "feim-oggetti-generici"
+        "feim-oggetti-generici",
+        "feim-bango-minatori",
+        "feim-bango-lavoro",
+        "feim-trasporti"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -966,7 +1007,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261014
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-economia",
@@ -981,6 +1022,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Rischio",
           "body": "Se ogni avventuriero ottiene sempre armi migliori dai mostri, la bottega perde significato. Esplorazione, artigianato e domanda devono alimentarsi."
+        },
+        {
+          "heading": "Documenti e trasporto",
+          "body": "Cartellini sugli oggetti, compravendite, Bango artigiani, spedizioni minerarie e merci trasportate rendono concreti reputazione, scorte, prezzi e distanza."
         }
       ],
       "properties": {
@@ -989,7 +1034,10 @@ window.FEIM_REFERENCE={
       "links": [
         "feim-professioni",
         "feim-deleghe-npc",
-        "feim-ricerca"
+        "feim-ricerca",
+        "feim-cartellino-oggetto",
+        "feim-trasporti",
+        "feim-bango-lavoro"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -997,7 +1045,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-deleghe-npc",
@@ -1012,6 +1060,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Da definire",
           "body": "Contratti, salari, fedeltà, apprendimento e limiti della delega non sono ancora definiti."
+        },
+        {
+          "heading": "Autonomia di lavoro",
+          "body": "Un lavoratore Bango segue un progetto, consuma materiali, si stanca e può essere meno preciso senza diventare arbitrariamente incapace. Miniere e trasporti sono filiere da progettare; calcolo offline aggregato."
         }
       ],
       "properties": {
@@ -1019,7 +1071,9 @@ window.FEIM_REFERENCE={
       },
       "links": [
         "feim-bango",
-        "feim-economia"
+        "feim-economia",
+        "feim-bango-lavoro",
+        "feim-bango-minatori"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1027,7 +1081,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-magia",
@@ -1046,6 +1100,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Non deciso",
           "body": "Elenco degli elementi, grammatica, livelli, costi e formule non sono canonizzati."
+        },
+        {
+          "heading": "Ipotesi di controllo",
+          "body": "Magia nel materiale, rune e catalizzatori fisici; bacchette e bastoni potrebbero rispondere a pochi gesti riconoscibili. La conoscenza del personaggio non coincide con l'energia dell'oggetto; dettagli non definiti."
         }
       ],
       "properties": {
@@ -1054,7 +1112,10 @@ window.FEIM_REFERENCE={
       "links": [
         "feim-magia-oggetti",
         "feim-ricerca",
-        "feim-combat"
+        "feim-combat",
+        "feim-magia-gesti",
+        "feim-magia-rune",
+        "feim-materiali-fantastici"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1062,7 +1123,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-magia-oggetti",
@@ -1077,6 +1138,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Limiti",
           "body": "Le combinazioni devono essere esplorabili e leggibili, non risultati puramente casuali senza spiegazione."
+        },
+        {
+          "heading": "Conseguenze fisiche",
+          "body": "L'incastonatura e il materiale possono cambiare la conduzione o risposta energetica di un manufatto, invece di un bonus numerico arbitario."
         }
       ],
       "properties": {
@@ -1085,7 +1150,8 @@ window.FEIM_REFERENCE={
       "links": [
         "feim-magia",
         "feim-armi-libere",
-        "feim-ricerca"
+        "feim-ricerca",
+        "feim-magia-rune"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1093,7 +1159,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-ricerca",
@@ -1147,6 +1213,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Esperienza",
           "body": "Niente nomi permanenti sopra le teste: identità e conoscenza delle persone passano anche dalle interazioni."
+        },
+        {
+          "heading": "Cartellini esaminati",
+          "body": "Lo scontrino è sull'oggetto. Il giocatore lo legge e la sua copia viene automaticamente conservata nel diario. Le dichiarazioni di fabbro o venditore possono essere incerte, anche se l'identità reale dell'oggetto è persistente."
         }
       ],
       "properties": {
@@ -1155,7 +1225,9 @@ window.FEIM_REFERENCE={
       "links": [
         "feim-ricerca",
         "feim-comunita",
-        "feim-piccioni"
+        "feim-piccioni",
+        "feim-cartellino-oggetto",
+        "feim-inventario-modello"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -1163,7 +1235,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-combat",
@@ -1182,6 +1254,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Skill residue",
           "body": "Tecniche, magia e conoscenze possono rimanere capacità imparate; la forma esatta della progressione deve essere discussa."
+        },
+        {
+          "heading": "Proposta recente",
+          "body": "Combattimento continuo anche in città, con testimoni e conseguenze. Progressione orizzontale basata su magie e resistenze, protezioni localizzate e materiali; non un PvP cittadino completo già implementato."
         }
       ],
       "properties": {
@@ -1190,7 +1266,11 @@ window.FEIM_REFERENCE={
       "links": [
         "feim-armi-libere",
         "feim-magia",
-        "feim-raid"
+        "feim-raid",
+        "feim-combat-aperto",
+        "feim-progressione-orizzontale",
+        "feim-criminalita",
+        "feim-soccorso-messaggeri"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1198,7 +1278,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-creature",
@@ -1213,6 +1293,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Non deciso",
           "body": "Specie, tassonomia, IA, biomi e boss della storia principale sono aperti."
+        },
+        {
+          "heading": "Nuova direzione della fauna",
+          "body": "Creature e animali da lavoro originali, con ispirazioni reali e funzioni ecologiche riconoscibili; specie e nomi non stabiliti."
         }
       ],
       "properties": {
@@ -1221,7 +1305,9 @@ window.FEIM_REFERENCE={
       "links": [
         "feim-combat",
         "feim-ricerca",
-        "feim-territori"
+        "feim-territori",
+        "feim-animali-fantastici",
+        "feim-trasporti"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1229,7 +1315,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-esplorazione",
@@ -1275,6 +1361,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Da estendere",
           "body": "Fazioni, territori, città, proprietà diffuse e attività NPC autonome sono ancora sistemi futuri."
+        },
+        {
+          "heading": "Identità stabile",
+          "body": "Materiale, geometria e proprietario restano associati all'ID dell'oggetto. Lo scontrino e le copie nel diario sono documenti diversi dalla sua composizione e possono registrare una storia passata."
         }
       ],
       "properties": {
@@ -1283,7 +1373,9 @@ window.FEIM_REFERENCE={
       "links": [
         "feim-world-outcomes",
         "feim-economia",
-        "feim-diario"
+        "feim-diario",
+        "feim-cartellino-oggetto",
+        "feim-inventario-modello"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1291,7 +1383,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-comunita",
@@ -1389,8 +1481,8 @@ window.FEIM_REFERENCE={
     {
       "id": "feim-stato-tecnico",
       "categoryId": "produzione",
-      "title": "Stato reale del prototipo — 13 ottobre 2026",
-      "summary": "FEIM Next è una vertical slice, non il gioco completo. Il repository principale usa server Go autorevole, client Babylon.js/TypeScript e persistenza PostgreSQL o adattatore locale per test.",
+      "title": "Stato reale del prototipo — 16 ottobre 2026",
+      "summary": "FEIM Next è una vertical slice, non un MMORPG completo. Esistono server Go, client Babylon.js/TypeScript e una base di crafting fisico, ma la nuova forgia non ha superato il playtest Android del 16 ottobre. Feature progettate e test automatici non sono gameplay accettato.",
       "sections": [
         {
           "heading": "Implementato o verificato logicamente",
@@ -1403,6 +1495,14 @@ window.FEIM_REFERENCE={
         {
           "heading": "Non implementato",
           "body": "Grande mondo a zone, guerra stagionale globale, magia sistemica, crafting arbitrario, economia articolata, sistema di società/reputazioni, combattimento fisico profondo."
+        },
+        {
+          "heading": "Forgia e stato attuale",
+          "body": "feat/playable-forge-rebuild @ 4ca36a1: risorse, forno, focolare, colata rame, pressa Vetril. Codice e test mirati presenti; carbone, ferro e riduzione bloccati nel playtest. Test automatici non certificano la manualità su Android."
+        },
+        {
+          "heading": "Non implementato",
+          "body": "Cartellini e diario automatico, inventario generale, logistica autonoma Bango, fauna da soma, magia gestuale, rune funzionanti, voce, traduzione e crimini/soccorso sono obiettivi di design. FPS e scala MMO completi non certificati."
         }
       ],
       "properties": {
@@ -1413,7 +1513,10 @@ window.FEIM_REFERENCE={
         "feim-forgiatura",
         "feim-buraka",
         "feim-combat",
-        "feim-stagioni"
+        "feim-stagioni",
+        "feim-stato-forgia-20261016",
+        "feim-performance-mmo",
+        "feim-atlante-governance"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -1421,7 +1524,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-early-access",
@@ -1444,6 +1547,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Rischio da evitare",
           "body": "Non promettere un MMORPG completo quando esiste solo una vertical slice, e non fare del loop di forgiatura la principale identità pubblica del progetto."
+        },
+        {
+          "heading": "Prima del primo video",
+          "body": "L'obiettivo storico del 19 novembre 2026 non è una garanzia. Mostrare gameplay su Android solo dopo una sequenza affidabile e comprensibile con forgia, Bango e un momento sociale; non spacciare test sintetici per esperienza pronta."
         }
       ],
       "properties": {
@@ -1455,7 +1562,9 @@ window.FEIM_REFERENCE={
         "feim-daily",
         "feim-oggetti-generici",
         "feim-crafting-accessibile",
-        "feim-controlli-precisione"
+        "feim-controlli-precisione",
+        "feim-stato-forgia-20261016",
+        "feim-usabilita-fisica"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1463,7 +1572,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261014
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-identita-visiva",
@@ -1550,6 +1659,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Criterio",
           "body": "Non spacciare una proposta d'architettura per tecnica già sviluppata. Le regole condivise sono un obiettivo di design; misure di FPS, latenza, correttezza fisica ed economia richiedono prototipi e test."
+        },
+        {
+          "heading": "Aperture del 16 ottobre",
+          "body": "Inventario, nomi finali dei materiali, sintassi magica, Bango lavoratori, fauna, logistica, dialoghi e chat vocale, crimini/testimoni e sistema di cure restano da progettare; non canonizzare esempi."
         }
       ],
       "properties": {
@@ -1563,7 +1676,12 @@ window.FEIM_REFERENCE={
         "feim-early-access",
         "feim-oggetti-generici",
         "feim-metallurgia",
-        "feim-stampi"
+        "feim-stampi",
+        "feim-inventario-modello",
+        "feim-materiali-fantastici",
+        "feim-magia-gesti",
+        "feim-criminalita",
+        "feim-voice-lingue"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1571,7 +1689,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261014
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-decisioni-superate",
@@ -1602,6 +1720,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Criterio di aggiornamento",
           "body": "Non convertire automaticamente ogni esempio, suggestione o proposta commerciale in lore. La conferma esplicita e la data della decisione devono guidare le revisioni. Non trattare FEIM Next e gli altri progetti dello studio come un universo comune per impostazione predefinita."
+        },
+        {
+          "heading": "Nuovi appunti, 16 ottobre",
+          "body": "Confermati principi: materiali originali, fisicità selettiva, scontrino attaccato all'oggetto e usabilità prima di precisione estrema. In valutazione: nomi dei materiali, bibita Bango, magia gestuale, fauna, trasporti e inventario. La forgia esiste ma non è accettata."
         }
       ],
       "properties": {
@@ -1617,7 +1739,11 @@ window.FEIM_REFERENCE={
         "feim-questioni",
         "feim-oggetti-generici",
         "feim-crafting-accessibile",
-        "feim-assemblaggio"
+        "feim-assemblaggio",
+        "feim-stato-forgia-20261016",
+        "feim-materiali-fantastici",
+        "feim-bango-bibita",
+        "feim-magia-gesti"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -1625,7 +1751,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261014
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-oggetti-generici",
@@ -1664,6 +1790,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Perimetro iniziale",
           "body": "Obiettivo iniziale: pochi materiali, deformazione economica, connessioni rigide e impatti/contatti generici. Non progettare una simulazione in tempo reale di voxel, fluidi, metallurgia microscopica, tessuti o catene globali."
+        },
+        {
+          "heading": "Materia ed etichette",
+          "body": "Materiali fantastici, anche energetici, riusano la struttura proprietà→geometria→connessioni→trasformazioni. Lo scontrino scritto da un creatore è un documento legato all'identità dell'oggetto, non un attributo fisico inventato."
         }
       ],
       "properties": {
@@ -1676,7 +1806,10 @@ window.FEIM_REFERENCE={
         "feim-forgiatura",
         "feim-armi-libere",
         "feim-controlli-precisione",
-        "feim-crafting-accessibile"
+        "feim-crafting-accessibile",
+        "feim-materiali-fantastici",
+        "feim-cartellino-oggetto",
+        "feim-magia-rune"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -1684,7 +1817,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261014
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-metallurgia",
@@ -1715,6 +1848,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Stato e limiti",
           "body": "Impianti, fluidi e ricette delle leghe descritti qui sono design, non implementazione verificata. Per il prototipo si può simulare il livello di riempimento e generare il solido a fine colata, senza fluidodinamica particellare."
+        },
+        {
+          "heading": "Distinzioni operative",
+          "body": "Riduzione del minerale di ferro produce un blumo solido da consolidare, non metallo liquido; fusione/colata e forgiatura sono processi diversi. L'accensione appartiene al carbone e il forno deve accettare carica dall'alto in una camera vera."
         }
       ],
       "properties": {
@@ -1726,7 +1863,11 @@ window.FEIM_REFERENCE={
         "feim-stampi",
         "feim-forgiatura",
         "feim-oggetti-generici",
-        "feim-artigianato"
+        "feim-artigianato",
+        "feim-forgia-percorso",
+        "feim-ferro-acciaio",
+        "feim-focolare-carbone",
+        "feim-camera-riduzione"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1734,7 +1875,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "media",
       "favorite": false,
-      "__seedRevision": 20261014
+      "__seedRevision": 20261016
     },
     {
       "id": "feim-stampi",
@@ -1963,6 +2104,913 @@ window.FEIM_REFERENCE={
       "priority": "alta",
       "favorite": false,
       "__seedRevision": 20261014
+    },
+    {
+      "id": "feim-forgia-percorso",
+      "categoryId": "crafting",
+      "title": "Dal minerale alla spada: la filiera fisica",
+      "summary": "Un giocatore può estrarre, trasportare e preparare minerale, ridurlo a ferro grezzo, consolidare il blumo e poi formare una lama mediante calore e martellate, senza una ricetta che generi direttamente la spada.",
+      "sections": [
+        {
+          "heading": "Miniera e trasporto",
+          "body": "Il piccone stacca frammenti, che il giocatore raccoglie e trasporta con sacchi o altri mezzi. La preparazione serve a ridurre la roccia inutile. La quantità e massa della risorsa contano: una scheggia non può dare origine a una grande spada."
+        },
+        {
+          "heading": "Riduzione e blumo",
+          "body": "Il minerale ferrifero è composto anche da ossigeno e altre sostanze. Un forno alimentato con carbone e aria da mantice può liberare ferro METALLICO SOLIDO; si ottiene una massa spugnosa con scorie, non ferro liquido da versare. Il blumo viene estratto con utensili e compattato sull'incudine."
+        },
+        {
+          "heading": "Barra, lama e finitura",
+          "body": "Il fabbro riscalda la barra fra le braci, la porta con pinze all'incudine, la allunga e assottiglia con colpi localizzati, la gira e la riscalda nuovamente quando serve. Forma, massa e condizioni del materiale guidano il risultato. Mola, codolo, guardia e manico completano l'arma."
+        },
+        {
+          "heading": "Un mestiere, non una tassa d'ingresso",
+          "body": "L'artigiano può acquistare barre già preparate o delegare una fase, mentre altri giocatori si specializzano in estrazione, riduzione, finitura e vendita. La profondità è facoltativa: il ciclo principale dell'MMORPG non deve dipendere dalla lavorazione di una spada."
+        }
+      ],
+      "properties": {
+        "Stato tecnico": "Percorso implementato in parte, non accettato manualmente su Android"
+      },
+      "links": [
+        "feim-metallurgia",
+        "feim-ferro-acciaio",
+        "feim-focolare-carbone",
+        "feim-camera-riduzione",
+        "feim-forgiatura",
+        "feim-affilatura",
+        "feim-assemblaggio"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-focolare-carbone",
+      "categoryId": "crafting",
+      "title": "Accendere le braci, alimentarle e riscaldare materiali",
+      "summary": "Il giocatore accende un pezzo di carbone usando una fonte di calore, non preme un comando che accende astrattamente il forno. Le braci si scaldano insieme e cedono calore a barre e materiali presenti.",
+      "sections": [
+        {
+          "heading": "Azione fisica comprensibile",
+          "body": "Posare carbone nel focolare, avvicinare acciarino con esca o una torcia a un pezzo, accenderlo e azionare il mantice. Il mantice alimenta l'aria, non crea l'accensione da freddo. Altri carboni si scaldano se sono esposti alle braci."
+        },
+        {
+          "heading": "Calore senza simulazione eccessiva",
+          "body": "La temperatura del focolare deriva da combustibili effettivamente ardenti; il consumo e il riscaldamento si calcolano con gruppi termici aggregati a bassa frequenza. I corpi individuali restano riconoscibili, ma non si simula la combustione molecola per molecola."
+        },
+        {
+          "heading": "Aspetto",
+          "body": "Carbone grigio-nero con crepe e venature progressivamente rosso cupo, rosso e arancione. Maschera/emissività economica condivisa, senza una luce per carbone. I metalli assumono colore di incandescenza e diventano lavorabili in funzione delle loro proprietà."
+        },
+        {
+          "heading": "Problema riscontrato",
+          "body": "Nel playtest del 16 ottobre due carboni nel focolare non erano entrambi caldi; il ferro posato non si riscaldava. Il codice assegna il consumo in sequenza e usa il riconoscimento di postazione per scaldare il metallo: bisogna correggere e provare il comportamento, non dichiararlo già risolto."
+        }
+      ],
+      "properties": {
+        "Stato tecnico": "Carbone e riscaldamento presenti, bug manuali aperti"
+      },
+      "links": [
+        "feim-forgia-percorso",
+        "feim-camera-riduzione",
+        "feim-usabilita-fisica",
+        "feim-performance-mmo",
+        "feim-stato-forgia-20261016"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-camera-riduzione",
+      "categoryId": "crafting",
+      "title": "Forno di riduzione con vera bocca di caricamento",
+      "summary": "Il forno deve avere un'apertura superiore ampia e un contenitore fisico nel quale lasciar cadere carbone e minerale, anziché richiedere un appoggio su un piano preciso al centimetro.",
+      "sections": [
+        {
+          "heading": "Camera e collisioni",
+          "body": "Pareti, fondo e bocca superiore chiaramente visibili, con collider semplici corrispondenti alla geometria. I frammenti cadono realmente dentro, possono appoggiarsi uno sull'altro e vengono classificati come carica se contenuti; non serve un magnete né un teletrasporto."
+        },
+        {
+          "heading": "Processo e risultato",
+          "body": "Accendi il carbone, regoli l'aria con mantice e attendi la riduzione. Il sistema rispetta combustibile, temperatura, prodotti, scorie e massa; l'apertura inferiore consente di recuperare il blumo con le pinze senza restare incastrati."
+        },
+        {
+          "heading": "Problema di codice",
+          "body": "Il prototipo usa processBedContact con tolleranza verticale di circa 3,5 cm rispetto a una superficie. È coerente con i blocchi osservati nel gioco: carbone sopra un letto e minerale che non reagisce. Questa ipotesi tecnica deve essere verificata dopo la correzione."
+        }
+      ],
+      "properties": {
+        "Stato tecnico": "Cambio di design richiesto, non ancora implementato"
+      },
+      "links": [
+        "feim-metallurgia",
+        "feim-forgia-percorso",
+        "feim-focolare-carbone",
+        "feim-stato-forgia-20261016"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-materiali-fantastici",
+      "categoryId": "crafting",
+      "title": "Materiali fantastici con proprietà autonome",
+      "summary": "I materiali di FEIM Next devono includere sostanze fittizie, talvolta magiche, con massa, resistenza, duttilità, conducibilità e reazioni energetiche proprie. L'ispirazione alla materia reale non richiede di usare nomi terrestri.",
+      "sections": [
+        {
+          "heading": "Tre archetipi utili al prototipo",
+          "body": "Ferro comune: riduzione del minerale, consolidamento e forgiatura a caldo. Rame: fusione e colata, con prestazioni meccaniche diverse. Vetril: esempio cristallino azzurro termoformabile mediante pressione e sensibile agli urti concentrati. Non sono tre livelli di potenza."
+        },
+        {
+          "heading": "Nomi provvisori, non lore canonica",
+          "body": "Ririon, Ferridium, Cupera, Vetril e Aelith sono nomi di lavoro discussi, non approvati in modo definitivo. Non trasformare automaticamente «Ferridium = acciaio» o «Ririon = ferro» in leggi della lore: prima definire se sono elementi distinti, leghe o nomi culturali."
+        },
+        {
+          "heading": "Interazioni emergenti",
+          "body": "Una macchina applica una condizione fisica, per esempio calore, pressione o energia magica; è il materiale a decidere se fonde, si deforma, si rompe o reagisce. Densità, elasticità, vulnerabilità e affinità energetica influenzano manufatti e combattimento, senza bonus arbitrari."
+        },
+        {
+          "heading": "Prestazioni e scoperta",
+          "body": "Un catalogo di materiali condiviso alimenta poche operazioni generiche. Non serve un solver per ogni sostanza; le proprietà sconosciute possono essere studiate da giocatori, Bango esperti e esperimenti."
+        }
+      ],
+      "properties": {
+        "Stato nomi": "Provvisori"
+      },
+      "links": [
+        "feim-oggetti-generici",
+        "feim-ferro-acciaio",
+        "feim-magia-rune",
+        "feim-ricerca",
+        "feim-progressione-orizzontale"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-ferro-acciaio",
+      "categoryId": "crafting",
+      "title": "Riferimento reale: riduzione, ferro, carbonio e acciaio",
+      "summary": "La metallurgia terrestre distingue il ferro quasi puro dall'acciaio temprabile, che contiene carbonio: questo è un riferimento utile per costruire materiali di FEIM Next, non obbliga a usare la chimica terrestre nella lore.",
+      "sections": [
+        {
+          "heading": "Riduzione non significa fusione",
+          "body": "Il carbone e i gas riducenti rimuovono ossigeno dai minerali ferrosi in un forno tradizionale, formando ferro solido e scorie. Il blumo deve essere consolidato per ottenere una barra lavorabile."
+        },
+        {
+          "heading": "Acciaio e trattamenti",
+          "body": "L'acciaio è una lega di ferro e carbonio. Il ferro quasi puro non si indurisce come un acciaio adatto alla tempra soltanto immergendolo in acqua; cementazione, tempra e rinvenimento sono operazioni distinte. La cementazione richiede diffusione di carbonio nel tempo, non una manciata di carbone istantanea."
+        },
+        {
+          "heading": "Semplificazione utile",
+          "body": "Per FEIM basta inizialmente distinguere composizione, lavorabilità e risposta al trattamento termico, senza microstrutture complete. Cementazione dettagliata e tempra metallurgica avanzata non sono dichiarate implementate."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-metallurgia",
+        "feim-forgia-percorso",
+        "feim-affilatura",
+        "feim-materiali-fantastici"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-colata-gestuale",
+      "categoryId": "crafting",
+      "title": "Crogiolo, stampo e colata leggibile",
+      "summary": "Per materiali fondibili il giocatore dovrebbe fondere la carica, prendere il crogiolo e inclinarlo sopra la cavità dello stampo. Un trasferimento aggregato di massa può risultare credibile senza simulare particelle di metallo liquido.",
+      "sections": [
+        {
+          "heading": "Percorso fisico proposto",
+          "body": "Preparare una cavità, fondere materiale nel crogiolo, trasportarlo con utensili adatti, orientare il beccuccio sopra lo stampo e versare. Posizione, inclinazione, temperatura e capacità determinano il trasferimento; il raffreddamento produce il getto."
+        },
+        {
+          "heading": "Perché rifare l'interazione",
+          "body": "Il prototipo richiede modello nel ricevitore, preparazione, carbone e materiale nella metà sinistra, accensione, trasferimento di proxy liquido alla metà destra, comando «Cola metallo», solidificazione e apertura. È poco intuitivo su Android anche se esistono verifiche automatiche."
+        },
+        {
+          "heading": "Contabilità e limiti",
+          "body": "Il gioco conserva massa, identità e provenienza; effetti di flusso locali possono essere soltanto grafici. La forma dello stampo non è una ricetta «crea spada» e il ferro comune da riduzione non va confuso con metallo già fuso."
+        }
+      ],
+      "properties": {
+        "Stato tecnico": "Proxy esistente, UX non accettata"
+      },
+      "links": [
+        "feim-stampi",
+        "feim-forgia-percorso",
+        "feim-usabilita-fisica",
+        "feim-stato-forgia-20261016"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-usabilita-fisica",
+      "categoryId": "crafting",
+      "title": "Precisione nelle conseguenze, tolleranza nelle intenzioni",
+      "summary": "FEIM Next deve mantenere collisioni, massa e trasformazioni fisiche, ma non costringere il giocatore a centrare superfici invisibili o lottare con mani e pinze per svolgere azioni comuni.",
+      "sections": [
+        {
+          "heading": "Presa e movimento",
+          "body": "Rendere punti di presa accessibili e il rilascio affidabile; gli oggetti non devono tornare al forno, fluttuare, generare forti lag o immobilizzare il personaggio a causa di un braccio incastrato. Mano e camera possono essere controllate separatamente, ma l'interazione non deve richiedere micromovimenti faticosi."
+        },
+        {
+          "heading": "Ergonomia della scena",
+          "body": "Piani grandi, risorse separate, forno concavo, spazi per pinze e collider coerenti con mesh. Piccola assistenza contestuale e ritirata/scorrimento dai bordi, senza magnetismo persistente o attraversamento di muri."
+        },
+        {
+          "heading": "Feedback leggibile",
+          "body": "Indicazioni minimali su carica, braci, temperatura e blocco concreto: «manca carbone», «materiale troppo freddo», «fuori dalla camera». Nessun HUD tecnico obbligatorio o procedura oscura."
+        },
+        {
+          "heading": "Gate di accettazione",
+          "body": "In meno di cinque minuti il giocatore deve prendere una barra, accendere due carboni, riscaldarla e deformarla sull'incudine con soli comandi normali. Senza questo non si aggiungono magie o nuovi macchinari."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-fisica",
+        "feim-focolare-carbone",
+        "feim-camera-riduzione",
+        "feim-colata-gestuale",
+        "feim-stato-forgia-20261016"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-cartellino-oggetto",
+      "categoryId": "societa",
+      "title": "Scontrino attaccato all'oggetto e salvato nel diario",
+      "summary": "Creatore e venditore possono associare facoltativamente uno scontrino o cartellino all'oggetto stesso: nome, categoria, prezzo e note. Esaminandolo il giocatore ne conserva automaticamente una copia nel diario.",
+      "sections": [
+        {
+          "heading": "Cartellino dell'oggetto, non solo ricevuta personale",
+          "body": "Il documento resta fisicamente associato al manufatto, per esempio all'impugnatura o al recipiente, e ne segue l'identità persistente. Può essere scritto dal creatore e/o dal venditore; i campi sono opzionali e molti oggetti non hanno etichetta."
+        },
+        {
+          "heading": "Verità e dichiarazioni",
+          "body": "Il nome e le informazioni sono affermazioni di chi ha emesso il cartellino, non una scheda onnisciente generata dal server. Possono essere sbagliate, obsolete o false; la materia vera è memorizzata separatamente. Un perito può aggiungere una valutazione distinta."
+        },
+        {
+          "heading": "Uso e diario",
+          "body": "Premendo Esamina si legge la scheda e se ne registra una copia, senza duplicare fisicamente l'oggetto. Le regole per rimuovere o sostituire il cartellino e per la catena di rivendite restano aperte. La replica avviene su cambi e ispezioni, non in ogni tick."
+        }
+      ],
+      "properties": {
+        "Stato tecnico": "Non implementato",
+        "Campi": "Nome, categoria, prezzo, note facoltativi"
+      },
+      "links": [
+        "feim-diario",
+        "feim-inventario-modello",
+        "feim-economia",
+        "feim-persistence",
+        "feim-bango-domande"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-inventario-modello",
+      "categoryId": "societa",
+      "title": "Inventario: mano fisica, borse e contenitori",
+      "summary": "La forma definitiva dell'inventario è ancora aperta: FEIM Next deve conciliare presa fisica, attrezzatura indossata, oggetti grandi e stoccaggio con l'usabilità di un MMORPG su telefono.",
+      "sections": [
+        {
+          "heading": "Tipi di trasporto",
+          "body": "Una mano porta uno strumento; vestiti, borse, sacchi, casse, scaffali, carri e animali da soma possono gestire capacità e ingombro diversi. Non servono necessariamente collider attivi per ogni oggetto quando è correttamente riposto."
+        },
+        {
+          "heading": "Regole persistenti",
+          "body": "La proprietà e identità dell'oggetto devono sopravvivere ai trasferimenti: mai duplicazione né «inventario infinito» che cancella la logistica. Capacità, gestione delle mani, hotbar e recupero in caso di disconnessione restano da progettare."
+        },
+        {
+          "heading": "Relazione col diario",
+          "body": "Il diario può conservare lo scontrino esaminato senza trasportarne una seconda copia fisica. Una descrizione non sostituisce analisi, competenza o composizione reale."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-cartellino-oggetto",
+        "feim-trasporti",
+        "feim-fisica",
+        "feim-persistence"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-bango-domande",
+      "categoryId": "personaggi",
+      "title": "Chiedere a un Bango: «What's this?»",
+      "summary": "Le risposte Bango devono dipendere dall'oggetto fisicamente mostrato e dalle conoscenze del personaggio: un fabbro può riconoscere un metallo noto, ma non tutte le sostanze o gli incantesimi esistenti.",
+      "sections": [
+        {
+          "heading": "Mostrare un oggetto",
+          "body": "Un umano si avvicina con un frammento o manufatto in mano e chiede in inglese «What's this?». Il fabbro può rispondere «That's Ririon» se riconosce quel materiale (nome soltanto provvisorio). Il target è realmente l'oggetto indicato, non una selezione astratta."
+        },
+        {
+          "heading": "Mano vuota",
+          "body": "Senza alcun oggetto: «What's what? Show me something». Dopo un'attesa indicativa di circa cinque secondi, il Bango può lamentarsi e riprendere il lavoro: «What a waste of time». Pazienza, tono e conoscenza dipendono da personalità e attività."
+        },
+        {
+          "heading": "Implementazione possibile",
+          "body": "Intenzioni contestuali e conoscenza locale sono sufficienti inizialmente; non serve un LLM per ogni battuta. Traduzione automatica e chat vocale sono obiettivi futuri, non necessari per questa interazione."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-bango",
+        "feim-bango-lavoro",
+        "feim-materiali-fantastici",
+        "feim-voice-lingue",
+        "feim-cartellino-oggetto"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-bango-lavoro",
+      "categoryId": "personaggi",
+      "title": "Bango artigiani: commissioni e schemi imperfetti",
+      "summary": "Un Bango può lavorare su incarico umano seguendo un modello o disegno ma deve avere materiali, utensili, conoscenze e limiti propri. La qualità non deve essere una ricetta prefabbricata sempre perfetta.",
+      "sections": [
+        {
+          "heading": "Processo e competenza",
+          "body": "Un progetto indica obiettivi e misure; l'artigiano applica le operazioni disponibili e può produrre differenze di precisione secondo padronanza ed equipaggiamento. Nessun materiale o oggetto deve nascere dal nulla."
+        },
+        {
+          "heading": "Bisogni e autonomia",
+          "body": "Cibo, acqua, sonno, stanchezza e preferenze possono influire su produttività, pause e attenzione; non devono trasformare casualmente un esperto in un pessimo lavoratore. I Bango possono borbottare o socializzare mentre lavorano."
+        },
+        {
+          "heading": "Costo MMO",
+          "body": "Lavoro lontano dagli osservatori aggiornato per stati aggregati; animazioni e manipolazione fisica dettagliate solo nelle vicinanze. Definire in seguito contratti, paghe, tempo offline, errori ammessi e interruzioni."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-deleghe-npc",
+        "feim-bango-bibita",
+        "feim-bango-minatori",
+        "feim-performance-mmo",
+        "feim-economia"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-bango-bibita",
+      "categoryId": "personaggi",
+      "title": "I Bango e l'acqua frizzante al limone",
+      "summary": "Proposta culturale e umoristica: i Bango potrebbero essere appassionati di una bevanda frizzante al limone, un'abitudine distintiva capace di produrre pause di lavoro, battute, consegne e piccole attività economiche.",
+      "sections": [
+        {
+          "heading": "Tono",
+          "body": "Un lavoratore borbotta in inglese: «When's that human coming back? I need some sparkling lemonwater». Questo è un esempio narrativo, non un dialogo canonico o un obbligo per tutti i Bango."
+        },
+        {
+          "heading": "Economia e personalità",
+          "body": "La bevanda potrebbe essere prodotta, venduta, trasportata e desiderata durante pause e feste. Non ridurre la specie a una gag; i Bango hanno preferenze individuali, affetti, mestieri e altri bisogni."
+        },
+        {
+          "heading": "Da scegliere",
+          "body": "Nome definitivo, tradizione, origine degli ingredienti e ruolo della bevanda nel gameplay sono aperti. Non trattarla come bonus automatico alla qualità o nuova lore già approvata."
+        }
+      ],
+      "properties": {
+        "Stato": "Idea culturale non canonica"
+      },
+      "links": [
+        "feim-bango",
+        "feim-bango-lavoro",
+        "feim-economia"
+      ],
+      "origin": "proposta",
+      "status": "da_esplorare",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-bango-minatori",
+      "categoryId": "professioni",
+      "title": "Miniere e spedizioni tra umani e Bango",
+      "summary": "I Bango potrebbero accompagnare i giocatori nelle cave, picconare e trasportare risorse, partecipando a un'economia in cui esploratori, minatori, trasportatori e fabbri dipendono l'uno dall'altro.",
+      "sections": [
+        {
+          "heading": "Lavoro cooperativo",
+          "body": "Un umano esplora o protegge, un Bango rompe il minerale, un altro porta sacchi o assiste. I Bango devono poter avere competenze e iniziativa proprie, non essere soltanto automi da assegnazione compiti."
+        },
+        {
+          "heading": "Filiera ed eventi",
+          "body": "I giacimenti hanno quantità disponibili; trasporto, caverne, viaggi, creature e rischio di imboscate creano scelte concrete. Delegare una parte della filiera non deve rendere tutte le risorse infinite."
+        },
+        {
+          "heading": "Persistenza efficiente",
+          "body": "Le attività lontane da giocatori si risolvono con lavori e intervalli a costo limitato; presenza di un osservatore abilita rappresentazione animata. Lavoratori minerari autonomi non sono ancora implementati."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-bango-lavoro",
+        "feim-trasporti",
+        "feim-forgia-percorso",
+        "feim-esplorazione"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-trasporti",
+      "categoryId": "professioni",
+      "title": "Logistica: sacchi, carri e animali da soma",
+      "summary": "Il trasporto di minerali e manufatti dovrebbe essere un mestiere e una necessità concreta, in funzione di massa, ingombro, mezzi disponibili e percorsi, senza obbligare al trasporto a mano ripetitivo.",
+      "sections": [
+        {
+          "heading": "Dal sacco al convoglio",
+          "body": "Mani e borse per poco materiale; contenitori più grandi, carriole, carretti, animali da soma e addetti per rifornimenti importanti. Il trasferimento deve essere semplice e autorevole sul server."
+        },
+        {
+          "heading": "Strade, carichi e mercati",
+          "body": "Pendenze, ponti, porte, rischio e distanze cambiano l'utilità del mezzo. Botteghe, depositi e cortili di ricevimento non sono decorazioni: offrono spazio reale a merci e artigiani."
+        },
+        {
+          "heading": "Limiti aperti",
+          "body": "Capacità dei contenitori, furto, proprietà dei carichi, veicoli e fatica delle creature sono da progettare. Non serve simulare continuamente la caduta di centinaia di sacchi in regioni senza giocatori."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-inventario-modello",
+        "feim-bango-minatori",
+        "feim-animali-fantastici",
+        "feim-economia",
+        "feim-architettura-utile"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-animali-fantastici",
+      "categoryId": "insediamenti",
+      "title": "Animali originali ispirati al mondo reale",
+      "summary": "La fauna dovrebbe evocare funzioni riconoscibili come bestiame, animali domestici, trasporto o predazione, senza riprodurre semplicemente galline, vacche e cavalli con nomi diversi.",
+      "sections": [
+        {
+          "heading": "Design biologico leggibile",
+          "body": "Silhouette, anatomia, andatura, habitat, alimentazione e comportamento devono spiegare cosa una creatura è capace di fare. Non tutto deve essere alieno: ispirazione reale e stile fantasy coerente aiutano la leggibilità."
+        },
+        {
+          "heading": "Ruoli",
+          "body": "Animali da soma, creature selvatiche, compagni e possibili messaggeri; possono interagire con materiali magici e l'ecosistema. Specie, nomi e forme sono ancora aperti e non canonizzati."
+        },
+        {
+          "heading": "Simulazione sostenibile",
+          "body": "Bisogni e trasporti a livello aggregato quando lontani; solo entità rilevanti vengono animate e dotate di contatti fisici dettagliati."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-creature",
+        "feim-trasporti",
+        "feim-soccorso-messaggeri"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-magia-gesti",
+      "categoryId": "magia",
+      "title": "Magia gestuale con bacchette e bastoni",
+      "summary": "La magia potrebbe essere controllata mediante gesti semplici con mano, bacchetta o bastone; il movimento indicherebbe l'intenzione, mentre conoscenza, materiali e rune determinerebbero l'effetto possibile.",
+      "sections": [
+        {
+          "heading": "Gesti utilizzabili",
+          "body": "Puntare, ruotare, tracciare un arco e mantenere una posa sono esempi da prototipare. Su telefono non è sostenibile richiedere movimenti millimetrici o decine di simboli complessi."
+        },
+        {
+          "heading": "Catalizzatori",
+          "body": "Una bacchetta potrebbe favorire precisione, un bastone canalizzazione o effetti prolungati; queste distinzioni restano ipotesi. La magia in un oggetto non equivale alla conoscenza di come lanciare ogni incantesimo."
+        },
+        {
+          "heading": "Studio invece di hotbar onnisciente",
+          "body": "Il personaggio apprende tecniche e interazioni; materiali e ambiente possono amplificarle o contrastarle. Fonte d'energia, costo, rischi e gesti definitivi non sono decisi."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-magia",
+        "feim-magia-rune",
+        "feim-materiali-fantastici",
+        "feim-progressione-orizzontale"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-magia-rune",
+      "categoryId": "magia",
+      "title": "Rune, incastonature e materiali energetici",
+      "summary": "Gli effetti magici possono nascere dalla struttura e dalle connessioni di un oggetto, per esempio una runa applicata a una lama o una sostanza capace di accumulare energia.",
+      "sections": [
+        {
+          "heading": "Comportamenti anziché bonus",
+          "body": "Conduzione, accumulo, incompatibilità ed energia trasferita sono proprietà possibili. Geometria, incastro e sostanze possono influenzare l'effetto; non serve «+15 danni» per giustificare un oggetto magico."
+        },
+        {
+          "heading": "Utilizzatori e oggetti",
+          "body": "Un guerriero può impugnare una lama con una proprietà arcana senza saper riprodurre la magia di un mago. Gesto appreso e magia incorporata sono due assi distinti."
+        },
+        {
+          "heading": "Ricerca",
+          "body": "Gli esperimenti dei giocatori e le conoscenze dei Bango possono rivelare proprietà ripetibili. Rune, simboli, costi e compatibilità specifici non sono lore stabilita e non devono apparire come ricettario ufficiale."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-magia-oggetti",
+        "feim-magia-gesti",
+        "feim-ricerca",
+        "feim-materiali-fantastici"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-voice-lingue",
+      "categoryId": "societa",
+      "title": "Inglese iniziale, traduzione automatica e voce futura",
+      "summary": "Il gioco è concepito inizialmente in inglese. In seguito sono desiderate traduzioni automatiche e chat vocale per l'interazione sociale fra giocatori e con il mondo.",
+      "sections": [
+        {
+          "heading": "Lingua del gioco",
+          "body": "Interfaccia e dialoghi inizialmente in inglese; i nomi fantasy richiedono un glossario coerente. Esempi di battute Bango sono bozze di tono, non battute finali o traduzioni già rilasciate."
+        },
+        {
+          "heading": "Traduzione futura",
+          "body": "Distinguere testo UI, nomi propri, etichette oggetto, documenti e chat libera. Non riscrivere il testo originale quando lo si traduce. Provider, latenza, gestione offline e qualità sono scelte aperte."
+        },
+        {
+          "heading": "Voce",
+          "body": "La chat vocale futura richiederà prossimità, moderazione, privacy, blocchi e costi di rete compatibili col MMO. Non dichiararla disponibile nel prototipo."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-bango-domande",
+        "feim-comunita",
+        "feim-piccioni",
+        "feim-stato-tecnico"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-combat-aperto",
+      "categoryId": "combattimento",
+      "title": "Armi fisiche utilizzabili anche in città",
+      "summary": "La libertà di FEIM Next comprende la possibilità di colpire qualcuno in un villaggio con un'arma realmente maneggiata: non deve essere automaticamente disattivata una modalità fisica di combattimento perché si entra in zona abitata.",
+      "sections": [
+        {
+          "heading": "Traiettorie e contatto",
+          "body": "La collisione dell'arma può produrre danno se attraversa un bersaglio; il server valida gli impatti con modelli semplificati e solo sui personaggi coinvolti, non simulando tutte le ossa di un intero villaggio."
+        },
+        {
+          "heading": "Conseguenze sociali",
+          "body": "Testimoni, guardie, soccorsi, reputazione e pericoli devono scoraggiare il crimine in modo credibile. Evitare che libertà PvP significhi griefing permanente del punto d'ingresso. Le regole sono ancora in discussione."
+        },
+        {
+          "heading": "Ergonomia",
+          "body": "La mano resta fisica ma non deve incastrarsi al punto da bloccare il corpo; prestazioni, lag e predizione sono requisiti fondamentali."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-combat",
+        "feim-criminalita",
+        "feim-soccorso-messaggeri",
+        "feim-progressione-orizzontale"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-progressione-orizzontale",
+      "categoryId": "combattimento",
+      "title": "Magie, resistenze, debolezze e armature",
+      "summary": "La progressione orizzontale del combattimento dovrebbe essere soprattutto conoscenza dei materiali, magie, vulnerabilità, contromisure e gestione dell'equipaggiamento, anziché una scala verticale di danno e livello.",
+      "sections": [
+        {
+          "heading": "Scelte reali",
+          "body": "Un materiale leggero, elastico o resistente al calore offre vantaggi specifici e debolezze altrettanto reali; la magia può cambiare le interazioni. Evitare combinazioni migliori in ogni situazione."
+        },
+        {
+          "heading": "Armature",
+          "body": "Copertura localizzata, peso, libertà di movimento, rigidità e materiale sono dimensioni possibili. La protezione deve derivare da comportamento coerente, con collider e valutazioni d'impatto economici."
+        },
+        {
+          "heading": "Apprendimento",
+          "body": "Scoprire creature, magie e vulnerabilità conta quanto procurarsi un'arma. L'equipaggiamento raro non dovrebbe rendere inutile la strategia."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-combat-aperto",
+        "feim-magia-rune",
+        "feim-materiali-fantastici",
+        "feim-creature"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-criminalita",
+      "categoryId": "societa",
+      "title": "Crimini, testimoni e Bango che reagiscono",
+      "summary": "Un'aggressione può lasciare testimoni, feriti e richieste d'aiuto; la ricerca del colpevole dovrebbe derivare da testimonianze e informazione locale, non dall'onniscienza del server.",
+      "sections": [
+        {
+          "heading": "Aiuto non è identificazione",
+          "body": "Un uccellino può chiamare soccorsi anche senza sapere chi abbia aggredito qualcuno. Riconoscimento, indizi e testimonianze sono necessari per accusare un colpevole."
+        },
+        {
+          "heading": "Contrasto e conseguenze",
+          "body": "Un complice può distrarre un messaggero o utilizzare magia, esponendosi ad altri rischi. Guardie e Bango aumentano sicurezza e risposta; un'area sicura naturale o magica è una proposta, non una safe zone già stabilita."
+        },
+        {
+          "heading": "Protezione dei giocatori",
+          "body": "Bilanciare crimine, libertà e abuso, in particolare nella città di partenza. Gestione vittime, perquisizioni, sentenze e reputazioni restano da definire."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-soccorso-messaggeri",
+        "feim-combat-aperto",
+        "feim-proprieta",
+        "feim-piccioni"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-soccorso-messaggeri",
+      "categoryId": "eventi",
+      "title": "Feriti, cure magiche e animali messaggeri",
+      "summary": "Un nuovo giocatore ferito in città potrebbe cadere incapacitato senza morire subito, mentre un piccolo compagno o uccellino cerca un Bango capace di soccorrerlo.",
+      "sections": [
+        {
+          "heading": "Danno con conseguenze diverse",
+          "body": "Alcune aggressioni possono essere immediatamente mortali, altre lasciano la vittima a terra con possibilità di aiuto. Tipo di danno, ambiente e tempi restano da bilanciare."
+        },
+        {
+          "heading": "Messaggero fisico",
+          "body": "L'animale raggiunge qualcuno che possa aiutare, invece di attivare un allarme globale e istantaneo. Può incontrare impedimenti, essere protetto o distratto; in lontananza la navigazione è semplificata."
+        },
+        {
+          "heading": "Soccorso e accusa separati",
+          "body": "I Bango possono curare con mezzi ordinari o magie appropriate. Chi chiede aiuto non identifica necessariamente l'aggressore: servono testimoni o prove ulteriori."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-criminalita",
+        "feim-combat-aperto",
+        "feim-animali-fantastici",
+        "feim-piccioni"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-performance-mmo",
+      "categoryId": "produzione",
+      "title": "Ottimizzazione MMO: fisica selettiva e costi misurabili",
+      "summary": "FEIM Next deve simulare in dettaglio solo interazioni osservabili, usando stati aggregati e avanzamento deterministico per braci, temperature, NPC e oggetti non attivi, senza pretendere simulazione totale.",
+      "sections": [
+        {
+          "heading": "Tre livelli",
+          "body": "Giocatore vicino: collisioni, prese e deformazione locale. Officina senza gesti: termica e reazioni periodiche, corpi dormienti. Regione lontana: eventi e recupero temporale compatto, niente rendering e quasi niente fisica continua."
+        },
+        {
+          "heading": "Dati e rete",
+          "body": "Mesh/collider riutilizzati, deformazione per poche sezioni, replica su revisioni significative, materiali condivisi e update frequenze proporzionate. Niente particelle server per il fuoco né nuova simulazione per ogni materiale."
+        },
+        {
+          "heading": "Limiti dei benchmark",
+          "body": "Test Go e Chromium software non dimostrano FPS Android né capacità di migliaia di corpi attivi. Lo scheduler distribuito delle regioni non è ancora implementato; servono misure su hardware vero."
+        },
+        {
+          "heading": "Principio",
+          "body": "Ogni complessità deve giustificarsi con una differenza percepibile. Priorità alle interazioni riuscite, alla persistenza e alle prestazioni del mondo condiviso."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-oggetti-generici",
+        "feim-focolare-carbone",
+        "feim-stato-forgia-20261016",
+        "feim-stato-tecnico"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-stato-forgia-20261016",
+      "categoryId": "produzione",
+      "title": "Stato verificato della nuova forgia — 16 ottobre 2026",
+      "summary": "Il branch feat/playable-forge-rebuild contiene focolare, riduzione, carbone freddo, acciarino, rame colabile e Vetril pressabile; i test sono in parte positivi, ma il playtest manuale Android del 16 ottobre non ha completato alcun ciclo.",
+      "sections": [
+        {
+          "heading": "Codice e documentazione",
+          "body": "feim-next branch feat/playable-forge-rebuild, commit 4ca36a1bc1627b2cc62429db2f5a01c1fd0b8085. Documento docs/PLAYABLE_FORGE.md e launcher scripts/start-forge.sh con salvataggio di prova isolato. Backend Go e client Babylon.js/TypeScript."
+        },
+        {
+          "heading": "Problemi riportati dall'utente",
+          "body": "Due carboni nel focolare: uno solo si scaldava. Ferro nel focolare non si scaldava. Nel forno di riduzione il carbone restava sopra un piano e il minerale non reagiva. Colata incomprensibile. Collisioni e prese impedivano di testare rame e Vetril."
+        },
+        {
+          "heading": "Cause plausibili lette dal codice",
+          "body": "advanceForgeFire gestisce il consumo del carbone in sequenza. stepForge richiede che il metallo sia registrato nella postazione. restingContact e processBedContact usano volumi/appoggi ristretti (quest'ultimo circa 3,5 cm verticali). La colata esistente richiede controlli e passaggi separati. Sono punti fragili coerenti coi sintomi, non diagnosi strumentali definitive."
+        },
+        {
+          "heading": "Azioni prioritarie, non ancora risolte",
+          "body": "Correggere presa/rilascio, accendere il carbone come oggetto, scaldare gli altri pezzi e il metallo vicino, rifare la vera camera di caricamento, semplificare la colata, comunicare blocchi concreti. Test integrati ad alto valore e riprova manuale Android."
+        },
+        {
+          "heading": "Limiti e assenze",
+          "body": "No FPS Android certificati, nessuna scala MMO completa provata, affilatura/rinvenimento avanzato assenti, magie, scontrini sugli oggetti, logistica, dialogue Bango e inventario completo non implementati."
+        }
+      ],
+      "properties": {
+        "Revisioni": "feim-next @ 4ca36a1",
+        "Playtest": "Fallito su Android; funzionalità non accettata"
+      },
+      "links": [
+        "feim-stato-tecnico",
+        "feim-forgia-percorso",
+        "feim-focolare-carbone",
+        "feim-camera-riduzione",
+        "feim-usabilita-fisica",
+        "feim-colata-gestuale",
+        "feim-performance-mmo"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-atlante-governance",
+      "categoryId": "produzione",
+      "title": "Come mantenere l'Atlante sincronizzato e affidabile",
+      "summary": "Le pagine devono distinguere decisioni emerse dalle conversazioni, proposte da valutare, capacità del codice dimostrate da test e gameplay effettivamente provato dall'utente, conservando le note locali.",
+      "sections": [
+        {
+          "heading": "Tipi di fonte",
+          "body": "Visione: discussioni e conferme. Implementazione: branch, commit, documentazione e codice. Playtest: esito concreto con limiti dichiarati. Ipotesi: bozze reversibili. Nessuna build verde prova da sola una lavorazione giocabile."
+        },
+        {
+          "heading": "Workflow mobile",
+          "body": "Articoli già scritti nella wiki; nuove idee annotate sul dispositivo e poi esportate in Markdown a ChatGPT. Backup JSON locale. Le nuove revisioni pubblicate mantengono ID stabili e rispettano i testi modificati localmente."
+        },
+        {
+          "heading": "Repository pubblico",
+          "body": "Non pubblicare spoiler segreti della trama, credenziali, dettagli privati e speculazioni presentate come canon. L'atlante italiano può restare strumento di progetto anche se il gioco nasce in inglese."
+        }
+      ],
+      "properties": {},
+      "links": [
+        "feim-decisioni-superate",
+        "feim-questioni",
+        "feim-stato-tecnico",
+        "feim-visione"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "visione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261016
     }
   ]
 };

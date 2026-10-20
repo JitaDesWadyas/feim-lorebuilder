@@ -1,10 +1,10 @@
 /* FEIM Next project reference — publicly readable. Local personal notes never belong here. */
 window.FEIM_REFERENCE={
   "format": "feim-atlas-seed",
-  "revision": 20261016,
+  "revision": 20261020,
   "project": {
     "name": "FEIM Next · Atlante",
-    "description": "Enciclopedia pubblica aggiornata al 16 ottobre 2026: mondo, forgia, Bango, materiali fantastici, magia, oggetti, società e stato tecnico verificato. Note personali locali."
+    "description": "Enciclopedia pubblica aggiornata al 20 ottobre 2026: mondo, forgia, Bango, soccorso, audio, economia fisica, statistiche, stamina, progressione e armature. Design, PR aperte e main sono distinti; note personali locali."
   },
   "categories": [
     {
@@ -798,6 +798,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Ergonomia prima del rigore sterile",
           "body": "Il corpo non deve restare bloccato perché una mano o utensile si incastra; presa, distacco e appoggio richiedono assistenza discreta, senza magnetismi o attraverso-pareti. La fisica deve avere conseguenze precise, non gesture punitive."
+        },
+        {
+          "heading": "Conseguenze dalle prove successive",
+          "body": "Le prove tra 17 e 20 ottobre hanno evidenziato regressioni possibili: gomiti mal posizionati, braccia attraverso i muri o allungate all'infinito, collisioni fantasma e tool persi. PR #10 contiene un tentativo di coerenza corpo-braccio-snapshot ma risulta ancora aperta. Accettazione = gestione degli incastri fisicamente coerente, nessun auto-drop casuale, recupero intuitivo e performance sul device. Nessun rallentatore STR separato dal solver."
         }
       ],
       "properties": {
@@ -813,7 +817,10 @@ window.FEIM_REFERENCE={
         "feim-controlli-precisione",
         "feim-oggetti-generici",
         "feim-usabilita-fisica",
-        "feim-camera-riduzione"
+        "feim-camera-riduzione",
+        "feim-mani-integrita",
+        "feim-rilascio-e-test",
+        "feim-sei-statistiche"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -821,7 +828,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-forgiatura",
@@ -1104,6 +1111,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Ipotesi di controllo",
           "body": "Magia nel materiale, rune e catalizzatori fisici; bacchette e bastoni potrebbero rispondere a pochi gesti riconoscibili. La conoscenza del personaggio non coincide con l'energia dell'oggetto; dettagli non definiti."
+        },
+        {
+          "heading": "MAG e WIS non impongono una barra mana",
+          "body": "Discussione del 20 ottobre: MAG è proposta come potenziale/capacità energetica, WIS come comprensione e controllo; ma non sono ancora stabilite risorse, rune, sintassi, costo, gesti, materiali o rapporto fra magia e fisica. Non introdurre arbitrariamente skill a pulsante o un mana tradizionale."
         }
       ],
       "properties": {
@@ -1115,7 +1126,9 @@ window.FEIM_REFERENCE={
         "feim-combat",
         "feim-magia-gesti",
         "feim-magia-rune",
-        "feim-materiali-fantastici"
+        "feim-materiali-fantastici",
+        "feim-sei-statistiche",
+        "feim-progressione-mista"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1123,7 +1136,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-magia-oggetti",
@@ -1258,6 +1271,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Proposta recente",
           "body": "Combattimento continuo anche in città, con testimoni e conseguenze. Progressione orizzontale basata su magie e resistenze, protezioni localizzate e materiali; non un PvP cittadino completo già implementato."
+        },
+        {
+          "heading": "Nuovo principio: contatto prima delle statistiche",
+          "body": "Non «STR +8 danni»: il colpo usa velocità realmente raggiunta, massa e geometria del filo, orientamento, punto anatomico e armatura. La camera propone una posa; mano e arma la inseguono nei limiti del corpo. Chi ha STR bassa può utilizzare un'arma pesante più lentamente, senza lag artificiale sulla camera. Stamina deriva dal lavoro meccanico; implementare solo dopo solver affidabile e armi/creature provabili."
         }
       ],
       "properties": {
@@ -1270,7 +1287,12 @@ window.FEIM_REFERENCE={
         "feim-combat-aperto",
         "feim-progressione-orizzontale",
         "feim-criminalita",
-        "feim-soccorso-messaggeri"
+        "feim-soccorso-messaggeri",
+        "feim-combat-collisione-reale",
+        "feim-sei-statistiche",
+        "feim-stamina-fisica",
+        "feim-armature-fisiche",
+        "feim-prossimi-sistemi-combat"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1278,7 +1300,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-creature",
@@ -1398,6 +1420,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Aperto",
           "body": "Regole di gilda, fazione, reputazione, giustizia, conflitti e gerarchie non sono ancora definitive."
+        },
+        {
+          "heading": "Conoscenze e relazioni dei Bango",
+          "body": "Nuovo ramo PR #18 propone fiducia, memorie individuali, gossip attribuito e scelte conversazionali; non è in main e dipende dal commercio fisico PR #15. Gli scambi commerciali devono lasciare memoria sociale senza inventare dati o informazioni inesistenti."
         }
       ],
       "properties": {
@@ -1406,7 +1432,9 @@ window.FEIM_REFERENCE={
       "links": [
         "feim-diario",
         "feim-proprieta",
-        "feim-ruoli"
+        "feim-ruoli",
+        "feim-bango-memoria-dialoghi",
+        "feim-mercato-fisico-20261020"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1414,7 +1442,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-proprieta",
@@ -1481,8 +1509,8 @@ window.FEIM_REFERENCE={
     {
       "id": "feim-stato-tecnico",
       "categoryId": "produzione",
-      "title": "Stato reale del prototipo — 16 ottobre 2026",
-      "summary": "FEIM Next è una vertical slice, non un MMORPG completo. Esistono server Go, client Babylon.js/TypeScript e una base di crafting fisico, ma la nuova forgia non ha superato il playtest Android del 16 ottobre. Feature progettate e test automatici non sono gameplay accettato.",
+      "title": "Stato reale del prototipo — 20 ottobre 2026",
+      "summary": "Vertical slice in sviluppo: soccorso Bango fisico, audio V3 e ottimizzazioni conservative sono stati integrati in main il 20 ottobre. Commercio, dialoghi Bango, Material Playground e audio V4 rimangono su PR aperte; forgia e mani richiedono accettazione manuale. Magia, stamina, stats e armature sono ancora design.",
       "sections": [
         {
           "heading": "Implementato o verificato logicamente",
@@ -1503,11 +1531,16 @@ window.FEIM_REFERENCE={
         {
           "heading": "Non implementato",
           "body": "Cartellini e diario automatico, inventario generale, logistica autonoma Bango, fauna da soma, magia gestuale, rune funzionanti, voce, traduzione e crimini/soccorso sono obiettivi di design. FPS e scala MMO completi non certificati."
+        },
+        {
+          "heading": "Aggiornamento verificato 20 ottobre 2026",
+          "body": "Il resoconto del 16 ottobre rimane storico, non lo stato corrente: la PR #14 (soccorso Bango fisico) è merged; #17 (audio V3.1) è merged; #20 (ottimizzazione conservativa replica) è merged. Le PR #15 (commercio), #18 (dialoghi/memoria), #21 (Material Playground), #22 (audio V4) sono aperte; #13 inventario è abbandonata. Il ciclo completo forgia da telefono, combattimento profondo, stamina, statistiche e armature restano non accettati o non implementati. Le PR #10/#11/#12 su mani e forgiatura non vanno spacciate per merge definitivi."
         }
       ],
       "properties": {
         "Verifica": "Repository feim-next, commit d687e2d del 13/10/2026",
-        "Non significa": "Early Access già pronto"
+        "Non significa": "Early Access già pronto",
+        "Ultima revisione": "20 ottobre 2026"
       },
       "links": [
         "feim-forgiatura",
@@ -1516,7 +1549,14 @@ window.FEIM_REFERENCE={
         "feim-stagioni",
         "feim-stato-forgia-20261016",
         "feim-performance-mmo",
-        "feim-atlante-governance"
+        "feim-atlante-governance",
+        "feim-soccorso-fisico-20261020",
+        "feim-audio-v3",
+        "feim-performance-20261020",
+        "feim-material-playground-v1",
+        "feim-mercato-fisico-20261020",
+        "feim-bango-memoria-dialoghi",
+        "feim-mani-integrita"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -1524,7 +1564,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-early-access",
@@ -1663,6 +1703,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Aperture del 16 ottobre",
           "body": "Inventario, nomi finali dei materiali, sintassi magica, Bango lavoratori, fauna, logistica, dialoghi e chat vocale, crimini/testimoni e sistema di cure restano da progettare; non canonizzare esempi."
+        },
+        {
+          "heading": "Decisioni e confini aggiornati al 20 ottobre",
+          "body": "Decisi come direzione: 6 statistiche corporee con forza/agilità/stamina, progressione prevalentemente orizzontale e verticale tenue, colpi fisici senza +danno STR; armature a copertura localizzata e produzione tramite operazioni riutilizzabili. Aperti: formule di crescita, trauma e recupero, magia MAG/WIS, arco/lancio, schivata, tessuti/piastre/mesh, libertà costruttiva finale, usura, ospedale, qualità degli NPC, UX zaino, integrazione della forgia e benchmark multiplayer."
         }
       ],
       "properties": {
@@ -1681,7 +1725,14 @@ window.FEIM_REFERENCE={
         "feim-materiali-fantastici",
         "feim-magia-gesti",
         "feim-criminalita",
-        "feim-voice-lingue"
+        "feim-voice-lingue",
+        "feim-sei-statistiche",
+        "feim-progressione-mista",
+        "feim-armature-fisiche",
+        "feim-armature-produzione",
+        "feim-armi-distanza",
+        "feim-bango-memoria-dialoghi",
+        "feim-inventario-scartato-20261020"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1689,7 +1740,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-decisioni-superate",
@@ -1724,6 +1775,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Nuovi appunti, 16 ottobre",
           "body": "Confermati principi: materiali originali, fisicità selettiva, scontrino attaccato all'oggetto e usabilità prima di precisione estrema. In valutazione: nomi dei materiali, bibita Bango, magia gestuale, fauna, trasporti e inventario. La forgia esiste ma non è accettata."
+        },
+        {
+          "heading": "Registro pratico 20 ottobre",
+          "body": "Da NON riprendere: PR #13 inventario piatto/overlay, idee di danno STR diretto, camera/colpo come teletrasporto dell'arma, degrado gratuito della giocabilità per chi ha DEX bassa. Da distinguere: #14 soccorso, #17 audio V3 e #20 performance sicura merged; #15, #18, #21, #22 draft; #19 non merged. Il progetto resta MMO sociale d'avventura, non simulatore di fabbro obbligatorio."
         }
       ],
       "properties": {
@@ -1743,7 +1798,11 @@ window.FEIM_REFERENCE={
         "feim-stato-forgia-20261016",
         "feim-materiali-fantastici",
         "feim-bango-bibita",
-        "feim-magia-gesti"
+        "feim-magia-gesti",
+        "feim-inventario-scartato-20261020",
+        "feim-sei-statistiche",
+        "feim-armature-produzione",
+        "feim-rilascio-e-test"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -1751,7 +1810,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-oggetti-generici",
@@ -1794,6 +1853,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Materia ed etichette",
           "body": "Materiali fantastici, anche energetici, riusano la struttura proprietà→geometria→connessioni→trasformazioni. Lo scontrino scritto da un creatore è un documento legato all'identità dell'oggetto, non un attributo fisico inventato."
+        },
+        {
+          "heading": "Prove sul ramo Material Playground",
+          "body": "PR #21 propone colate progressive, deformazioni bounded, tagli conservativi, giunti generici, argilla e ledger di provenienza con salvataggi compatibili. Sono moduli condivisi in verifica, non prova che una spada/armatura completamente libera esista già."
         }
       ],
       "properties": {
@@ -1809,7 +1872,10 @@ window.FEIM_REFERENCE={
         "feim-crafting-accessibile",
         "feim-materiali-fantastici",
         "feim-cartellino-oggetto",
-        "feim-magia-rune"
+        "feim-magia-rune",
+        "feim-material-playground-v1",
+        "feim-termica-universale",
+        "feim-armature-produzione"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -1817,7 +1883,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": true,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-metallurgia",
@@ -1994,6 +2060,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Limiti",
           "body": "Il fissaggio non è attualmente confermato come funzionante nel prototipo. La possibilità di rottura, riparazione o usura permanente deve essere bilanciata e confermata a parte."
+        },
+        {
+          "heading": "Applicazioni future delle connessioni",
+          "body": "I giunti fisici devono poter servire sia manici di utensili, sia armature, borse, equipaggiamenti e costruzioni; l'accettazione di una giunzione dipende dal contatto reale, non dalla scelta in menu. I rivetti e cinghie delle corazze restano concept da sviluppare dopo la prima armatura fisica."
         }
       ],
       "properties": {
@@ -2005,7 +2075,10 @@ window.FEIM_REFERENCE={
         "feim-armi-libere",
         "feim-oggetti-generici",
         "feim-controlli-precisione",
-        "feim-artigianato"
+        "feim-artigianato",
+        "feim-armature-produzione",
+        "feim-armature-indossare",
+        "feim-material-playground-v1"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -2013,7 +2086,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "media",
       "favorite": false,
-      "__seedRevision": 20261014
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-controlli-precisione",
@@ -2430,6 +2503,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Relazione col diario",
           "body": "Il diario può conservare lo scontrino esaminato senza trasportarne una seconda copia fisica. Una descrizione non sostituisce analisi, competenza o composizione reale."
+        },
+        {
+          "heading": "Prototipo da non riprendere",
+          "body": "La PR #13 è stata chiusa senza merge dopo prova Android negativa. Niente zaino piatto HTML o nero che copre il diario, niente moneta forzata in mano. Obiettivo da riprogettare: zaino 3D con oggetti riposizionabili tramite B, Riponi dalla mano, selezione che prende in mano, libro leggibile fisicamente e identità persistente degli oggetti."
         }
       ],
       "properties": {},
@@ -2437,7 +2514,8 @@ window.FEIM_REFERENCE={
         "feim-cartellino-oggetto",
         "feim-trasporti",
         "feim-fisica",
-        "feim-persistence"
+        "feim-persistence",
+        "feim-inventario-scartato-20261020"
       ],
       "origin": "proposta",
       "status": "in_discussione",
@@ -2445,7 +2523,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-bango-domande",
@@ -2603,6 +2681,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Limiti aperti",
           "body": "Capacità dei contenitori, furto, proprietà dei carichi, veicoli e fatica delle creature sono da progettare. Non serve simulare continuamente la caduta di centinaia di sacchi in regioni senza giocatori."
+        },
+        {
+          "heading": "Interazione fisica dei carichi",
+          "body": "Per il futuro trasporto fisico e costruzioni, preferire meccanismi comprensibili e coerenti con massa, inerzia, superfici di contatto, peso sui supporti e spinte. Non fare del veicolo una ricetta obbligatoria né un mini-gioco artificioso. Carri, barelle, carrelli e animali non sono tutti implementati; la barella del soccorso è un sistema dedicato."
         }
       ],
       "properties": {},
@@ -2611,7 +2693,9 @@ window.FEIM_REFERENCE={
         "feim-bango-minatori",
         "feim-animali-fantastici",
         "feim-economia",
-        "feim-architettura-utile"
+        "feim-architettura-utile",
+        "feim-soccorso-fisico-20261020",
+        "feim-stamina-fisica"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -2619,7 +2703,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-animali-fantastici",
@@ -2739,6 +2823,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Voce",
           "body": "La chat vocale futura richiederà prossimità, moderazione, privacy, blocchi e costi di rete compatibili col MMO. Non dichiararla disponibile nel prototipo."
+        },
+        {
+          "heading": "Audio e voce, 20 ottobre",
+          "body": "L'audio spaziale/musicale V3 è integrato in main, l'estensione acustica e Foley V4 è solo draft PR #22. La chat vocale vera non è stata implementata: un bus già predisposto non è funzionalità disponibile. Traduzione automatica e localizzazione completa rimangono future."
         }
       ],
       "properties": {},
@@ -2746,7 +2834,9 @@ window.FEIM_REFERENCE={
         "feim-bango-domande",
         "feim-comunita",
         "feim-piccioni",
-        "feim-stato-tecnico"
+        "feim-stato-tecnico",
+        "feim-audio-v3",
+        "feim-audio-v4"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -2754,7 +2844,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-combat-aperto",
@@ -2807,6 +2897,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Apprendimento",
           "body": "Scoprire creature, magie e vulnerabilità conta quanto procurarsi un'arma. L'equipaggiamento raro non dovrebbe rendere inutile la strategia."
+        },
+        {
+          "heading": "Decisione 20 ottobre: orizzontale dominante e verticale contenuta",
+          "body": "Sei statistiche STR/DEX/MAG/CON/END/WIS conservate come capacità reali; nessun bonus di danno astratto. STR gestisce accelerazione di oggetti e sforzo, DEX agilità e futuri archi/lanci senza punire l'aim, END stamina, CON traumi, MAG/WIS energia e controllo magico ancora da specificare. Crescita soprattutto di conoscenze, possibilità e materiali, con allenamento fisico lieve e rendimenti decrescenti. La proposta 80/20 è qualitativa."
         }
       ],
       "properties": {},
@@ -2814,7 +2908,11 @@ window.FEIM_REFERENCE={
         "feim-combat-aperto",
         "feim-magia-rune",
         "feim-materiali-fantastici",
-        "feim-creature"
+        "feim-creature",
+        "feim-sei-statistiche",
+        "feim-progressione-mista",
+        "feim-stamina-fisica",
+        "feim-armature-fisiche"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -2822,7 +2920,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-criminalita",
@@ -2841,6 +2939,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Protezione dei giocatori",
           "body": "Bilanciare crimine, libertà e abuso, in particolare nella città di partenza. Gestione vittime, perquisizioni, sentenze e reputazioni restano da definire."
+        },
+        {
+          "heading": "Soccorso non significa testimone del crimine",
+          "body": "L'uccello che cerca aiuto e i Bango che soccorrono la vittima non devono sapere automaticamente chi ha aggredito. Il soccorso PR #14 è merged, mentre testimoni, responsabilità, prove, guardie e reputazione globale richiedono verifiche e regole ulteriori; dialoghi/gossip PR #18 sono solo draft."
         }
       ],
       "properties": {},
@@ -2848,7 +2950,9 @@ window.FEIM_REFERENCE={
         "feim-soccorso-messaggeri",
         "feim-combat-aperto",
         "feim-proprieta",
-        "feim-piccioni"
+        "feim-piccioni",
+        "feim-soccorso-fisico-20261020",
+        "feim-bango-memoria-dialoghi"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -2856,7 +2960,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-soccorso-messaggeri",
@@ -2875,6 +2979,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Soccorso e accusa separati",
           "body": "I Bango possono curare con mezzi ordinari o magie appropriate. Chi chiede aiuto non identifica necessariamente l'aggressore: servono testimoni o prove ulteriori."
+        },
+        {
+          "heading": "Il prototipo ora è reale e in main",
+          "body": "La PR #14 è merged al 20 ottobre. Uccellino messaggero, due Bango che arrivano fisicamente, barella con portatori separati, trasporto fino a Uru e cura al termine sono stati sviluppati e provati su Android. Da fare ospedale/luogo dedicato, test visivo finale e possibile approfondimento clinico/magico; non affermare che la barella sia un corpo rigido completo."
         }
       ],
       "properties": {},
@@ -2882,7 +2990,8 @@ window.FEIM_REFERENCE={
         "feim-criminalita",
         "feim-combat-aperto",
         "feim-animali-fantastici",
-        "feim-piccioni"
+        "feim-piccioni",
+        "feim-soccorso-fisico-20261020"
       ],
       "origin": "proposta",
       "status": "in_discussione",
@@ -2890,7 +2999,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-performance-mmo",
@@ -2913,6 +3022,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Principio",
           "body": "Ogni complessità deve giustificarsi con una differenza percepibile. Priorità alle interazioni riuscite, alla persistenza e alle prestazioni del mondo condiviso."
+        },
+        {
+          "heading": "Baseline prestazionale integrata",
+          "body": "La PR #20 merged su main contiene replica batch 10 Hz, spatial/static indexes e reuse buffers senza modificare mano o forgia; la PR #19 di integrazione V2 completa rimane aperta e problematica nei test. Audio/materiali/stamina devono rispettare lo stesso livello di efficienza e non basarsi su benchmark sintetici come prova di FPS mobile."
         }
       ],
       "properties": {},
@@ -2920,7 +3033,11 @@ window.FEIM_REFERENCE={
         "feim-oggetti-generici",
         "feim-focolare-carbone",
         "feim-stato-forgia-20261016",
-        "feim-stato-tecnico"
+        "feim-stato-tecnico",
+        "feim-performance-20261020",
+        "feim-audio-v3",
+        "feim-audio-v4",
+        "feim-material-playground-v1"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -2928,7 +3045,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-stato-forgia-20261016",
@@ -2955,6 +3072,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Limiti e assenze",
           "body": "No FPS Android certificati, nessuna scala MMO completa provata, affilatura/rinvenimento avanzato assenti, magie, scontrini sugli oggetti, logistica, dialogue Bango e inventario completo non implementati."
+        },
+        {
+          "heading": "Nota storica: revisioni dopo il 16 ottobre",
+          "body": "Questo articolo resta una fotografia del test del 16/10, non una descrizione dell'ultima build. Seguono PR #11/#12 su riduzione, stampi, operazioni fisiche; PR #21 Material Playground con contenuti di recipiente, energia latente e deformazione a sezioni (commit 84ffc4c). Nuovi test legacy/salvataggio migliorati su branch ma percorso completo al telefono non accettato. Non sovrascrivere i bug registrati come se fossero già risolti."
         }
       ],
       "properties": {
@@ -2968,7 +3089,10 @@ window.FEIM_REFERENCE={
         "feim-camera-riduzione",
         "feim-usabilita-fisica",
         "feim-colata-gestuale",
-        "feim-performance-mmo"
+        "feim-performance-mmo",
+        "feim-material-playground-v1",
+        "feim-termica-universale",
+        "feim-rilascio-e-test"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -2976,7 +3100,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261020
     },
     {
       "id": "feim-atlante-governance",
@@ -3011,6 +3135,789 @@ window.FEIM_REFERENCE={
       "priority": "alta",
       "favorite": false,
       "__seedRevision": 20261016
+    },
+    {
+      "id": "feim-sei-statistiche",
+      "categoryId": "fondamenti",
+      "title": "Le sei statistiche: capacità del corpo, non bonus al danno",
+      "summary": "FEIM Next mantiene STR, DEX, MAG, CON, END e WIS come capacità del personaggio. Non sono moltiplicatori di danno: modificano ciò che il corpo o la magia possono realmente fare. Nessuna classe obbligatoria.",
+      "sections": [
+        {
+          "heading": "Significato delle sei statistiche",
+          "body": "STR — forza e coppia muscolare disponibili, controllo dei carichi pesanti e rapporto fra forza richiesta e affaticamento.\nDEX — agilità e rapidità corporea, reattività, cambi di direzione, salto; in futuro archi, lancio e forse schivata.\nMAG — potenziale energetico magico e intensità sostenibile.\nCON — resistenza a ferite, traumi e condizioni fisiche.\nEND — riserva di stamina, tolleranza allo sforzo e recupero.\nWIS — conoscenza, controllo ed efficienza della magia. MAG/WIS sono distinzioni di lavoro: la magia non ha ancora regole definitive."
+        },
+        {
+          "heading": "Non creare un gioco sgradevole a statistiche basse",
+          "body": "DEX non è mira assistita, precisione gratuita o tremolio punitivo. L'abilità del giocatore deve contare più del numero. STR 1 può usare una spada pesante, ma accelera e recupera più lentamente; STR 8 la gestisce meglio senza differenze abnormi. L'arma non riceve +danno magico da STR."
+        },
+        {
+          "heading": "Scala e implementazione",
+          "body": "I valori numerici, range e progressione sono da calibrare sul solver stabile. Non importare automaticamente le vecchie tabelle FEIM; nessuna formula percentuale è approvata. Implementare prima sforzo/STR/END, poi DEX, CON e infine MAG/WIS."
+        }
+      ],
+      "properties": {
+        "Stato": "Visione discussa il 20/10/2026; sistema non implementato",
+        "Non previsto": "Bonus diretto danno, classi o gating rigido per livello"
+      },
+      "links": [
+        "feim-combat",
+        "feim-stamina-fisica",
+        "feim-progressione-mista",
+        "feim-magia",
+        "feim-armature-fisiche",
+        "feim-armi-libere"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": true,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-stamina-fisica",
+      "categoryId": "combattimento",
+      "title": "Stamina da sforzo reale: STR, END e DEX",
+      "summary": "La stamina deve consumarsi secondo gli sforzi che il corpo simula, non con un costo fisso per ogni pressione del mouse. STR ed END collaborano; DEX regola soprattutto l'agilità.",
+      "sections": [
+        {
+          "heading": "Consumo basato sul lavoro",
+          "body": "Correre, saltare, sollevare, trascinare, sostenere pesi e imprimere accelerazioni a spade o utensili hanno un costo coerente con durata e forza richiesta. Guardarsi intorno non consuma stamina. Camminare e piccoli gesti non devono svuotarla in modo fastidioso."
+        },
+        {
+          "heading": "Effetti separati",
+          "body": "STR regola la forza disponibile e lo sforzo relativo sotto un carico; END regola riserva, tolleranza e recupero; DEX può influire su rapidità e cambi di movimento senza aumentare automaticamente il danno. Evitare di conteggiare due volte lo stesso costo energetico."
+        },
+        {
+          "heading": "Esaurimento",
+          "body": "Quando la stamina scende, il personaggio riduce gradualmente l'intensità degli sforzi e la capacità di accelerazione, senza bloccarsi, droppare arbitrariamente oggetti o perdere il controllo della camera. Niente stamina consumata solo perché il mouse gira."
+        },
+        {
+          "heading": "Architettura",
+          "body": "Un solo modello di effort e budget muscolare collegato al solver fisico autorevole, con feedback e previsione client non divergenti. Serve profiling delle azioni rapide, dei contatti e del multiplayer prima di qualunque merge."
+        }
+      ],
+      "properties": {
+        "Stato": "Design deciso, calibrazione e codice mancanti",
+        "Ingresso consigliato": "Dopo la stabilità del solver mani e primi test arma"
+      },
+      "links": [
+        "feim-sei-statistiche",
+        "feim-fisica",
+        "feim-combat",
+        "feim-performance-mmo"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-progressione-mista",
+      "categoryId": "fondamenti",
+      "title": "Progressione prevalentemente orizzontale, verticale contenuta",
+      "summary": "La crescita privilegia conoscenze, materiali, possibilità, tecniche, relazioni e capacità scoperte. Le statistiche crescono lentamente ma non rendono un veterano invulnerabile a un colpo ben assestato.",
+      "sections": [
+        {
+          "heading": "Orizzontale come identità",
+          "body": "Nuovi processi fisici, strumenti, magie, contatti Bango, vulnerabilità dei mostri, materiali e idee costruttive aprono azioni diverse invece di un'unica scala di potenza. Il crafting rimane opzionale: comprare, trovare o commissionare deve restare possibile."
+        },
+        {
+          "heading": "Verticale reale ma limitata",
+          "body": "Più forza, resistenza e agilità migliorano le capacità corporee in misura moderata, con rendimenti decrescenti. L'idea 80% orizzontale / 20% verticale è una bussola qualitativa, non una formula di codice."
+        },
+        {
+          "heading": "Allenamento e livelli",
+          "body": "Allenamento tramite uso e apprendimento contestuale sono una direzione possibile; non sono definiti i punti esperienza, le soglie, la distribuzione manuale o il rate di crescita. Evitare requisiti arbitrari tipo «livello 15 per impugnare un'arma»: puoi provarci e il corpo risponde ai suoi limiti."
+        }
+      ],
+      "properties": {
+        "Stato": "Direzione approvata; regole di progressione non implementate"
+      },
+      "links": [
+        "feim-sei-statistiche",
+        "feim-progressione-orizzontale",
+        "feim-ruoli",
+        "feim-ricerca",
+        "feim-combat"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-combat-collisione-reale",
+      "categoryId": "combattimento",
+      "title": "Colpi e danno dal contatto fisico della lama",
+      "summary": "Il colpo efficace nasce da traiettoria, velocità effettiva, massa, orientamento del filo, punto colpito, protezione e trasferimento dell'urto. Non da danni fissi sommati alle statistiche.",
+      "sections": [
+        {
+          "heading": "La telecamera non è una frusta",
+          "body": "La camera esprime l'intenzione di movimento; corpo, braccio, presa e arma sono limitati da inerzia, forza muscolare e collisioni. Muovere il mouse molto rapidamente non deve teletrasportare la spada né produrre impatti arbitrari."
+        },
+        {
+          "heading": "Due giocatori differenti",
+          "body": "Un personaggio debole ma guidato con abilità può ferire più gravemente di uno forte che colpisce male. A parità di arma, massa, geometria e velocità realmente raggiunta, STR non aggiunge danno diretto. La forza influisce sulle accelerazioni raggiungibili e sul recupero."
+        },
+        {
+          "heading": "Futuro test minimo",
+          "body": "Confrontare un oggetto leggero e una spada pesante a STR bassa/alta, su PC e Android. Misurare latenza apparente, sforzo, colisori, recupero, FPS, rete e impossibilità di attraversare muri. Non introdurre un secondo smoothing indipendente dal solver."
+        }
+      ],
+      "properties": {
+        "Stato": "Target di combattimento; non ancora vertical slice completa"
+      },
+      "links": [
+        "feim-combat",
+        "feim-sei-statistiche",
+        "feim-stamina-fisica",
+        "feim-armature-fisiche",
+        "feim-fisica"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-armi-distanza",
+      "categoryId": "combattimento",
+      "title": "Archi, armi da lancio e possibili schivate",
+      "summary": "DEX servirà soprattutto a mobilità e gestione di archi e oggetti lanciati, senza autocorreggere la mira. Queste meccaniche non sono ancora state realizzate.",
+      "sections": [
+        {
+          "heading": "Archi e lancio",
+          "body": "Quando esisteranno, usare posa reale, tensione, caratteristiche dell'arma e del proiettile, stato fisico e stanchezza. DEX può aiutare rapidità di incocco, coordinazione e stabilità non punitiva; la traiettoria resta conseguenza del rilascio reale."
+        },
+        {
+          "heading": "Movimento e schivata",
+          "body": "DEX influenza moderatamente accelerazione corporea, cambi di direzione e salto. La schivata specifica non è decisa: non inventare un tasto, un dash o i-frame come feature approvata."
+        },
+        {
+          "heading": "Dipendenze",
+          "body": "Aspettare un sistema fisico affidabile e combattimento corpo a corpo giocabile; non costruire archi e schivate soltanto per giustificare DEX."
+        }
+      ],
+      "properties": {
+        "Stato": "Futuro, non implementato"
+      },
+      "links": [
+        "feim-sei-statistiche",
+        "feim-stamina-fisica",
+        "feim-combat"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "media",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-armature-fisiche",
+      "categoryId": "combattimento",
+      "title": "Armature: protezioni locali invece di bonus difesa",
+      "summary": "Armature e colpi interagiscono per zona corporea, strati, materiale, spessore, rigidità e geometria; evitare statistiche astratte di difesa globale.",
+      "sections": [
+        {
+          "heading": "Risultato d'impatto",
+          "body": "Tessuto imbottito attenua parte di urti e abrasioni, maglia ostacola tagli con limitazioni proprie, piastre deviano o resistono alle lame ma trasmettono urti e lasciano aperture. Efficacia da contatto localizzato e proprietà fisiche semplificate."
+        },
+        {
+          "heading": "Compromesso prestazioni",
+          "body": "Collider aderenti alle zone del corpo e mesh indossate efficienti, non un rigid body indipendente per ogni anello, lamella o rivetto. Il sistema valuta penetrazione, energia trasmessa e copertura con regole economiche per il server."
+        },
+        {
+          "heading": "Bilanciamento",
+          "body": "Peso, ingombro, mobilità, sovrapposizioni di protezione, punti scoperti e materiale generano compromessi reali. Un colpo ben mirato in zona vulnerabile può ferire un veterano; nessun «+35 difesa» valido per tutto il corpo."
+        }
+      ],
+      "properties": {
+        "Stato": "Visione di design 20/10; non implementata"
+      },
+      "links": [
+        "feim-armature-produzione",
+        "feim-armature-indossare",
+        "feim-combat-collisione-reale",
+        "feim-progressione-mista",
+        "feim-oggetti-generici"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-armature-produzione",
+      "categoryId": "crafting",
+      "title": "Produrre armature: tessuti, piastre e connessioni",
+      "summary": "Il crafting delle armature dovrà riutilizzare materiali, geometria, deformazioni e giunti della forgia, non una ricetta speciale per ogni pezzo.",
+      "sections": [
+        {
+          "heading": "Dai semplici ai complessi",
+          "body": "Prima giubbotti imbottiti, cuoio e protezioni semplici; poi piastre lavorate, brigantine e assemblaggio; cotte di maglia e corazze articolate solo molto più avanti. Il sistema deve rendere possibile la lavorazione progressiva senza centinaia di microazioni."
+        },
+        {
+          "heading": "Deformazione e assemblaggio",
+          "body": "Un foglio di metallo può essere tagliato in parti, piegato con martello e supporti e fissato con cinghie, rivetti o altri giunti; deformazione a sezioni limitate, niente mesh plastica universale. Pezzi incompatibili con le articolazioni non si trasformano magicamente in tessuto."
+        },
+        {
+          "heading": "Produzione non obbligatoria",
+          "body": "Equipaggiamenti possono essere comprati dai Bango o giocatori, trovati, recuperati, commissionati o riparati. Il fabbro offre profondità facoltativa; non tutti devono imparare l'intera metallurgia."
+        },
+        {
+          "heading": "Decisione aperta",
+          "body": "Obiettivo finale: combinazioni libere di pezzi anche asimmetrici, ma il primo prototipo dovrebbe riconoscere protezioni elementari e testarli prima. Libertà completamente arbitraria e modello di deformazione non sono approvati come implementazione."
+        }
+      ],
+      "properties": {
+        "Stato": "Direzione concettuale, dopo armi e mostri"
+      },
+      "links": [
+        "feim-armature-fisiche",
+        "feim-armature-indossare",
+        "feim-oggetti-generici",
+        "feim-assemblaggio",
+        "feim-metallurgia",
+        "feim-crafting-accessibile"
+      ],
+      "origin": "confermato",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-armature-indossare",
+      "categoryId": "combattimento",
+      "title": "Indossare e riparare protezioni fisiche",
+      "summary": "Il personaggio prende una protezione, la avvicina alla zona del corpo e la fissa con assist di allineamento ragionevole. Un'interfaccia a slot non deve sostituire la fisicità.",
+      "sections": [
+        {
+          "heading": "Vestizione",
+          "body": "Gesto fisico leggibile vicino a busto, testa o braccia; allineamento assistito discreto, controlli semplici anche da telefono, nessuna necessità di centrare al millimetro la fibbia."
+        },
+        {
+          "heading": "Simulazione indossata",
+          "body": "Una volta equipaggiata, la protezione segue il corpo con collisioni aggregate e conserva massa, copertura, ingombro e danni; niente centinaia di rigid bodies attivi."
+        },
+        {
+          "heading": "Riparazione",
+          "body": "Danni e riparazioni delle protezioni devono provenire dai materiali e collegamenti quando il sistema di lavorazioni li supporterà. Decidere in seguito deterioramento permanente e costi dell'usura."
+        }
+      ],
+      "properties": {
+        "Stato": "Proposta di UX e architettura; non implementato"
+      },
+      "links": [
+        "feim-armature-fisiche",
+        "feim-armature-produzione",
+        "feim-inventario-modello",
+        "feim-fisica"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "media",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-mercato-fisico-20261020",
+      "categoryId": "societa",
+      "title": "Commercio fisico fra privati, mercato e Bango — PR #15",
+      "summary": "Una compravendita è una scena sociale nel mondo: conversazione, merci visibili, monete e accettazione reciproca, non un menu automatico di acquisto. La PR #15 è aperta e richiede playtest PC.",
+      "sections": [
+        {
+          "heading": "Scambio privato ovunque",
+          "body": "Due persone avviano lo scambio con contatto intenzionale di mani vuote, posizionano i propri oggetti fisici e confermano entrambi con gesto di mano. Proprietà e riserve devono impedire doppie vendite."
+        },
+        {
+          "heading": "Mercato con tavolo",
+          "body": "Tavolo con zone fisiche separate e sigilli di conferma; mani, oggetti e spostamento di proprietà sono rilevati dal server. I vari scambi devono restare indipendenti."
+        },
+        {
+          "heading": "Commercio con Bango",
+          "body": "Domandare disponibilità e prezzo; oggetto mostrato sul banco e pagamento fisico/conferma. Vendere richiede presentare oggetto autentico, proposta e consenso. Wallet, stock, tesoreria limitata e oggetti persistenti vengono registrati atomicamente."
+        },
+        {
+          "heading": "Stato e limiti",
+          "body": "Codice e test specifici nella PR #15; NON in main al controllo del 20/10. I vecchi percorsi di acquisto possono ancora esistere; il Bango che porta realmente merce dallo scaffale è un passo separato. Niente accettazione conclusiva sul feel senza playtest."
+        }
+      ],
+      "properties": {
+        "PR": "https://github.com/JitaDesWadyas/feim-next/pull/15",
+        "Stato tecnico": "PR aperta, non merged"
+      },
+      "links": [
+        "feim-economia",
+        "feim-bango-memoria-dialoghi",
+        "feim-inventario-modello",
+        "feim-cartellino-oggetto"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "prototipo",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-bango-memoria-dialoghi",
+      "categoryId": "personaggi",
+      "title": "Dialoghi contestuali, memoria, gossip e fiducia — PR #18",
+      "summary": "I Bango dovrebbero parlare tramite scelte brevi e contestuali, ricordare episodi, conoscenze individuali, reputazione e commerci reali. PR #18 separata, ancora non integrata in main.",
+      "sections": [
+        {
+          "heading": "Conversazione naturale ma a opzioni",
+          "body": "Saluto, domanda su oggetti e conoscenze, verifica della disponibilità, prezzo, negoziazione e conclusione fisica. Le opzioni nascono dal contesto noto all'NPC; niente pulsante «Compra coltello 12» come intero dialogo."
+        },
+        {
+          "heading": "Memoria e informazione",
+          "body": "Record episodici per Bango e giocatore, fiducia e relazioni, pettegolezzi con fonte e distanza di propagazione limitata. Il Bango non inventa sapere che non possiede; le informazioni devono avere provenienza e conseguenze."
+        },
+        {
+          "heading": "Sistema tecnico",
+          "body": "La PR #18 riusa MemoryRecord, World.Interact e interfaccia diegetica, con gossip locale, stati persistenti e acquisti fisici con la PR #15 come base. Non richiede LLM obbligatorio."
+        },
+        {
+          "heading": "Confini di integrazione",
+          "body": "Al 20/10 la PR #18 è aperta, dipende da #15 e non modifica solver mani, forgia, soccorso o witness-bird. Test automatici non equivalgono all'approvazione della UX."
+        }
+      ],
+      "properties": {
+        "PR": "https://github.com/JitaDesWadyas/feim-next/pull/18",
+        "Stato": "Candidato, non main"
+      },
+      "links": [
+        "feim-bango",
+        "feim-bango-domande",
+        "feim-mercato-fisico-20261020",
+        "feim-comunita",
+        "feim-criminalita"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "prototipo",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-soccorso-fisico-20261020",
+      "categoryId": "eventi",
+      "title": "Soccorso dei Bango: messaggero, portatori e barella",
+      "summary": "Il giocatore ferito viene soccorso da Bango che arrivano davvero, lo trasportano su una barella e lo curano solo all'arrivo. La PR #14 è stata integrata in main il 20 ottobre.",
+      "sections": [
+        {
+          "heading": "Sequenza fisica",
+          "body": "Stato incapacitato con vignetta rossa e non barra HP classica, messaggero volante, due Bango che si muovono per raggiungere la vittima, barella e trasporto fino a Uru; cura al termine del percorso."
+        },
+        {
+          "heading": "Feedback e problemi corretti",
+          "body": "Il primo test mostrava il giocatore ancora in piedi e trasportato senza arrivo visibile dei Bango; la versione successiva include presenza e movimento reali. I portatori sono stati spostati ai due estremi della barella dopo compenetrazioni segnalate dall'utente."
+        },
+        {
+          "heading": "Stato e limiti",
+          "body": "PR #14 merged su main il 20/10; prova su Android effettuata, layout finale ancora soggetto a verifica visiva. Ospedale/edificio medico non costruito e barella non simulata come rigid-body universale; non inventare tali feature."
+        },
+        {
+          "heading": "Efficienza",
+          "body": "Messaggeri replicati a batch 10 Hz e creature temporanee solo durante interventi, senza snapshot globali di tutti i voli a ogni tick."
+        }
+      ],
+      "properties": {
+        "PR": "https://github.com/JitaDesWadyas/feim-next/pull/14",
+        "Stato": "Merged in main, limiti documentati"
+      },
+      "links": [
+        "feim-soccorso-messaggeri",
+        "feim-criminalita",
+        "feim-animali-fantastici",
+        "feim-performance-mmo"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "integrazione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-audio-v3",
+      "categoryId": "produzione",
+      "title": "Audio spaziale, natura, passi e musica — integrato",
+      "summary": "Web Audio spaziale e ascoltabile: fiume, fontana, natura, passi da spostamento reale, pickup e impatti approssimati, musica generativa in frasi. La PR #17 è merged su main il 20/10.",
+      "sections": [
+        {
+          "heading": "Ambiente e movimento",
+          "body": "Passi al contatto stimato alternato, fermati se non si avanza o il movimento è bloccato. Suoni posizionati nello spazio per acqua, fontana, vento, uccelli e grilli, con limiti di voci e consumo mobile."
+        },
+        {
+          "heading": "Musica e opzioni",
+          "body": "Frasi musicali generative con strumenti sintetizzati, umori diversi e nuova melodia opzionale; slider audio persistenti nel pannello F2, mute e gestione sospensione audio."
+        },
+        {
+          "heading": "Limiti",
+          "body": "Test client/CI positivi e prima integrazione in main, ma ascolto Android, sincronizzazione definitiva piede-suolo e campionature più autentiche richiedono verifiche. Bus voce predisposto non significa chat vocale pronta."
+        },
+        {
+          "heading": "Riferimento",
+          "body": "PR #17 merged il 20 ottobre 2026; PR #16 superata."
+        }
+      ],
+      "properties": {
+        "PR": "https://github.com/JitaDesWadyas/feim-next/pull/17",
+        "Stato": "Merged in main"
+      },
+      "links": [
+        "feim-audio-v4",
+        "feim-voice-lingue",
+        "feim-performance-mmo",
+        "feim-fisica"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "integrazione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-audio-v4",
+      "categoryId": "produzione",
+      "title": "Audio ambientale V4: materiali, stanze e più fauna — PR #22",
+      "summary": "Estensione sonora del mondo: occlusione da geometria architettonica, suoni legati ai materiali fisici, mixer della forgia unificato e maggiore varietà naturale. PR #22 aperta, non in main.",
+      "sections": [
+        {
+          "heading": "Acustica",
+          "body": "Pareti e porte reali tratte dalla geometria del villaggio modificano attenuazione e filtraggio; riverberi/riflessioni limitate per non pesare su telefono. Non è una simulazione d'onda 3D integrale."
+        },
+        {
+          "heading": "Oggetti e lavorazioni",
+          "body": "Impatto, rotolamento e scorrimento distinguono legno, ferro e pietra considerando massa e moto; contatti mano già disponibili forniscono cue; niente nuova fisica o nuovi pacchetti di rete. Suoni termici/forgia condividono il mixer."
+        },
+        {
+          "heading": "Mondo vivo",
+          "body": "Uccelli, picchio, gufo, rane, api, fruscii, ali e acqua con varietà giorno/notte e prossimità, evitando loop ripetitivi e il vecchio vento rumoroso. Musica V3 mantenuta."
+        },
+        {
+          "heading": "Stato",
+          "body": "PR #22 in bozza, test di codice presenti ma serve ascolto su Android con stress termico/FPS; suoni sintetici richiedono tuning percettivo."
+        }
+      ],
+      "properties": {
+        "PR": "https://github.com/JitaDesWadyas/feim-next/pull/22",
+        "Stato tecnico": "Draft, non merged"
+      },
+      "links": [
+        "feim-audio-v3",
+        "feim-performance-mmo",
+        "feim-focolare-carbone"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "prototipo",
+      "priority": "media",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-material-playground-v1",
+      "categoryId": "crafting",
+      "title": "Material Playground V1: recipiente, colata e forma — PR #21",
+      "summary": "La nuova proposta integra capacità generiche su materiali e oggetti senza creare un pulsante speciale per ciascuna ricetta. PR #21 ancora aperta e ciclo completo non accettato.",
+      "sections": [
+        {
+          "heading": "Moduli",
+          "body": "Contenuti veri nei recipienti, colata progressiva, calore latente, deformazione limitata per sezioni, tagli conservativi, giunti a contatto e impronte nell'argilla. Materiali e massa devono rimanere consistenti attraverso salvataggi e trasformazioni."
+        },
+        {
+          "heading": "Riscontro ottobre 20",
+          "body": "Commit del ramo 84ffc4c: regressioni nuove su salvataggio/compatibilità risolte nella suite mirata, test legacy ancora con fallimenti baseline; la termica non deve distribuire a ogni vicino l'intera superficie radiante, ma solo superfici e contatti effettivi. Nessun crogiolo con calore artificiale dedicato."
+        },
+        {
+          "heading": "Accettazione",
+          "body": "Il percorso browser «fuoco → stampo personalizzato → manico» non è ancora accettato; test specifici e build non bastano. La PR non è merged: niente dichiarazioni di ciclo artigianale completo."
+        }
+      ],
+      "properties": {
+        "PR": "https://github.com/JitaDesWadyas/feim-next/pull/21",
+        "Branch": "feat/material-playground-v1",
+        "Stato": "Draft, non merged"
+      },
+      "links": [
+        "feim-oggetti-generici",
+        "feim-colata-gestuale",
+        "feim-metallurgia",
+        "feim-assemblaggio",
+        "feim-termica-universale"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "prototipo",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-termica-universale",
+      "categoryId": "crafting",
+      "title": "Termica universale: energia e superfici a contatto",
+      "summary": "Braci, minerali, crogioli e stampi devono scaldarsi tramite lo stesso modello di trasferimento, senza riscaldatori speciali codificati per ogni manufatto.",
+      "sections": [
+        {
+          "heading": "Regola",
+          "body": "Trasferimenti per irraggiamento, contatto e ambiente in funzione di geometria realmente esposta, superfici e prossimità. Se più oggetti circondano una sorgente, non ricevono ciascuno il 100% dell'energia disponibile."
+        },
+        {
+          "heading": "Stati materiali",
+          "body": "Energia termica, capacità, temperatura e calore latente per fusione o solidificazione; perdita di energia e conservazione devono essere testate sul bilancio globale."
+        },
+        {
+          "heading": "Verifica",
+          "body": "La correzione del 20 ottobre nel ramo Material Playground riduce uno scambio eccessivo tra vicini; non dimostra da sola che tutte le lavorazioni da minerale a spada funzionino manualmente sul telefono."
+        }
+      ],
+      "properties": {
+        "Stato": "Design e correzioni su branch #21"
+      },
+      "links": [
+        "feim-material-playground-v1",
+        "feim-ferro-acciaio",
+        "feim-focolare-carbone",
+        "feim-performance-mmo"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "design",
+      "priority": "media",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-performance-20261020",
+      "categoryId": "produzione",
+      "title": "Prestazioni: ottimizzazione di replica sicura — PR #20",
+      "summary": "Il ramo di ottimizzazione conservativa replica a batch, riusa buffer e indicizza entità e collisioni senza cambiare il solver mano. PR #20 merged in main il 20 ottobre.",
+      "sections": [
+        {
+          "heading": "Modifiche integrate",
+          "body": "Replica a batch 10 Hz con view e candidati spaziali cached; buffer per client riutilizzati per delta, entità e mani; indice spaziale incrementale e collider statici indicizzati. Soccorso Bango mantenuto."
+        },
+        {
+          "heading": "Scelta consapevole",
+          "body": "NON fondere indiscriminatamente Performance Foundation V2: la PR #19 aveva mostrato più test fisici/forgia falliti rispetto a main. La #20 sceglie un sottoinsieme con confronto preciso delle regressioni."
+        },
+        {
+          "heading": "Cosa non prova",
+          "body": "Nessuna dichiarazione di migliaia di giocatori reali o FPS stabili sui dispositivi: i benchmark sintetici server non sostituiscono il test termico e GPU Android. Il profiling deve accompagnare tutti i nuovi sistemi di fisica, audio e stamina."
+        }
+      ],
+      "properties": {
+        "PR": "https://github.com/JitaDesWadyas/feim-next/pull/20",
+        "Stato": "Merged in main",
+        "Esclusione": "PR #19 full V2 non merged"
+      },
+      "links": [
+        "feim-performance-mmo",
+        "feim-soccorso-fisico-20261020",
+        "feim-mani-integrita",
+        "feim-audio-v4"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "integrazione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-mani-integrita",
+      "categoryId": "crafting",
+      "title": "Mano e utensili: coerenza fisica prima di nuove statistiche",
+      "summary": "Il braccio deve evitare incastri prevenibili, non allungarsi all'infinito o inventare collisioni in aria. La camera è libera; la mano/presa possono seguire limiti fisici coerenti.",
+      "sections": [
+        {
+          "heading": "Regole d'interazione",
+          "body": "Presa reale sul punto corretto di martello, pinze e altri oggetti; verifica di corpo + collisioni degli utensili; possibilità di ripiegare, scorrere, ruotare o ritirare l'oggetto da ostacoli senza auto-drop normale. Nessuna mano teleportata o rigidità punitiva."
+        },
+        {
+          "heading": "Origine dei bug",
+          "body": "Le iterazioni precedenti hanno generato braccio in mezzo al muro, gomito incoerente, rallentamenti, stretch infinito, collisioni fantasma e oggetti persi. Un test unitario verde non smentisce il feedback giocato."
+        },
+        {
+          "heading": "Stato",
+          "body": "PR #10 propone pose e replica coerenti ma risulta aperta; diversi rami #8/#9 sono stati chiusi senza merge. Il sistema STAMINA/STR va collegato a un unico solver validato, non a un rallentamento client aggiuntivo."
+        },
+        {
+          "heading": "Accettazione",
+          "body": "Provare presa + avanzamento contro muri/porte + giro 90° + recupero dall'incastro + multiutente con latenza, su Android e PC, misurando FPS e tempo di tick."
+        }
+      ],
+      "properties": {
+        "PR": "https://github.com/JitaDesWadyas/feim-next/pull/10",
+        "Stato": "In evoluzione, attenzione a branch alternativi"
+      },
+      "links": [
+        "feim-fisica",
+        "feim-controlli-precisione",
+        "feim-stamina-fisica",
+        "feim-usabilita-fisica",
+        "feim-performance-20261020"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-inventario-scartato-20261020",
+      "categoryId": "produzione",
+      "title": "Inventario diegetico: prototipo respinto (PR #13)",
+      "summary": "Il vecchio prototipo di zaino/diario in overlay è stato bocciato in prova Android; PR #13 chiusa senza merge. Non confondere una PR scritta con una funzionalità accettata.",
+      "sections": [
+        {
+          "heading": "Problemi osservati",
+          "body": "Zaino piatto e marrone senza profondità, oggetti non riposizionabili, diario nero e overlay che rompeva la lettura fisica, moneta come oggetto forzato, interazione opaca."
+        },
+        {
+          "heading": "Target quando riprogettato",
+          "body": "B apre uno zaino fisico 3D, dove gli oggetti sono visibili, riposizionabili e occupano spazio. Riponi prende l'oggetto dalla mano; toccare un oggetto nel contenitore lo porta in mano. Il diario deve restare un libro fisico leggibile, senza overlay fullscreen arbitrario."
+        },
+        {
+          "heading": "Integrazione",
+          "body": "Progetto da rifare da main e validare con veri oggetti e mano; nessun merge del vecchio ramo e nessuna scorciatoia che rompa proprietà o salvataggi."
+        }
+      ],
+      "properties": {
+        "PR": "https://github.com/JitaDesWadyas/feim-next/pull/13",
+        "Stato": "Abbandonato, non merged"
+      },
+      "links": [
+        "feim-inventario-modello",
+        "feim-fisica",
+        "feim-diario",
+        "feim-mercato-fisico-20261020"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "media",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-rilascio-e-test",
+      "categoryId": "produzione",
+      "title": "Regressioni, playtest e integrazione continua senza illusioni",
+      "summary": "Per FEIM Next si distinguono unit test, prova completa sul dispositivo, merge e comportamento osservato. Nessuna funzionalità è dichiarata pronta perché un branch compila.",
+      "sections": [
+        {
+          "heading": "Baseline",
+          "body": "Test suite Go storica conserva alcuni fallimenti precedenti: confrontare sempre contro la stessa revisione di main. Non nascondere test con skip o cambiare threshold per far passare la CI."
+        },
+        {
+          "heading": "Playtest",
+          "body": "Per mani: collisione e recupero senza stretch. Per forgia: intero ciclo lavorabile senza API o comandi nascosti. Per audio: ascolto con headphone/device; per performance: FPS, latenze, memoria e calore veri. Per commercio: doppi utenti, race, anti-duplicazione, reconnect."
+        },
+        {
+          "heading": "Strategia di ramo",
+          "body": "Branch di caratteristiche separati, confronti per path e test di integrazione prima del merge. Evitare di integrare simultaneamente nuovi solver, audio, mercato, materiali e ottimizzazione: ogni sistema nuovo deve partire dalla baseline approvata."
+        },
+        {
+          "heading": "Build e cache locali",
+          "body": "Il progetto ha avuto sessioni localhost incoerenti tra branch/cookie/risorse client dopo cambi rapidi. È un problema di sviluppo da risolvere con identità build/sessione e reset mirato, non una giustificazione per cancellare indiscriminatamente i salvataggi."
+        }
+      ],
+      "properties": {
+        "Stato": "Regola di sviluppo continuativa"
+      },
+      "links": [
+        "feim-stato-tecnico",
+        "feim-performance-20261020",
+        "feim-mani-integrita",
+        "feim-inventario-scartato-20261020",
+        "feim-material-playground-v1"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-prossimi-sistemi-combat",
+      "categoryId": "combattimento",
+      "title": "Sequenza di sviluppo: armi, creature, stamina, armature",
+      "summary": "Il modello di danno e le statistiche devono evolvere insieme al combattimento fisico, ma non anticipare solver e creature con mille sistemi incompleti.",
+      "sections": [
+        {
+          "heading": "Prima",
+          "body": "Stabilizzare mani e prese, un'arma fisica controllabile, collisione coerente del colpo e almeno un bersaglio/creatura con zone vulnerabili. Solo dopo ha senso calibrare STR e sforzo."
+        },
+        {
+          "heading": "Poi",
+          "body": "Prototipo STR/END con stamina da sforzo reale; DEX movimento moderato, CON come tenuta dei traumi; archi/lancio solo quando ci sono fisica e feedback maturi."
+        },
+        {
+          "heading": "Protezione",
+          "body": "Implementare prima armature già pronte da indossare e verificare sul corpo; produzione di pezzi semplici solo più avanti. MAG/WIS dipendono dalla progettazione ancora aperta della magia."
+        },
+        {
+          "heading": "Vincolo",
+          "body": "Nessuna data di rilascio promessa e nessuna crescita esplosiva che renda il gioco ingestibile. Ogni fase va provata sul telefono e in multiplayer."
+        }
+      ],
+      "properties": {
+        "Stato": "Sequenza progettuale proposta il 20/10"
+      },
+      "links": [
+        "feim-sei-statistiche",
+        "feim-stamina-fisica",
+        "feim-armature-fisiche",
+        "feim-magia",
+        "feim-mani-integrita"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261020
     }
   ]
 };

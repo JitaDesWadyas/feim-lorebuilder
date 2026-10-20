@@ -4,15 +4,41 @@ Enciclopedia mobile-first per consultare la visione di **FEIM Next**, sviluppare
 
 ## Come è organizzata
 
-La pagina **Inizio** propone sei letture essenziali e una panoramica sintetica. **Atlante** raccoglie 11 capitoli e 74 voci di world design, con collegamenti, proprietà, approfondimenti e ricerca. **Idee** consente di catturare appunti in un solo campo o svilupparli in una scheda facoltativa con domanda, alternative e conseguenze. **Esporta** produce un pacchetto Markdown per ChatGPT e un backup JSON ripristinabile.
+La pagina **Inizio** propone sei letture essenziali e una panoramica sintetica. **Atlante** raccoglie 11 capitoli e 94 voci di world design, con collegamenti, proprietà, approfondimenti e ricerca. **Idee** consente di catturare appunti in un solo campo o svilupparli in una scheda facoltativa con domanda, alternative e conseguenze. **Esporta** produce un pacchetto Markdown per ChatGPT e un backup JSON ripristinabile.
 
 L'archivio comprende la premessa degli evocati e dei Bango, Bura'Ka, la minaccia comune, le stagioni, i raid, la magia elementale, la ricerca senza ricette ufficiali, le armi fisiche, le professioni, il commercio di conoscenze, la comunicazione tramite piccioni e il gameplay sociale persistente. Include anche lo stato tecnico effettivo del prototipo.
 
-### Aggiornamento 16 ottobre 2026
+### Aggiornamento storico 16 ottobre 2026
 
-Il progetto ora documenta 74 voci: ferro e riduzione allo stato solido, accensione e propagazione del calore nel carbone, camera di caricamento accessibile, colata semplificata, materiali fantastici e prestazioni MMO; oltre a scontrini attaccati agli oggetti e copiati nel diario, inventario da progettare, rune, gesti magici, Bango lavoratori con bisogni e conoscenze, acqua frizzante al limone (proposta), fauna originale, logistica, lingua inglese, traduzione futura, chat vocale e conseguenze sociali del combattimento.
+Al 16 ottobre il progetto documentava 74 voci: ferro e riduzione allo stato solido, accensione e propagazione del calore nel carbone, camera di caricamento accessibile, colata semplificata, materiali fantastici e prestazioni MMO; oltre a scontrini attaccati agli oggetti e copiati nel diario, inventario da progettare, rune, gesti magici, Bango lavoratori con bisogni e conoscenze, acqua frizzante al limone (proposta), fauna originale, logistica, lingua inglese, traduzione futura, chat vocale e conseguenze sociali del combattimento.
 
 Il branch **`feim-next/feat/playable-forge-rebuild`** contiene codice consistente, ma **il playtest Android del 16 ottobre non ha completato un ciclo di crafting**. La wiki separa l'implementato, i test automatici, i problemi verificati manualmente e le proposte ancora aperte. I nomi dei materiali citati sono provvisori. Nessun contenuto locale o spoiler narrativo privato è pubblicato.
+
+### Aggiornamento 20 ottobre 2026
+
+L'Atlante passa a **94 schede in 11 capitoli**: 20 nuove pagine e 17 esistenti revisionate (37 pagine con revisione 20261020), mantenendo gli ID stabili e rispettando le note locali dell'utente. Il sito non chiede login e non pubblica automaticamente appunti o spoiler dal dispositivo.
+
+**Gameplay e progressione:** STR, DEX, MAG, CON, END, WIS restano sei capacità del personaggio, non bonus numerici diretti ai danni. STR applica forza fisica a oggetti e armi; DEX regola moderatamente agilità, movimento, salto e futuri archi/lanci senza rovinare i controlli ai personaggi iniziali; END regola stamina e recupero; CON traumi; MAG/WIS ancora da progettare a livello magico. Stamina da lavoro muscolare e carico reale, non costo fisso per ogni input. Progressione prevalentemente orizzontale con crescita verticale contenuta e non punitiva.
+
+**Combattimento e armature:** traiettoria, velocità effettiva, orientamento del filo, massa, contatto e punto anatomico devono determinare gli urti; niente bonus STR «+danno». Le armature proteggono zone effettive in base a spessore, materiale, rigidità e ingombro. Produzione futura da tessuti/imbottiture a piastre/brigantine e molto dopo maglia; indossamento fisico assistito, collider aggregati, lavorazioni riutilizzabili e crafting facoltativo. Non sono sistemi ancora giocabili.
+
+**Codice e stato verificati al 20/10** (le PR draft sono **codice in prova**, non funzionalità rilasciate):
+
+| Area | Stato accertato |
+| --- | --- |
+| Soccorso Bango fisico, messaggeri, due portatori, barella e cura presso Uru | [PR #14](https://github.com/JitaDesWadyas/feim-next/pull/14) **merged** su main; edificio ospedale e barella rigid-body assenti |
+| Audio V3 (passi, ambientazione, musica generativa, oggetti) | [PR #17](https://github.com/JitaDesWadyas/feim-next/pull/17) **merged** su main; verifica d'ascolto dispositivo da completare |
+| Replica rete ottimizzata e indici spaziali senza cambiare il solver | [PR #20](https://github.com/JitaDesWadyas/feim-next/pull/20) **merged**; Performance Foundation V2 completa [#19](https://github.com/JitaDesWadyas/feim-next/pull/19) **non merged** |
+| Commercio fisico fra giocatori, tavoli e Bango | [PR #15](https://github.com/JitaDesWadyas/feim-next/pull/15) **aperta**, playtest PC richiesto |
+| Dialoghi dinamici, memoria episodica, gossip e fiducia Bango | [PR #18](https://github.com/JitaDesWadyas/feim-next/pull/18) **aperta**, dipende da #15 |
+| Material Playground: calore, recipienti, deformazione, tagli e giunti | [PR #21](https://github.com/JitaDesWadyas/feim-next/pull/21) **aperta**, percorso artigianale completo non accettato |
+| Audio V4: acustica degli interni, materiali e natura arricchita | [PR #22](https://github.com/JitaDesWadyas/feim-next/pull/22) **aperta**, prova Android/termica richiesta |
+| Zaino diegetico precedente | [PR #13](https://github.com/JitaDesWadyas/feim-next/pull/13) **abbandonata**, niente merge; riprogettazione fisica 3D da main |
+| Mano e strumenti coerenti con muri e presa | [PR #10](https://github.com/JitaDesWadyas/feim-next/pull/10) **aperta**, stabilizzazione ancora necessaria |
+
+Priorità di integrazione progettuale: stabilizzare mani e armi, testare colpi e creature, sviluppare STR/END e sforzo fisico, poi DEX/CON; armature prima già costruite e infine produzione; progettare la magia prima di implementare MAG/WIS. La chat vocale vera, gli archi, le schivate e l'ospedale restano futuri e non vengono descritti come implementati.
+
+Le sezioni precedenti datate 16 ottobre restano come documentazione storica delle osservazioni e dei bug, non come fotografia dell'ultima build.
 
 ### Creazione fisica senza simulatore universale
 

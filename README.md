@@ -42,7 +42,7 @@ Le sezioni precedenti datate 16 ottobre restano come documentazione storica dell
 
 ### Aggiornamento 21 ottobre 2026
 
-L'Atlante conta ora **116 schede in 11 capitoli**: 22 nuove voci, 12 voci già presenti aggiornate e revisione di riferimento `20261021`. L'aggiornamento non pubblica appunti personali locali.
+L'Atlante conta ora **116 schede in 11 capitoli**: 22 nuove voci, 13 voci già presenti aggiornate e revisione di riferimento `20261021`. L'aggiornamento non pubblica appunti personali locali.
 
 **Game design e priorità:** sequenza iniziale diegetica, primo loop completo Bura'Ka → risorse → lavorazione/scambio → esplorazione → rischio → ritorno, regioni e densità del mondo, un primo combattimento completo, creature geometriche e animazioni organiche, grammatica della magia ancora aperta. Le proposte sono chiaramente distinte dalle decisioni confermate.
 

@@ -4,7 +4,7 @@ Enciclopedia mobile-first per consultare la visione di **FEIM Next**, sviluppare
 
 ## Come è organizzata
 
-La pagina **Inizio** propone sei letture essenziali e una panoramica sintetica. **Atlante** raccoglie 11 capitoli e 94 voci di world design, con collegamenti, proprietà, approfondimenti e ricerca. **Idee** consente di catturare appunti in un solo campo o svilupparli in una scheda facoltativa con domanda, alternative e conseguenze. **Esporta** produce un pacchetto Markdown per ChatGPT e un backup JSON ripristinabile.
+La pagina **Inizio** propone sei letture essenziali e una panoramica sintetica. **Atlante** raccoglie 11 capitoli e 116 voci di world design, con collegamenti, proprietà, approfondimenti e ricerca. **Idee** consente di catturare appunti in un solo campo o svilupparli in una scheda facoltativa con domanda, alternative e conseguenze. **Esporta** produce un pacchetto Markdown per ChatGPT e un backup JSON ripristinabile.
 
 L'archivio comprende la premessa degli evocati e dei Bango, Bura'Ka, la minaccia comune, le stagioni, i raid, la magia elementale, la ricerca senza ricette ufficiali, le armi fisiche, le professioni, il commercio di conoscenze, la comunicazione tramite piccioni e il gameplay sociale persistente. Include anche lo stato tecnico effettivo del prototipo.
 
@@ -39,6 +39,22 @@ L'Atlante passa a **94 schede in 11 capitoli**: 20 nuove pagine e 17 esistenti r
 Priorità di integrazione progettuale: stabilizzare mani e armi, testare colpi e creature, sviluppare STR/END e sforzo fisico, poi DEX/CON; armature prima già costruite e infine produzione; progettare la magia prima di implementare MAG/WIS. La chat vocale vera, gli archi, le schivate e l'ospedale restano futuri e non vengono descritti come implementati.
 
 Le sezioni precedenti datate 16 ottobre restano come documentazione storica delle osservazioni e dei bug, non come fotografia dell'ultima build.
+
+### Aggiornamento 21 ottobre 2026
+
+L'Atlante conta ora **116 schede in 11 capitoli**: 22 nuove voci, 12 voci già presenti aggiornate e revisione di riferimento `20261021`. L'aggiornamento non pubblica appunti personali locali.
+
+**Game design e priorità:** sequenza iniziale diegetica, primo loop completo Bura'Ka → risorse → lavorazione/scambio → esplorazione → rischio → ritorno, regioni e densità del mondo, un primo combattimento completo, creature geometriche e animazioni organiche, grammatica della magia ancora aperta. Le proposte sono chiaramente distinte dalle decisioni confermate.
+
+**Società sistemica:** bisogni e incarichi offline dei Bango, economia oltre il gesto fisico dello scambio, mestieri basati su materiali/geometria/trasformazioni condivisi, regole di proprietà e PvP, organizzazione dei giocatori, valore delle informazioni, storia reattiva e costi della simulazione fuori dalla vista del giocatore.
+
+**Esperienza mobile:** il precedente pannello rettangolare Bango è respinto. Dialogo in **rotella radiale centrata**, comandi leggibili in inglese; quando inizia uno scambio, entra una **modalità fisica separata** con giocatore/NPC fermi, mani controllabili e HUD superfluo nascosto. Nessun merge dei branch #15/#18 è approvato solo perché i test passano.
+
+**Arte e suono:** il feedback del 21 ottobre critica cielo, nuvole, scatto giorno/notte, lampioni, targhe e senso di vuoto. La PR #26 è in prova (continuità del cielo, nuvole procedurali, applique, targhe su facciata), **non merged** e soggetta a playtest PC/Android. Gli effetti ambientali sono distinti dalle nuove melodie, ancora respinte per frammentazione, scarso legato e riverbero.
+
+**Stato GitHub controllato il 21 ottobre:** sono integrate le PR #14, #17, #20, **#22 (Audio V4)**, **#23 (ottimizzazione fisica conservativa)** e **#25 (ambiente, fotografia locale, diagnostica)**. Restano aperte **#10, #11, #12, #15, #18, #21, #24 e #26**. La fotografia della PR #25 non è ancora integrazione delle foto nel diario. Il vecchio inventario PR #13 è stato respinto. I cicli completi mano/forgia/commercio richiedono ancora test manuali; *merged* non significa *accettato*. **Il proprietario autorizza i merge FEIM Next dopo verifica**, non in anticipo.
+
+**Lavori dalla chat senza Codex o Blender:** prototipi contenuti di dialoghi/UX, mini-economia Bango, piccole aree esplorabili e creature procedurali, atmosfera e diagnostica; le grosse riscritture di mano, forgiatura e armature sono da trattare separatamente e con prove sul dispositivo.
 
 ### Creazione fisica senza simulatore universale
 

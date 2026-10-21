@@ -1,10 +1,10 @@
 /* FEIM Next project reference — publicly readable. Local personal notes never belong here. */
 window.FEIM_REFERENCE={
   "format": "feim-atlas-seed",
-  "revision": 20261020,
+  "revision": 20261021,
   "project": {
     "name": "FEIM Next · Atlante",
-    "description": "Enciclopedia pubblica aggiornata al 20 ottobre 2026: mondo, forgia, Bango, soccorso, audio, economia fisica, statistiche, stamina, progressione e armature. Design, PR aperte e main sono distinti; note personali locali."
+    "description": "Atlante pubblico aggiornato al 21 ottobre 2026: decisioni recenti, questioni aperte, UX scambi/dialoghi, mondo, creature, economia e stato GitHub verificato; nessun contenuto privato o merge FEIM Next."
   },
   "categories": [
     {
@@ -425,6 +425,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Principio proposto",
           "body": "Meglio una scena giocabile che 20 finestre tutorial."
+        },
+        {
+          "heading": "Aggiornamento design 21 ottobre",
+          "body": "La Cripta degli Evocati rimane un elemento da conciliare con Bura'Ka; primo incontro e scoperta di un'opportunità devono funzionare senza schermate tutorial. La sequenza giocabile non è ancora stata approvata."
         }
       ],
       "properties": {
@@ -432,7 +436,8 @@ window.FEIM_REFERENCE={
       },
       "links": [
         "feim-bango",
-        "feim-daily"
+        "feim-daily",
+        "feim-primi-minuti-20261021"
       ],
       "origin": "proposta",
       "status": "in_discussione",
@@ -440,7 +445,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-buraka",
@@ -1115,6 +1120,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "MAG e WIS non impongono una barra mana",
           "body": "Discussione del 20 ottobre: MAG è proposta come potenziale/capacità energetica, WIS come comprensione e controllo; ma non sono ancora stabilite risorse, rune, sintassi, costo, gesti, materiali o rapporto fra magia e fisica. Non introdurre arbitrariamente skill a pulsante o un mana tradizionale."
+        },
+        {
+          "heading": "Priorità di progettazione 21 ottobre",
+          "body": "Prima del codice servono grammatica degli effetti, controlli/gesti, apprendimento, rischio/costo, difese e interazioni con materiali, luogo e strumenti. Nessuna lista finale di incantesimi o mana è stata approvata."
         }
       ],
       "properties": {
@@ -1128,7 +1137,8 @@ window.FEIM_REFERENCE={
         "feim-magia-rune",
         "feim-materiali-fantastici",
         "feim-sei-statistiche",
-        "feim-progressione-mista"
+        "feim-progressione-mista",
+        "feim-magia-da-progettare-20261021"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1136,7 +1146,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261020
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-magia-oggetti",
@@ -1319,6 +1329,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Nuova direzione della fauna",
           "body": "Creature e animali da lavoro originali, con ispirazioni reali e funzioni ecologiche riconoscibili; specie e nomi non stabiliti."
+        },
+        {
+          "heading": "Creature animate: nuova proposta",
+          "body": "Discussa una generazione morfologica matematica con modello poi stabile e animazione variabile, wobble/ragdoll limitato per evitare movimenti troppo meccanici. È direzione da prototipare, non sistema creature completo."
         }
       ],
       "properties": {
@@ -1329,7 +1343,9 @@ window.FEIM_REFERENCE={
         "feim-ricerca",
         "feim-territori",
         "feim-animali-fantastici",
-        "feim-trasporti"
+        "feim-trasporti",
+        "feim-creature-procedurali-20261021",
+        "feim-primo-combattimento-20261021"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1337,7 +1353,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261016
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-esplorazione",
@@ -1509,7 +1525,7 @@ window.FEIM_REFERENCE={
     {
       "id": "feim-stato-tecnico",
       "categoryId": "produzione",
-      "title": "Stato reale del prototipo — 20 ottobre 2026",
+      "title": "Stato reale del prototipo — aggiornamento 21 ottobre 2026",
       "summary": "Vertical slice in sviluppo: soccorso Bango fisico, audio V3 e ottimizzazioni conservative sono stati integrati in main il 20 ottobre. Commercio, dialoghi Bango, Material Playground e audio V4 rimangono su PR aperte; forgia e mani richiedono accettazione manuale. Magia, stamina, stats e armature sono ancora design.",
       "sections": [
         {
@@ -1535,6 +1551,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Aggiornamento verificato 20 ottobre 2026",
           "body": "Il resoconto del 16 ottobre rimane storico, non lo stato corrente: la PR #14 (soccorso Bango fisico) è merged; #17 (audio V3.1) è merged; #20 (ottimizzazione conservativa replica) è merged. Le PR #15 (commercio), #18 (dialoghi/memoria), #21 (Material Playground), #22 (audio V4) sono aperte; #13 inventario è abbandonata. Il ciclo completo forgia da telefono, combattimento profondo, stamina, statistiche e armature restano non accettati o non implementati. Le PR #10/#11/#12 su mani e forgiatura non vanno spacciate per merge definitivi."
+        },
+        {
+          "heading": "Aggiornamento 21 ottobre (prevale sui vecchi paragrafi storici)",
+          "body": "Su GitHub risultano ora merged anche PR #22 Audio V4, #23 ottimizzazione fisica prudente, #25 utilità ambientali/diagnostica/foto. Restano aperte #26 correzioni visive, #24 integrazione materiali, #21 materiali, #18 dialoghi, #15 scambi, #10 mani e altri rami forge. Il merge di utility o audio non certifica la qualità percepita o la stabilità dei sistemi ancora in prova."
         }
       ],
       "properties": {
@@ -1556,7 +1576,9 @@ window.FEIM_REFERENCE={
         "feim-material-playground-v1",
         "feim-mercato-fisico-20261020",
         "feim-bango-memoria-dialoghi",
-        "feim-mani-integrita"
+        "feim-mani-integrita",
+        "feim-stato-20261021",
+        "feim-grafica-feedback-20261021"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -1564,7 +1586,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261020
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-early-access",
@@ -1627,6 +1649,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Da migliorare",
           "body": "Fluidità delle animazioni, qualità visiva in movimento, leggibilità dei gesti e prestazioni su dispositivi reali."
+        },
+        {
+          "heading": "Feedback reale 21 ottobre",
+          "body": "L'angolarità dei modelli rimane desiderata ma il cielo, la transizione notte/giorno, le lampade e le insegne non sono stati accettati visivamente. Il successivo tentativo PR #26 è draft e deve essere testato su dispositivi prima di entrare in main."
         }
       ],
       "properties": {
@@ -1634,7 +1660,9 @@ window.FEIM_REFERENCE={
       },
       "links": [
         "feim-bango",
-        "feim-stato-tecnico"
+        "feim-stato-tecnico",
+        "feim-grafica-feedback-20261021",
+        "feim-cielo-luci-segnaletica-pr26-20261021"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -1642,7 +1670,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261013
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-marketing",
@@ -1707,6 +1735,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Decisioni e confini aggiornati al 20 ottobre",
           "body": "Decisi come direzione: 6 statistiche corporee con forza/agilità/stamina, progressione prevalentemente orizzontale e verticale tenue, colpi fisici senza +danno STR; armature a copertura localizzata e produzione tramite operazioni riutilizzabili. Aperti: formule di crescita, trauma e recupero, magia MAG/WIS, arco/lancio, schivata, tessuti/piastre/mesh, libertà costruttiva finale, usura, ospedale, qualità degli NPC, UX zaino, integrazione della forgia e benchmark multiplayer."
+        },
+        {
+          "heading": "Mappa priorità aggiornata al 21 ottobre",
+          "body": "Nodi centrali non risolti: primo loop avventura, primi minuti senza quest UI, geografia esplorabile, primo combattimento PvE, magia sistemica, motivazione di ritorno, economia dei Bango, vita offline, proprietà/PvP, scoperta della conoscenza, storia reattiva e livello di simulazione delle aree non osservate. Evitare di confondere elenco delle cose mancanti con un impegno ad implementarle tutte."
         }
       ],
       "properties": {
@@ -1732,7 +1764,11 @@ window.FEIM_REFERENCE={
         "feim-armature-produzione",
         "feim-armi-distanza",
         "feim-bango-memoria-dialoghi",
-        "feim-inventario-scartato-20261020"
+        "feim-inventario-scartato-20261020",
+        "feim-loop-completo-20261021",
+        "feim-magia-da-progettare-20261021",
+        "feim-esplorazione-mappa-20261021",
+        "feim-simulazione-lontana-20261021"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -1740,7 +1776,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261020
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-decisioni-superate",
@@ -2827,6 +2863,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Audio e voce, 20 ottobre",
           "body": "L'audio spaziale/musicale V3 è integrato in main, l'estensione acustica e Foley V4 è solo draft PR #22. La chat vocale vera non è stata implementata: un bus già predisposto non è funzionalità disponibile. Traduzione automatica e localizzazione completa rimangono future."
+        },
+        {
+          "heading": "Sequenza attività audio e comunicazione",
+          "body": "Fra le quattro attività audio/social ricordate il 20 ottobre: audio 3D completato a livello branch/main; chat vocale di prossimità ancora da fare; diagnostica/bug recorder in parte coperta dalle utility PR #25; localizzazione IT/EN ancora da affrontare. I dialoghi Bango del gioco iniziano in inglese."
         }
       ],
       "properties": {},
@@ -2836,7 +2876,8 @@ window.FEIM_REFERENCE={
         "feim-piccioni",
         "feim-stato-tecnico",
         "feim-audio-v3",
-        "feim-audio-v4"
+        "feim-audio-v4",
+        "feim-stato-20261021"
       ],
       "origin": "confermato",
       "status": "in_discussione",
@@ -2844,7 +2885,7 @@ window.FEIM_REFERENCE={
       "phase": "visione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261020
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-combat-aperto",
@@ -3461,6 +3502,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Stato e limiti",
           "body": "Codice e test specifici nella PR #15; NON in main al controllo del 20/10. I vecchi percorsi di acquisto possono ancora esistere; il Bango che porta realmente merce dallo scaffale è un passo separato. Niente accettazione conclusiva sul feel senza playtest."
+        },
+        {
+          "heading": "Direzione UX confermata il 21 ottobre",
+          "body": "Il commercio attivo non deve condividere il normale overlay dei dialoghi; entra in una modalità fisica distinta. Giocatore e NPC fermi, solo mani attive e HUD superfluo nascosto sul telefono. Il consenso e il trasferimento restano operazioni autorevoli."
         }
       ],
       "properties": {
@@ -3471,7 +3516,8 @@ window.FEIM_REFERENCE={
         "feim-economia",
         "feim-bango-memoria-dialoghi",
         "feim-inventario-modello",
-        "feim-cartellino-oggetto"
+        "feim-cartellino-oggetto",
+        "feim-mercato-modalita-fisica-20261021"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -3479,7 +3525,7 @@ window.FEIM_REFERENCE={
       "phase": "prototipo",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261020
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-bango-memoria-dialoghi",
@@ -3502,6 +3548,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Confini di integrazione",
           "body": "Al 20/10 la PR #18 è aperta, dipende da #15 e non modifica solver mani, forgia, soccorso o witness-bird. Test automatici non equivalgono all'approvazione della UX."
+        },
+        {
+          "heading": "Correzione mobile confermata il 21 ottobre",
+          "body": "Il pannello rettangolare mobile è stato respinto. Rotella centrata, scelte radiali, leggibilità touch, paginazione coerente; tutta la conversazione in inglese e contestuale. La modalità scambio fisica sostituisce il dialogo quando inizia un vero trade."
         }
       ],
       "properties": {
@@ -3513,7 +3563,9 @@ window.FEIM_REFERENCE={
         "feim-bango-domande",
         "feim-mercato-fisico-20261020",
         "feim-comunita",
-        "feim-criminalita"
+        "feim-criminalita",
+        "feim-dialogo-rotella-mobile-20261021",
+        "feim-mercato-modalita-fisica-20261021"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -3521,7 +3573,7 @@ window.FEIM_REFERENCE={
       "phase": "prototipo",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261020
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-soccorso-fisico-20261020",
@@ -3585,6 +3637,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Riferimento",
           "body": "PR #17 merged il 20 ottobre 2026; PR #16 superata."
+        },
+        {
+          "heading": "Musica ancora da approvare",
+          "body": "La qualità dell'audio ambientale e della musica vanno valutate separatamente: l'utente ha respinto più melodie successive per incoerenza tra frasi, assenza di legato e attacchi bruschi. Il merge delle librerie sonore non equivale ad approvazione artistica."
         }
       ],
       "properties": {
@@ -3595,7 +3651,8 @@ window.FEIM_REFERENCE={
         "feim-audio-v4",
         "feim-voice-lingue",
         "feim-performance-mmo",
-        "feim-fisica"
+        "feim-fisica",
+        "feim-audio-musica-revisione-20261021"
       ],
       "origin": "confermato",
       "status": "da_validare",
@@ -3603,13 +3660,13 @@ window.FEIM_REFERENCE={
       "phase": "integrazione",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261020
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-audio-v4",
       "categoryId": "produzione",
       "title": "Audio ambientale V4: materiali, stanze e più fauna — PR #22",
-      "summary": "Estensione sonora del mondo: occlusione da geometria architettonica, suoni legati ai materiali fisici, mixer della forgia unificato e maggiore varietà naturale. PR #22 aperta, non in main.",
+      "summary": "Audio ambientale V4: materiali, spazi, natura estesa. PR #22 risulta integrata in main; la qualità percettiva resta da validare.",
       "sections": [
         {
           "heading": "Acustica",
@@ -3626,24 +3683,29 @@ window.FEIM_REFERENCE={
         {
           "heading": "Stato",
           "body": "PR #22 in bozza, test di codice presenti ma serve ascolto su Android con stress termico/FPS; suoni sintetici richiedono tuning percettivo."
+        },
+        {
+          "heading": "Aggiornamento repository 21 ottobre",
+          "body": "PR #22 risulta merged il 20 ottobre (non più draft): audio di materiali, acustica delle stanze e varietà naturale presenti a livello codice. La prova d'ascolto, soprattutto Android, e la soddisfazione per la musica rimangono aspetti separati."
         }
       ],
       "properties": {
         "PR": "https://github.com/JitaDesWadyas/feim-next/pull/22",
-        "Stato tecnico": "Draft, non merged"
+        "Stato tecnico": "Merged PR #22 il 20 ottobre 2026; playtest ancora necessario"
       },
       "links": [
         "feim-audio-v3",
         "feim-performance-mmo",
-        "feim-focolare-carbone"
+        "feim-focolare-carbone",
+        "feim-audio-musica-revisione-20261021"
       ],
       "origin": "confermato",
       "status": "da_validare",
       "kind": "system",
-      "phase": "prototipo",
+      "phase": "integrazione",
       "priority": "media",
       "favorite": false,
-      "__seedRevision": 20261020
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-material-playground-v1",
@@ -3817,6 +3879,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Integrazione",
           "body": "Progetto da rifare da main e validare con veri oggetti e mano; nessun merge del vecchio ramo e nessuna scorciatoia che rompa proprietà o salvataggi."
+        },
+        {
+          "heading": "Vincoli confermati della riprogettazione",
+          "body": "B apre un contenitore tridimensionale profondo; gli oggetti si spostano per ricavare spazio, «Riponi» deposita quello tenuto in mano e toccare un oggetto permette di prenderlo. Eliminare la falsa moneta singola e ogni schermata marrone full-screen. Diario come libro fisico davanti al mondo, con futura fotografia integrata."
         }
       ],
       "properties": {
@@ -3827,7 +3893,8 @@ window.FEIM_REFERENCE={
         "feim-inventario-modello",
         "feim-fisica",
         "feim-diario",
-        "feim-mercato-fisico-20261020"
+        "feim-mercato-fisico-20261020",
+        "feim-grafica-feedback-20261021"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -3835,7 +3902,7 @@ window.FEIM_REFERENCE={
       "phase": "design",
       "priority": "media",
       "favorite": false,
-      "__seedRevision": 20261020
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-rilascio-e-test",
@@ -3858,6 +3925,10 @@ window.FEIM_REFERENCE={
         {
           "heading": "Build e cache locali",
           "body": "Il progetto ha avuto sessioni localhost incoerenti tra branch/cookie/risorse client dopo cambi rapidi. È un problema di sviluppo da risolvere con identità build/sessione e reset mirato, non una giustificazione per cancellare indiscriminatamente i salvataggi."
+        },
+        {
+          "heading": "Regola esplicita 21 ottobre",
+          "body": "La pubblicazione diretta del codice FEIM Next su main prima del test dell'utente non è accettabile. Branch e PR separati, nessun merge automatico di cambiamenti visivi/fisici in attesa di prova. Strumenti di preview notte, foto e diagnostica devono facilitare l'approvazione senza falsare i dati di gioco."
         }
       ],
       "properties": {
@@ -3868,7 +3939,8 @@ window.FEIM_REFERENCE={
         "feim-performance-20261020",
         "feim-mani-integrita",
         "feim-inventario-scartato-20261020",
-        "feim-material-playground-v1"
+        "feim-material-playground-v1",
+        "feim-cielo-luci-segnaletica-pr26-20261021"
       ],
       "origin": "confermato",
       "status": "definito",
@@ -3876,7 +3948,7 @@ window.FEIM_REFERENCE={
       "phase": "design",
       "priority": "alta",
       "favorite": false,
-      "__seedRevision": 20261020
+      "__seedRevision": 20261021
     },
     {
       "id": "feim-prossimi-sistemi-combat",
@@ -3918,6 +3990,829 @@ window.FEIM_REFERENCE={
       "priority": "alta",
       "favorite": false,
       "__seedRevision": 20261020
+    },
+    {
+      "id": "feim-loop-completo-20261021",
+      "categoryId": "fondamenti",
+      "title": "Vertical slice: un'avventura che torna a Bura'Ka",
+      "summary": "Priorità progettuale proposta: collegare i sistemi esistenti in un ciclo giocabile, anziché accumulare meccaniche isolate.",
+      "sections": [
+        {
+          "heading": "Percorso da validare",
+          "body": "Bura'Ka → incontro con una persona/opportunità → raccolta legno, minerali, cibo o pelle → lavorazione o acquisto → equipaggiamento → area di esplorazione e pericolo → scoperta/ricompensa → ritorno al villaggio, vendita e nuova ragione per uscire."
+        },
+        {
+          "heading": "Libertà di ruolo",
+          "body": "Un giocatore può commerciare o esplorare senza diventare fabbro. Un artigiano può vivere di produzione e commissioni. Non obbligare tutti ad attraversare la stessa catena produttiva."
+        },
+        {
+          "heading": "Domanda di design",
+          "body": "Perché partire, rischiare, tornare e ripartire? Deve esserci risposta concreta già in una prima sessione, non solo nella promessa di futuri sistemi."
+        },
+        {
+          "heading": "Accettazione futura",
+          "body": "Provare la stessa mini-avventura in solitaria e con due giocatori senza finestre tutorial, cheat, quest marker obbligatori né fixture che saltino i passaggi fisici. È una proposta, non una build già pronta."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-visione",
+        "feim-daily",
+        "feim-arrivo-giocatore",
+        "feim-territori",
+        "feim-mercato-fisico-20261020"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-primi-minuti-20261021",
+      "categoryId": "fondamenti",
+      "title": "Primi dieci minuti: onboarding diegetico",
+      "summary": "La premessa dei Bango evocatori e l'avvio a Bura'Ka sono stabiliti; la sequenza concreta dei primi minuti resta da inventare e provare.",
+      "sections": [
+        {
+          "heading": "Direzione confermata",
+          "body": "Niente tutorial/quest UI invasiva. I dialoghi con i Bango sono rapidi e contestuali; gli oggetti e l'ambiente suggeriscono cosa è possibile fare."
+        },
+        {
+          "heading": "Sequenza da progettare",
+          "body": "Luogo d'arrivo e rapporto con la Cripta degli Evocati, primo Bango incontrato, primo gesto fisico accessibile, primo bisogno/opportunità, primo viaggio oltre il villaggio."
+        },
+        {
+          "heading": "Qualità",
+          "body": "In pochi minuti il giocatore deve capire di trovarsi in una comunità viva, ma poter ignorare la prima opportunità e scegliere altro."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-arrivo-giocatore",
+        "feim-bango",
+        "feim-loop-completo-20261021",
+        "feim-evocati"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-esplorazione-mappa-20261021",
+      "categoryId": "insediamenti",
+      "title": "Regioni esplorabili: densità prima della superficie",
+      "summary": "Oltre il primo villaggio manca un piano concreto di aree, biomi, distanze, distribuzione delle risorse e luoghi d'interesse.",
+      "sections": [
+        {
+          "heading": "Decisioni ancora aperte",
+          "body": "Geografia, clima, dungeon, grotte, foreste, fiumi e monti; dove si trovano risorse rare, creature e insediamenti; come si viaggia e si torna indietro."
+        },
+        {
+          "heading": "Produzione consigliata",
+          "body": "Prototipo piccolo e denso intorno a Bura'Ka, con percorsi riconoscibili, pericoli, ricompense e varianti d'esplorazione. Decorazione e generazione procedurale non bastano a creare gameplay."
+        },
+        {
+          "heading": "Persistenza",
+          "body": "La posizione e la distanza devono contare anche per notizie, soccorso, logistica e attività dei Bango."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-territori",
+        "feim-creature",
+        "feim-trasporti",
+        "feim-loop-completo-20261021"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-creature-procedurali-20261021",
+      "categoryId": "combattimento",
+      "title": "Creature: forme originali e animazione corporea viva",
+      "summary": "Direzione esplorata: generare una creatura da regole geometriche, mantenerne stabile il modello e animarla con movimenti variabili, elastici e reazioni fisiche.",
+      "sections": [
+        {
+          "heading": "Idea discussa il 20 ottobre",
+          "body": "Matematica per produrre una morfologia originale, poi forma/asset riconoscibile; movimento che coinvolga il corpo, non soltanto cicli rigidi di scheletro, con wobble, inerzia e ragdoll limitato."
+        },
+        {
+          "heading": "Da progettare",
+          "body": "Famiglie, silhouette, locomozione, AI, segnali di attacco, collisioni dei colpi, reazioni al dolore, territorio e debolezze. Non confondere una demo visiva con un nemico giocabile."
+        },
+        {
+          "heading": "Prototipo consigliato",
+          "body": "Una sola famiglia con varianti di dimensione, comportamento e movimento, poi una vera scena di avventura e combattimento; controllare stabilità e costo sui dispositivi mobili."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-creature",
+        "feim-combat",
+        "feim-combat-collisione-reale",
+        "feim-esplorazione-mappa-20261021"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-primo-combattimento-20261021",
+      "categoryId": "combattimento",
+      "title": "Primo combattimento completo: arma, creatura, conseguenza",
+      "summary": "Serve un incontro PvE giocabile prima di moltiplicare equipaggiamento e statistiche.",
+      "sections": [
+        {
+          "heading": "Taglio minimo",
+          "body": "Una presa/arma controllabile, una creatura leggibile, colpi basati sul contatto, reazione agli impatti, difesa, energia/stamina e un esito chiaro di scontro o fuga."
+        },
+        {
+          "heading": "Regole già orientate",
+          "body": "STR influenza la forza realmente impressa, non aggiunge danno numerico; DEX influenza moderatamente velocità/agilità, END la resistenza allo sforzo, CON la tolleranza ai traumi. Armatura come protezione delle zone coperte; niente barra vita tradizionale se i feedback fisici/visivi bastano."
+        },
+        {
+          "heading": "Futuro",
+          "body": "Variazioni di armi, tipi di creature, vulnerabilità, boss e raid solo dopo l'incontro-base. Non agganciare nuove statistiche a un carrier mano ancora instabile."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-combat",
+        "feim-sei-statistiche",
+        "feim-soccorso-fisico-20261020",
+        "feim-creature-procedurali-20261021"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-magia-da-progettare-20261021",
+      "categoryId": "magia",
+      "title": "Magia: il grande sistema ancora senza grammatica",
+      "summary": "La magia deve agire su mondo, materia e combattimento, ma costi, controlli, effetti e apprendimento non sono stati definiti.",
+      "sections": [
+        {
+          "heading": "Già condiviso",
+          "body": "Scoperta invece di enciclopedia ufficiale di ricette. Materiali, rune, bacchette, gesti e manufatti possono essere canali di magia. Progressione prevalentemente orizzontale."
+        },
+        {
+          "heading": "Questioni prioritarie",
+          "body": "Quanti principi o elementi? Come combinarli? Come lanciare, interrompere e difendersi? Quali costi e rischi? Come interagisce con fisica, ambiente e debolezze? Come impararla dai Bango e dagli esperimenti?"
+        },
+        {
+          "heading": "Distinzione",
+          "body": "Proposta di pochi principi componibili anziché centinaia di skill isolate; non è ancora canon. MAG/WIS già nominate, ma funzionamento non stabilito."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-magia",
+        "feim-magia-gesti",
+        "feim-magia-rune",
+        "feim-sei-statistiche"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-economia-sistemica-20261021",
+      "categoryId": "professioni",
+      "title": "Economia: non basta poter posare monete sul tavolo",
+      "summary": "Lo scambio fisico è un'interazione; l'economia deve spiegare provenienza, utilità, scarsità e circolazione dei beni.",
+      "sections": [
+        {
+          "heading": "Da decidere",
+          "body": "Fonti/pozzi monetari, domanda e disponibilità dei materiali, prezzi variabili ma spiegabili, potere d'acquisto dei Bango, trasporti, flussi fra insediamenti e merci rare."
+        },
+        {
+          "heading": "Prototipo consigliato",
+          "body": "Un Bango ha bisogno di materiale; qualcuno lo porta, qualcuno lo lavora, qualcun altro acquista il risultato. Stock, proprietà, prezzo e conoscenza dei personaggi devono restare coerenti."
+        },
+        {
+          "heading": "Integrità",
+          "body": "Controllo server di proprietà, trasferimenti atomici, anti-duplicazione, riconnessioni e salvataggi; i Bango non devono generare merci o monete infinite per comodità."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-economia",
+        "feim-mercato-fisico-20261020",
+        "feim-bango-lavoro",
+        "feim-trasporti"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-bango-vita-autonoma-20261021",
+      "categoryId": "personaggi",
+      "title": "Bango: vita, bisogni, lavoro e incarichi offline",
+      "summary": "Memoria e dialoghi non bastano: il progetto vuole persone con attività e necessità che proseguano anche senza la presenza immediata del giocatore.",
+      "sections": [
+        {
+          "heading": "Direzione già emersa",
+          "body": "Bango artigiani e abitanti con conoscenze individuali, fiducia e gossip; possono essere assunti da un giocatore e svolgere un lavoro mentre lui è offline, nei limiti di regole ancora da definire."
+        },
+        {
+          "heading": "Aperto",
+          "body": "Routine di lavoro, riposo, consumo dei beni, alloggio, relazioni e decisioni; costo, affidabilità, priorità e limite degli incarichi offline; capacità di interrompere o fallire un lavoro."
+        },
+        {
+          "heading": "Prototipo utile",
+          "body": "Un bisogno reale, un magazzino, un Bango produttore e un Bango acquirente. Niente IA LLM necessaria per ogni decisione, né simulazione completa ogni frame quando l'area è deserta."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-bango",
+        "feim-bango-memoria-dialoghi",
+        "feim-deleghe-npc",
+        "feim-economia-sistemica-20261021"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-mestieri-compatibili-20261021",
+      "categoryId": "professioni",
+      "title": "Mestieri dopo la forgia: una grammatica comune",
+      "summary": "Falegnameria, cuoio, tessuti, cucina, caccia, agricoltura e forse alchimia sono candidati, non tutti lavori da aprire subito.",
+      "sections": [
+        {
+          "heading": "Principio stabilito",
+          "body": "Il crafting è opzionale e costruito da sistemi condivisi: materiali, forme, connessioni, trasformazioni e interazioni. Nessun if particolare per ogni utensile o ricetta."
+        },
+        {
+          "heading": "Scelta proposta",
+          "body": "Completare un processo produttivo usabile e poi provare una seconda trasformazione di materiale differente, per dimostrare che il modello può essere riutilizzato."
+        },
+        {
+          "heading": "Armature",
+          "body": "Prima indossare armature già realizzate; solo in una fase successiva lavorazioni di protezioni tessili e piastre, senza impegnarsi subito nella simulazione complessa della maglia."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-professioni",
+        "feim-oggetti-generici",
+        "feim-forgia-percorso",
+        "feim-armature-produzione"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-proprieta-sociale-20261021",
+      "categoryId": "societa",
+      "title": "Case, negozi e oggetti persistenti: le regole di proprietà",
+      "summary": "L'uso di edifici e contenitori fisici non definisce da solo diritto d'accesso, furti, protezione e abbandono.",
+      "sections": [
+        {
+          "heading": "Domande",
+          "body": "Si possono affittare, acquistare o costruire case? Dove si conserva qualcosa al sicuro? Come condividere magazzini e botteghe con amici? Quali oggetti possono essere mossi o rubati?"
+        },
+        {
+          "heading": "Rischi",
+          "body": "Evita appropriazione di spazi comuni, blocchi delle porte, migliaia di oggetti dormienti e griefing. Stabilire regole prima di moltiplicare architetture editabili."
+        },
+        {
+          "heading": "Stato",
+          "body": "Argomento da decidere: nessuna nuova meccanica qui è confermata o codificata."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-proprieta",
+        "feim-abitare",
+        "feim-persistence",
+        "feim-criminalita"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-pvp-leggi-20261021",
+      "categoryId": "societa",
+      "title": "Crimini e PvP: libertà con conseguenze verificabili",
+      "summary": "Testimoni, uccelli messaggeri, soccorso e ricordi dei Bango formano una base; mancano regole condivise per furto, aggressione e reazioni.",
+      "sections": [
+        {
+          "heading": "Da definire",
+          "body": "Chi può aggredire chi e dove, come si raccolgono prove, cosa costituisce furto, come agiscono guardie o abitanti, come funzionano reputazione, punizioni, difesa e recupero degli oggetti."
+        },
+        {
+          "heading": "Vincolo",
+          "body": "Nessuna soluzione che permetta a pochi giocatori di bloccare stabilmente la vita sociale degli altri. Una libertà di combattimento senza contromisure non produce un mondo vivibile."
+        },
+        {
+          "heading": "Stato",
+          "body": "Design non chiuso: la presenza del witness-bird e del soccorso non equivale a un sistema di legge o PvP completo."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-criminalita",
+        "feim-proprieta-sociale-20261021",
+        "feim-soccorso-fisico-20261020"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-social-gruppi-20261021",
+      "categoryId": "societa",
+      "title": "Gilde, gruppi e spedizioni senza menu astratti",
+      "summary": "La filosofia diegetica è definita, ma la cooperazione non ha ancora un contratto operativo.",
+      "sections": [
+        {
+          "heading": "Aperto",
+          "body": "Come formare un gruppo riconoscibile, condividere permessi e magazzini, coordinare viaggi, creare gilde e organizzare spedizioni in zone pericolose."
+        },
+        {
+          "heading": "Già desiderato",
+          "body": "Rapporti sociali concreti; piccioni per i messaggi e chat vocale di prossimità in futuro. Evitare gilde che esistono soltanto perché si è premuto un pulsante in una finestra."
+        },
+        {
+          "heading": "Prova futura",
+          "body": "Due persone devono potersi incontrare, organizzare, commerciare e partire insieme senza dipendere da interfacce pesanti."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-comunita",
+        "feim-piccioni",
+        "feim-voice-lingue",
+        "feim-esplorazione-mappa-20261021"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-conoscenza-soggettiva-20261021",
+      "categoryId": "societa",
+      "title": "Scoperte, false informazioni e valore delle conoscenze",
+      "summary": "La conoscenza può diventare un bene sociale: un Bango sa solo ciò che ha visto o appreso e un diario riporta fonti, non verità assolute.",
+      "sections": [
+        {
+          "heading": "Da stabilire",
+          "body": "Quali segreti sono effettivamente scopribili, come registrarli, citarne la provenienza, copiarli e venderli; come una notizia può essere falsa o diventare conoscenza diffusa."
+        },
+        {
+          "heading": "Coerenza",
+          "body": "Dati fisici degli oggetti e dichiarazioni di venditori/testimoni non coincidono necessariamente. La verifica avviene esplorando, sperimentando, confrontando racconti e materiali."
+        },
+        {
+          "heading": "Relazioni",
+          "body": "Fonti e memoria dei Bango, diario, scontrini di oggetti, usi magici e punti deboli dei mostri dovrebbero contribuire allo stesso sistema di conoscenza."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-ricerca",
+        "feim-diario",
+        "feim-cartellino-oggetto",
+        "feim-bango-memoria-dialoghi"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-storia-mondo-reattivo-20261021",
+      "categoryId": "storia",
+      "title": "La minaccia comune come conseguenza del mondo",
+      "summary": "La premessa narrativa esiste; resta definire la progressione osservabile della minaccia e gli esiti dei capitoli.",
+      "sections": [
+        {
+          "heading": "Aperto",
+          "body": "Segni della minaccia, vie d'accesso alla scoperta, eventi e attacchi, ruolo dei Bango, differenze tra server, conseguenze durevoli di successi e fallimenti."
+        },
+        {
+          "heading": "Principio proposto",
+          "body": "Esporre eventi attraverso viaggiatori, racconti, luoghi cambiati e oggetti, senza task-list e quest marker. Evitare un narratore che scavalchi la simulazione."
+        },
+        {
+          "heading": "Limite",
+          "body": "Non canonizzare adesso nomi, rivelazioni o spoiler della trama ancora privati."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-minaccia",
+        "feim-stagioni",
+        "feim-world-outcomes",
+        "feim-eventi-emergenti"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-simulazione-lontana-20261021",
+      "categoryId": "produzione",
+      "title": "Quanto simula il server quando nessuno osserva?",
+      "summary": "Decisione di architettura ancora aperta ma fondamentale per Bango offline, mondo persistente, economia e capacità MMO.",
+      "sections": [
+        {
+          "heading": "Tre livelli da valutare",
+          "body": "Vicino ai giocatori: fisica e agenti più dettagliati. Lontano: eventi significativi e aggiornamenti economici a grana larga. Offline o non osservato: stati duraturi ed esecuzione a intervalli quando necessario."
+        },
+        {
+          "heading": "Non deciso",
+          "body": "Frequenza, modello di coerenza, carichi limite, interesse spaziale, conflitti tra agenti e verifiche. È una proposta di architettura, non una performance garantita."
+        },
+        {
+          "heading": "Misurare",
+          "body": "Confrontare tick server, memoria, latenza e determinismo con 10/25/50/100/200 giocatori e varie densità di NPC; il benchmark sintetico non prova la qualità su rete e Android."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-performance-mmo",
+        "feim-persistence",
+        "feim-bango-vita-autonoma-20261021",
+        "feim-economia-sistemica-20261021"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-dialogo-rotella-mobile-20261021",
+      "categoryId": "personaggi",
+      "title": "Dialoghi mobile: rotella radiale centrale",
+      "summary": "Il 21 ottobre è stato respinto il pannello rettangolare mobile: il dialogo deve tornare a una ruota di scelte centrata e leggibile.",
+      "sections": [
+        {
+          "heading": "Decisioni dell'utente",
+          "body": "Ruota vera con opzioni disposte radialmente; compatta ma toccabile, centrata; paginazione soltanto mantenendo la ruota; niente pannello da desktop travestito da mobile."
+        },
+        {
+          "heading": "Tono e lingua",
+          "body": "Dialoghi inizialmente in inglese, coerenti e contestuali; non mix di frasi italiane, inglesi, dinamiche e hardcodate. Reazioni determinate da memoria e conoscenze reali dell'NPC."
+        },
+        {
+          "heading": "Accettazione",
+          "body": "Provare con mano reale su Android, opzioni corte/lunghe, molte scelte, rotazioni e ripetizioni. Il fatto che esista un componente UI nel branch #18 non equivale a una UX approvata."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Decisione o feedback dell'utente"
+      },
+      "links": [
+        "feim-bango-memoria-dialoghi",
+        "feim-voice-lingue",
+        "feim-mercato-modalita-fisica-20261021"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-mercato-modalita-fisica-20261021",
+      "categoryId": "societa",
+      "title": "Scambio: modalità fisica separata dal dialogo",
+      "summary": "Il commercio vero deve uscire dalla rotella ed entrare in una scena dedicata agli oggetti fisici e alle mani.",
+      "sections": [
+        {
+          "heading": "Decisioni 21 ottobre",
+          "body": "All'inizio dello scambio reale giocatore e NPC restano fermi; locomozione disabilitata e Bango non si allontana; si mantiene il controllo delle mani e si nasconde l'HUD mobile non necessario."
+        },
+        {
+          "heading": "Continuità",
+          "body": "Le battute a opzioni servono per chiedere cosa ha un Bango, disponibilità, prezzo e negoziazione; lo scambio di merci e monete si conferma con il gesto fisico e la logica autorevole."
+        },
+        {
+          "heading": "Integrazione",
+          "body": "Branch dialogo feature/bango-dialogue-memory sopra feature/physical-trade-table-20261020, PR #18/#15 aperte al controllo del 21 ottobre. Richiede test su PC/Android, cancellazione, distanza, disconnessione e doppio acquisto. Niente merge automatico."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Decisione o feedback dell'utente"
+      },
+      "links": [
+        "feim-dialogo-rotella-mobile-20261021",
+        "feim-mercato-fisico-20261020",
+        "feim-bango-memoria-dialoghi"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-grafica-feedback-20261021",
+      "categoryId": "produzione",
+      "title": "Arte 21 ottobre: il mondo è ancora spoglio",
+      "summary": "L'identità geometrica desiderata non si riduce a low-poly vuoto: servono materiali, carattere, cielo credibile e illuminazione leggibile.",
+      "sections": [
+        {
+          "heading": "Difetti segnalati",
+          "body": "Cielo senza nuvole o buggato; salto brusco giorno/notte; lampioni con luce percepita mediocre; insegne rovesciate, sproporzionate, mal posizionate e attraversate dal palo; scenografia povera; menu non ancora finalizzato."
+        },
+        {
+          "heading": "Direzione certa",
+          "body": "Geometrie angolari decise, palette riconoscibile, ambienti attraenti da PC e Android; personaggi con volto e vestiti tridimensionali ed espressività. Fotografie in seguito nel diario."
+        },
+        {
+          "heading": "Da progettare",
+          "body": "Guida visiva: materiali, illuminazione, ombre, effetti atmosferici, cloud layers, composizione, vegetazione, edifici, dettagli e budget grafico mobile. Blender può servire per asset dedicati ma non è prerequisito per ogni prototipo procedurale."
+        },
+        {
+          "heading": "Controlli",
+          "body": "Un comando debug per forzare la notte deve essere accessibile per il playtest. Non progettare un menu diegetico definitivo finché non si decide se serve realmente."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Decisione o feedback dell'utente"
+      },
+      "links": [
+        "feim-identita-visiva",
+        "feim-cielo-luci-segnaletica-pr26-20261021",
+        "feim-stato-20261021"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-cielo-luci-segnaletica-pr26-20261021",
+      "categoryId": "produzione",
+      "title": "PR #26: cielo graduale, nuvole, applique e targhe",
+      "summary": "La PR #26 prova a correggere esattamente i difetti visivi osservati dopo gli interventi ambientali della PR #25. È in revisione, non approvata.",
+      "sections": [
+        {
+          "heading": "Prototipo visivo disponibile",
+          "body": "Interpolazione fluida del ciclo cosmetico da 60 minuti, layer procedurali di nuvole, luci calde reali alle facciate e insegne piccole fissate presso ingressi senza palo centrale."
+        },
+        {
+          "heading": "Prova manuale",
+          "body": "Preview con ?art=1 e ?light=NIGHT. Il codice e i test non bastano: controllare notte, cielo, segnaletica, coerenza visiva, FPS e GPU mobile prima di autorizzare il merge."
+        },
+        {
+          "heading": "Vincoli",
+          "body": "PR solo visiva, senza cambiare tempo di gioco server, forgia, mano, dialoghi o dati persistenti. Branch fix/cinematic-sky-lighting-signage-20261021; non integrare automaticamente in main."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Decisione o feedback dell'utente"
+      },
+      "links": [
+        "feim-grafica-feedback-20261021",
+        "feim-stato-20261021",
+        "feim-identita-visiva"
+      ],
+      "origin": "confermato",
+      "status": "da_validare",
+      "kind": "system",
+      "phase": "prototipo",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-audio-musica-revisione-20261021",
+      "categoryId": "produzione",
+      "title": "Musica: serve scrittura melodica, non note casuali",
+      "summary": "Gli effetti ambientali sono progrediti, ma le ultime tracce generate in chat non sono state approvate come colonna sonora definitiva.",
+      "sections": [
+        {
+          "heading": "Feedback esplicito",
+          "body": "Frasi e melodie diverse nella stessa canzone si intralciano; note troppo brevi e brusche, poco legato, assenza percepita di coda/reverb/continuità; alcune revisioni più lunghe risultavano più caratteristiche ma non risolvevano gli stacchi."
+        },
+        {
+          "heading": "Direzione proposta",
+          "body": "Prima comporre una sola traccia coesa con tema riconoscibile, armonia e variazioni controllate, frasi con legato, inviluppi e riverbero; solo dopo creare una libreria di brani."
+        },
+        {
+          "heading": "Stati distinti",
+          "body": "Audio ambientale V3/V4 integrato nel codice; approvazione degli effetti di natura non implica approvazione delle musiche nuove."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Decisione o feedback dell'utente"
+      },
+      "links": [
+        "feim-audio-v3",
+        "feim-audio-v4",
+        "feim-stato-20261021"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-stato-20261021",
+      "categoryId": "produzione",
+      "title": "Stato GitHub verificato — 21 ottobre 2026",
+      "summary": "Fotografia delle PR consultate su GitHub; la presenza in main o il merge non sostituiscono il playtest manuale dell'utente.",
+      "sections": [
+        {
+          "heading": "Integrato secondo GitHub",
+          "body": "PR #14 soccorso Bango, #17 Audio V3, #20 ottimizzazioni replica, #22 Audio V4, #23 ottimizzazione fisica conservativa e #25 utilità del mondo (giornata cosmetica, particelle, foto locali, insegne, diagnostica) risultano merged in main."
+        },
+        {
+          "heading": "Aperto e NON approvato",
+          "body": "PR #26 cielo continuo, nuvole, luci e insegne corrette; #24 integrazione Material Playground; #21 materiali; #18 dialoghi Bango; #15 scambi fisici; #12/#11 forgia e materiali; #10 recupero mani. Status da ricontrollare in futuro, non dichiarare questi lavori consegnati."
+        },
+        {
+          "heading": "Respinto o incompleto",
+          "body": "PR #13 inventario precedente chiusa senza merge; la nuova soluzione fisica 3D resta da validare. Le mani/carrier e il ciclo completo forgia non sono approvati dai test PC/Android; scatti o bug effettivi hanno precedenza sugli unit test."
+        },
+        {
+          "heading": "Test e pubblicazione",
+          "body": "Niente merge FEIM Next senza l'approvazione esplicita del proprietario quando serve playtest; distinguere main, PR, prototipo e sola proposta. Il Lorebuilder è documentazione, non una prova che una feature funzioni."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Decisione o feedback dell'utente"
+      },
+      "links": [
+        "feim-stato-tecnico",
+        "feim-audio-v4",
+        "feim-grafica-feedback-20261021",
+        "feim-rilascio-e-test",
+        "feim-material-playground-v1"
+      ],
+      "origin": "confermato",
+      "status": "definito",
+      "kind": "system",
+      "phase": "integrazione",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
+    },
+    {
+      "id": "feim-sviluppo-chat-20261021",
+      "categoryId": "produzione",
+      "title": "Sviluppi consigliati dalla chat, senza Codex o Blender",
+      "summary": "Il lavoro implementabile direttamente via codice del repository va separato da rifacimenti enormi di solver e produzione di asset Blender.",
+      "sections": [
+        {
+          "heading": "Candidati ad alto rendimento",
+          "body": "1) Rotella mobile, dialoghi in inglese e transizione alla modalità scambio; 2) prototipo di una piccola area esplorabile con risorse ed eventi; 3) creature geometriche procedurali e animazione flessibile da provare isolatamente; 4) miglioramento scenografico shader/sky/luce con test; 5) una mini-economia Bango deterministica e misurabile."
+        },
+        {
+          "heading": "Candidati gestibili",
+          "body": "Dati di world design, diari con foto, segnali di pericolo, variazione di suoni di natura, debug e strumenti di playtest, regole dei flussi economici; sempre in branch e senza attribuire a un test automatico l'approvazione del gioco."
+        },
+        {
+          "heading": "Da non aprire tutti insieme",
+          "body": "Riscrittura completa mano/carrier, forgiatura universale, armature fisiche complete e simulazione MMO globale richiedono forte integrazione e test reali: non accumulare branch concorrenti."
+        }
+      ],
+      "properties": {
+        "Revisione": "21 ottobre 2026",
+        "Classificazione": "Proposta / questione da progettare"
+      },
+      "links": [
+        "feim-loop-completo-20261021",
+        "feim-creature-procedurali-20261021",
+        "feim-dialogo-rotella-mobile-20261021",
+        "feim-economia-sistemica-20261021",
+        "feim-cielo-luci-segnaletica-pr26-20261021"
+      ],
+      "origin": "proposta",
+      "status": "in_discussione",
+      "kind": "system",
+      "phase": "design",
+      "priority": "alta",
+      "favorite": false,
+      "__seedRevision": 20261021
     }
   ]
 };
